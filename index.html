@@ -43,12 +43,46 @@ h1{font-size:28px;margin:0 0 8px}p{color:var(--muted);line-height:1.55}.small{fo
 <script src="data.js"></script>
 <script>
 const sets=window.EFS_SETS||[];let set=null,order=[],i=0,flipped=false,locked=false,mode="random";
-const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#039;"}[m]));
+const $=id=>document.getElementById(id);
+function esc(s){
+  return String(s??"").replace(/[&<>"']/g,function(m){
+    if(m==="&")return "&amp;";
+    if(m==="<")return "&lt;";
+    if(m===">")return "&gt;";
+    if(m==='"')return "&quot;";
+    return "&#039;";
+  });
+}
 function isMCQ(c){return c&&c.A&&c.B&&c.C&&c.D&&c.key}
 function hi(text,target){let s=esc(text);if(!target)return s;let t=String(target).replace(/[.*+?^\${}()|[\]\\]/g,"\\$&");try{return s.replace(new RegExp(t,"i"),m=>"<u><strong>"+m+"</strong></u>")}catch{return s}}
 function build(){order=set.cards.map((_,x)=>x);if(mode==="random")for(let x=order.length-1;x>0;x--){let y=Math.floor(Math.random()*(x+1));[order[x],order[y]]=[order[y],order[x]]}i=0}
 function card(){return set.cards[order[i]]}
-function renderLib(){let id=new URLSearchParams(location.search).get("set");if(id){set=sets.find(s=>s.id===id);if(set){$("library").classList.add("hidden");$("practice").classList.remove("hidden");build();render();return}}$("library").innerHTML="<h1>Học phần</h1><p>Chọn một bộ để luyện tập.</p><div class='list'>"+sets.map(s=>"<div class='set'><div><b>"+esc(s.title)+"</b><div class='small'>"+s.cards.length+" thẻ/câu</div></div><button class='primary' onclick=\\"openSet('"+s.id+"')\\">Mở</button></div>").join("")+"</div>"}
+function renderLib(){
+  let id=new URLSearchParams(location.search).get("set");
+  if(id){
+    set=sets.find(s=>s.id===id);
+    if(set){
+      $("library").classList.add("hidden");
+      $("practice").classList.remove("hidden");
+      build();render();return;
+    }
+  }
+  $("library").innerHTML="<h1>Học phần</h1><p>Chọn một bộ để luyện tập.</p><div id='setList' class='list'></div>";
+  const list=$("setList");
+  sets.forEach(s=>{
+    const row=document.createElement("div");
+    row.className="set";
+    const info=document.createElement("div");
+    info.innerHTML="<b>"+esc(s.title)+"</b><div class='small'>"+s.cards.length+" thẻ/câu</div>";
+    const btn=document.createElement("button");
+    btn.className="primary";
+    btn.textContent="Mở";
+    btn.onclick=()=>openSet(s.id);
+    row.appendChild(info);
+    row.appendChild(btn);
+    list.appendChild(row);
+  });
+}
 window.openSet=id=>{history.replaceState(null,"","?set="+encodeURIComponent(id));set=sets.find(s=>s.id===id);$("library").classList.add("hidden");$("practice").classList.remove("hidden");build();render()}
 function render(){let c=card();$("title").textContent=set.title;$("count").textContent=(i+1)+" / "+set.cards.length;$("bar").style.width=((i+1)/set.cards.length*100)+"%";$("shuffle").classList.toggle("hidden",mode!=="random");if(isMCQ(c)){renderQ(c)}else{renderCard(c)}}
 function renderCard(c){$("mcq").classList.add("hidden");$("basic").classList.remove("hidden");flipped=false;$("front").classList.remove("hidden");$("back").classList.add("hidden");$("front").innerHTML=hi(c.front,c.targetText);setOpt("pos",c.backTitle);setOpt("meaning",c.backContent);setOpt("extra1",c.extra1);setOpt("extra2",c.extra2);setOpt("example",c.example)}
