@@ -6,7 +6,35 @@
 <title>EFS Practice</title>
 <style>
 :root{--bg:#f3f7fb;--card:#fff;--text:#18324a;--muted:#6d8193;--accent:#20a6b7;--line:#dce7ee;--good:#2e9469;--bad:#d85b63;--soft:#e9f7f9}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif}.app{max-width:900px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;padding:7px 10px;border-radius:999px;background:var(--soft);font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}h1{font-size:28px;margin:0 0 8px}.muted{color:var(--muted)}.set{border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}button,select{font:inherit;border-radius:12px;border:0;padding:11px 15px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#edf3f6;color:var(--text)}.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}.hidden{display:none!important}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}.progress div{height:100%;background:var(--accent)}.flash{min-height:330px;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;place-items:center;text-align:center}.front{font-size:40px;font-weight:850}.pos{display:inline-block;background:var(--soft);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}.meaning{font-size:26px;font-weight:800}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.question{font-size:24px;font-weight:800;line-height:1.45;margin:12px 0 18px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:1px solid var(--line);background:#fff;text-align:left;min-height:62px;font-size:17px}.option.correct{border-color:var(--good);background:#edf9f4}.option.wrong{border-color:var(--bad);background:#fff0f1}.feedback{margin-top:16px;border-radius:16px;padding:16px;line-height:1.6}.feedback.good{background:#edf9f4}.feedback.bad{background:#fff0f1}.small{font-size:12px;color:var(--muted)}.error{padding:16px;border-radius:14px;background:#fff0f1;color:#98414a}@media(max-width:700px){.options{grid-template-columns:1fr}.front{font-size:34px}.question{font-size:21px}.meaning{font-size:23px}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif}.app{max-width:900px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;padding:7px 10px;border-radius:999px;background:var(--soft);font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}h1{font-size:28px;margin:0 0 8px}.muted{color:var(--muted)}.set{border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}button,select{font:inherit;border-radius:12px;border:0;padding:11px 15px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#edf3f6;color:var(--text)}.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}.hidden{display:none!important}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}.progress div{height:100%;background:var(--accent)}.flash{min-height:330px;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;place-items:center;text-align:center}.front{font-size:40px;font-weight:850}.pos{display:inline-block;background:var(--soft);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}.meaning{font-size:26px;font-weight:800}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.question{font-size:24px;font-weight:800;line-height:1.45;margin:12px 0 18px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:1px solid var(--line);background:#fff;text-align:left;min-height:62px;font-size:17px}.option.correct{border-color:var(--good);background:#edf9f4}.option.wrong{border-color:var(--bad);background:#fff0f1}.feedback{margin-top:16px;border-radius:16px;padding:16px;line-height:1.6}.feedback.good{background:#edf9f4}.feedback.bad{background:#fff0f1}.small{font-size:12px;color:var(--muted)}.error{padding:16px;border-radius:14px;background:#fff0f1;color:#98414a}.panel,.set,.flash,.option,.question,.front,.meaning,.extra,.example,h1,b{
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.set>div{min-width:0;flex:1}
+.set button{flex:0 0 auto}
+.options{min-width:0}
+.option{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+@media(max-width:700px){
+  .app{padding:10px}
+  .panel{padding:14px;border-radius:16px}
+  h1{font-size:22px;line-height:1.3}
+  .set{align-items:flex-start;padding:12px;gap:8px}
+  .set button{padding:9px 12px}
+  .toolbar{gap:8px}
+  .toolbar select,.toolbar button{max-width:100%}
+  .options{grid-template-columns:1fr}
+  .front{font-size:30px;line-height:1.25}
+  .question{font-size:20px;line-height:1.4}
+  .meaning{font-size:22px}
+  .extra{font-size:16px}
+  .example{font-size:15px}
+  .flash{min-height:280px;padding:16px}
+  .option{font-size:16px;line-height:1.4;min-height:56px;padding:12px}
+  .actions{width:100%}
+  .actions button{flex:1 1 30%;min-width:0}
+}.front{font-size:34px}.question{font-size:21px}.meaning{font-size:23px}}
 </style>
 </head>
 <body>
