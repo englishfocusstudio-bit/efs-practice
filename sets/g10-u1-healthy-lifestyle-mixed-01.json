@@ -1,0 +1,36 @@
+{
+  "id": "g10-u1-healthy-lifestyle-mixed-01",
+  "title": "GRADE 10 - HEALTHY LIFESTYLE - MIXED PRACTICE 01",
+  "type": "mixed",
+  "cards": [
+    {
+      "front": "Which phrase means 'a healthy balance of different kinds of food'?",
+      "A": "balanced diet",
+      "B": "heavy lifting",
+      "C": "household chores",
+      "D": "food waste",
+      "key": "A",
+      "explanation": "A balanced diet includes different kinds of food in suitable amounts."
+    },
+    {
+      "front": "Choose the correct sentence.",
+      "A": "I went to bed early last night.",
+      "B": "I have went to bed early last night.",
+      "C": "I go to bed early last night.",
+      "D": "I am going to bed early last night.",
+      "key": "A",
+      "explanation": "Last night is a finished past time, so use the Past Simple.",
+      "grammarSignal": "last night",
+      "grammarStructure": "S + V2/V-ed"
+    },
+    {
+      "front": "Which word is closest in meaning to 'thankfulness'?",
+      "A": "responsibility",
+      "B": "gratitude",
+      "C": "equality",
+      "D": "rubbish",
+      "key": "B",
+      "explanation": "Gratitude means thankfulness."
+    }
+  ]
+}
