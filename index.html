@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EFS Practice</title>
+<style>
+:root{--bg:#F3F7FB;--card:#fff;--text:#18324A;--muted:#6D8193;--accent:#20A6B7;--accent2:#16758A;--line:#DCE7EE;--good:#2E9469;--bad:#D85B63;--soft:#E9F7F9}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text)}
+.app{max-width:920px;margin:auto;padding:18px;min-height:100vh}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}
+.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;background:var(--soft);color:var(--accent2);padding:7px 10px;border-radius:999px;font-weight:800}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}
+h1{font-size:28px;margin:0 0 8px}p{color:var(--muted);line-height:1.55}.small{font-size:12px;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:20px;background:#fff;padding:22px}.flash{min-height:330px;display:grid;place-items:center;text-align:center}
+.front{font-size:40px;font-weight:850;line-height:1.2}.pos{display:inline-block;background:var(--soft);color:var(--accent2);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}
+.meaning{font-size:26px;font-weight:800;line-height:1.35}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button,select{font:inherit;border:0;border-radius:13px;padding:11px 15px;font-weight:800;cursor:pointer}
+.primary{background:var(--accent);color:#fff}.secondary{background:#EDF3F6;color:var(--text)}.ghost{background:#fff;border:1px solid var(--line);color:var(--text)}
+.progress{height:7px;background:#E8EFF3;border-radius:20px;overflow:hidden;margin:12px 0 18px}.progress div{height:100%;background:var(--accent)}
+.question{font-size:24px;font-weight:800;line-height:1.4;margin:12px 0 18px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.option{border:1px solid var(--line);background:#fff;text-align:left;font-size:17px;min-height:62px}.option.correct{border-color:var(--good);background:#EDF9F4}.option.wrong{border-color:var(--bad);background:#FFF0F1}
+.feedback{display:none;margin-top:16px;border-radius:16px;padding:16px;line-height:1.6}.feedback.show{display:block}.feedback.good{background:#EDF9F4;color:#256F53}.feedback.bad{background:#FFF0F1;color:#98414A}
+.explain{margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.08);color:var(--text)}.meanings{display:grid;gap:7px;margin-top:10px}.meanings div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 10px}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.hidden{display:none!important}.list{display:grid;gap:12px}.set{border:1px solid var(--line);border-radius:16px;padding:15px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+@media(max-width:720px){.options{grid-template-columns:1fr}.front{font-size:34px}.question{font-size:21px}.meaning{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top"><div class="brand">EFS <span>Practice</span></div><div class="badge">Classroom</div></div>
+<div class="panel">
+<div id="library"></div>
+<div id="practice" class="hidden">
+<div class="small" id="count"></div><div class="progress"><div id="bar"></div></div>
+<h1 id="title"></h1>
+<div class="toolbar"><b>Thứ tự:</b><select id="mode"><option value="random">Ngẫu nhiên — mặc định</option><option value="ordered">Theo worksheet</option></select><button class="ghost" id="shuffle">Xáo trộn lại</button></div>
+<div id="basic" class="hidden"><div class="card flash" id="flash"><div id="front" class="front"></div><div id="back" class="hidden"><div id="pos" class="pos"></div><div id="meaning" class="meaning"></div><div id="extra1" class="extra"></div><div id="extra2" class="extra"></div><div id="example" class="example"></div></div></div>
+<div class="actions"><button class="secondary" id="prev">Trước</button><button class="ghost" id="flip">Lật thẻ</button><button class="primary" id="next">Tiếp</button></div></div>
+<div id="mcq" class="hidden"><div id="q" class="question"></div><div id="opts" class="options"></div><div id="fb" class="feedback"></div><div class="actions"><button class="primary hidden" id="nextq">Câu tiếp theo</button></div></div>
+</div>
+</div>
+</div>
+<script src="data.js"></script>
+<script>
+const sets=window.EFS_SETS||[];let set=null,order=[],i=0,flipped=false,locked=false,mode="random";
+const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#039;"}[m]));
+function isMCQ(c){return c&&c.A&&c.B&&c.C&&c.D&&c.key}
+function hi(text,target){let s=esc(text);if(!target)return s;let t=String(target).replace(/[.*+?^\${}()|[\]\\]/g,"\\$&");try{return s.replace(new RegExp(t,"i"),m=>"<u><strong>"+m+"</strong></u>")}catch{return s}}
+function build(){order=set.cards.map((_,x)=>x);if(mode==="random")for(let x=order.length-1;x>0;x--){let y=Math.floor(Math.random()*(x+1));[order[x],order[y]]=[order[y],order[x]]}i=0}
+function card(){return set.cards[order[i]]}
+function renderLib(){let id=new URLSearchParams(location.search).get("set");if(id){set=sets.find(s=>s.id===id);if(set){$("library").classList.add("hidden");$("practice").classList.remove("hidden");build();render();return}}$("library").innerHTML="<h1>Học phần</h1><p>Chọn một bộ để luyện tập.</p><div class='list'>"+sets.map(s=>"<div class='set'><div><b>"+esc(s.title)+"</b><div class='small'>"+s.cards.length+" thẻ/câu</div></div><button class='primary' onclick=\\"openSet('"+s.id+"')\\">Mở</button></div>").join("")+"</div>"}
+window.openSet=id=>{history.replaceState(null,"","?set="+encodeURIComponent(id));set=sets.find(s=>s.id===id);$("library").classList.add("hidden");$("practice").classList.remove("hidden");build();render()}
+function render(){let c=card();$("title").textContent=set.title;$("count").textContent=(i+1)+" / "+set.cards.length;$("bar").style.width=((i+1)/set.cards.length*100)+"%";$("shuffle").classList.toggle("hidden",mode!=="random");if(isMCQ(c)){renderQ(c)}else{renderCard(c)}}
+function renderCard(c){$("mcq").classList.add("hidden");$("basic").classList.remove("hidden");flipped=false;$("front").classList.remove("hidden");$("back").classList.add("hidden");$("front").innerHTML=hi(c.front,c.targetText);setOpt("pos",c.backTitle);setOpt("meaning",c.backContent);setOpt("extra1",c.extra1);setOpt("extra2",c.extra2);setOpt("example",c.example)}
+function setOpt(id,v){$(id).textContent=v||"";$(id).classList.toggle("hidden",!v)}
+function flip(){flipped=!flipped;$("front").classList.toggle("hidden",flipped);$("back").classList.toggle("hidden",!flipped)}
+function renderQ(c){$("basic").classList.add("hidden");$("mcq").classList.remove("hidden");locked=false;$("nextq").classList.add("hidden");$("fb").className="feedback";$("fb").innerHTML="";$("q").innerHTML=hi(c.front,c.targetText);$("opts").innerHTML=["A","B","C","D"].map(k=>"<button class='option' data-k='"+k+"'><b>"+k+".</b> "+esc(c[k])+"</button>").join("");document.querySelectorAll(".option").forEach(b=>b.onclick=()=>answer(b.dataset.k,b))}
+function answer(k,b){if(locked)return;locked=true;let c=card();document.querySelectorAll(".option").forEach(o=>{if(o.dataset.k===c.key)o.classList.add("correct")});let ok=k===c.key;if(!ok)b.classList.add("wrong");$("fb").className="feedback show "+(ok?"good":"bad");$("fb").innerHTML=(ok?"✓ Chính xác":"✗ Chưa đúng")+explain(c);$("nextq").classList.remove("hidden")}
+function explain(c){let h="<div class='explain'><b>Đáp án:</b> "+c.key+". "+esc(c[c.key]||"");if(c.explanation)h+="<br><br><b>Giải thích:</b> "+esc(c.explanation);if(c.Ameaning||c.Bmeaning||c.Cmeaning||c.Dmeaning)h+="<div class='meanings'>"+["A","B","C","D"].map(k=>"<div><b>"+k+". "+esc(c[k])+"</b>: "+esc(c[k+"meaning"]||"—")+"</div>").join("")+"</div>";if(c.grammarSignal)h+="<br><b>Dấu hiệu nhận biết:</b> "+esc(c.grammarSignal);if(c.grammarStructure)h+="<br><b>Cấu trúc:</b> "+esc(c.grammarStructure);return h+"</div>"}
+function step(n){i=(i+n+order.length)%order.length;render()}
+$("flip").onclick=flip;$("flash").onclick=flip;$("next").onclick=()=>step(1);$("prev").onclick=()=>step(-1);$("nextq").onclick=()=>step(1);$("mode").onchange=e=>{mode=e.target.value;build();render()};$("shuffle").onclick=()=>{mode="random";$("mode").value="random";build();render()};renderLib();
+</script>
+</body></html>
