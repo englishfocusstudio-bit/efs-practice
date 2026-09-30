@@ -5,93 +5,92 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EFS Practice</title>
 <style>
-:root{--bg:#F3F7FB;--card:#fff;--text:#18324A;--muted:#6D8193;--accent:#20A6B7;--accent2:#16758A;--line:#DCE7EE;--good:#2E9469;--bad:#D85B63;--soft:#E9F7F9}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text)}
-.app{max-width:920px;margin:auto;padding:18px;min-height:100vh}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}
-.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;background:var(--soft);color:var(--accent2);padding:7px 10px;border-radius:999px;font-weight:800}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}
-h1{font-size:28px;margin:0 0 8px}p{color:var(--muted);line-height:1.55}.small{font-size:12px;color:var(--muted)}
-.card{border:1px solid var(--line);border-radius:20px;background:#fff;padding:22px}.flash{min-height:330px;display:grid;place-items:center;text-align:center}
-.front{font-size:40px;font-weight:850;line-height:1.2}.pos{display:inline-block;background:var(--soft);color:var(--accent2);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}
-.meaning{font-size:26px;font-weight:800;line-height:1.35}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button,select{font:inherit;border:0;border-radius:13px;padding:11px 15px;font-weight:800;cursor:pointer}
-.primary{background:var(--accent);color:#fff}.secondary{background:#EDF3F6;color:var(--text)}.ghost{background:#fff;border:1px solid var(--line);color:var(--text)}
-.progress{height:7px;background:#E8EFF3;border-radius:20px;overflow:hidden;margin:12px 0 18px}.progress div{height:100%;background:var(--accent)}
-.question{font-size:24px;font-weight:800;line-height:1.4;margin:12px 0 18px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.option{border:1px solid var(--line);background:#fff;text-align:left;font-size:17px;min-height:62px}.option.correct{border-color:var(--good);background:#EDF9F4}.option.wrong{border-color:var(--bad);background:#FFF0F1}
-.feedback{display:none;margin-top:16px;border-radius:16px;padding:16px;line-height:1.6}.feedback.show{display:block}.feedback.good{background:#EDF9F4;color:#256F53}.feedback.bad{background:#FFF0F1;color:#98414A}
-.explain{margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.08);color:var(--text)}.meanings{display:grid;gap:7px;margin-top:10px}.meanings div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 10px}
-.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.hidden{display:none!important}.list{display:grid;gap:12px}.set{border:1px solid var(--line);border-radius:16px;padding:15px;display:flex;justify-content:space-between;gap:12px;align-items:center}
-@media(max-width:720px){.options{grid-template-columns:1fr}.front{font-size:34px}.question{font-size:21px}.meaning{font-size:23px}}
+:root{--bg:#f3f7fb;--card:#fff;--text:#18324a;--muted:#6d8193;--accent:#20a6b7;--line:#dce7ee;--good:#2e9469;--bad:#d85b63;--soft:#e9f7f9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif}.app{max-width:900px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;padding:7px 10px;border-radius:999px;background:var(--soft);font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}h1{font-size:28px;margin:0 0 8px}.muted{color:var(--muted)}.set{border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}button,select{font:inherit;border-radius:12px;border:0;padding:11px 15px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#edf3f6;color:var(--text)}.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}.hidden{display:none!important}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}.progress div{height:100%;background:var(--accent)}.flash{min-height:330px;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;place-items:center;text-align:center}.front{font-size:40px;font-weight:850}.pos{display:inline-block;background:var(--soft);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}.meaning{font-size:26px;font-weight:800}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.question{font-size:24px;font-weight:800;line-height:1.45;margin:12px 0 18px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:1px solid var(--line);background:#fff;text-align:left;min-height:62px;font-size:17px}.option.correct{border-color:var(--good);background:#edf9f4}.option.wrong{border-color:var(--bad);background:#fff0f1}.feedback{margin-top:16px;border-radius:16px;padding:16px;line-height:1.6}.feedback.good{background:#edf9f4}.feedback.bad{background:#fff0f1}.small{font-size:12px;color:var(--muted)}@media(max-width:700px){.options{grid-template-columns:1fr}.front{font-size:34px}.question{font-size:21px}.meaning{font-size:23px}}
 </style>
 </head>
 <body>
 <div class="app">
-<div class="top"><div class="brand">EFS <span>Practice</span></div><div class="badge">Classroom</div></div>
-<div class="panel">
-<div id="library"></div>
-<div id="practice" class="hidden">
-<div class="small" id="count"></div><div class="progress"><div id="bar"></div></div>
-<h1 id="title"></h1>
-<div class="toolbar"><b>Thứ tự:</b><select id="mode"><option value="random">Ngẫu nhiên — mặc định</option><option value="ordered">Theo worksheet</option></select><button class="ghost" id="shuffle">Xáo trộn lại</button></div>
-<div id="basic" class="hidden"><div class="card flash" id="flash"><div id="front" class="front"></div><div id="back" class="hidden"><div id="pos" class="pos"></div><div id="meaning" class="meaning"></div><div id="extra1" class="extra"></div><div id="extra2" class="extra"></div><div id="example" class="example"></div></div></div>
-<div class="actions"><button class="secondary" id="prev">Trước</button><button class="ghost" id="flip">Lật thẻ</button><button class="primary" id="next">Tiếp</button></div></div>
-<div id="mcq" class="hidden"><div id="q" class="question"></div><div id="opts" class="options"></div><div id="fb" class="feedback"></div><div class="actions"><button class="primary hidden" id="nextq">Câu tiếp theo</button></div></div>
+  <div class="top"><div class="brand">EFS <span>Practice</span></div><div class="badge">Classroom</div></div>
+  <div class="panel">
+    <div id="library"></div>
+    <div id="practice" class="hidden">
+      <div id="count" class="small"></div>
+      <div class="progress"><div id="bar"></div></div>
+      <h1 id="title"></h1>
+      <div class="toolbar">
+        <b>Thứ tự:</b>
+        <select id="mode"><option value="random">Ngẫu nhiên — mặc định</option><option value="ordered">Theo worksheet</option></select>
+        <button id="shuffle" class="ghost">Xáo trộn lại</button>
+        <button id="home" class="secondary">Danh sách học phần</button>
+      </div>
+      <div id="flashArea" class="hidden">
+        <div id="flash" class="flash">
+          <div id="front" class="front"></div>
+          <div id="back" class="hidden">
+            <div id="pos" class="pos"></div>
+            <div id="meaning" class="meaning"></div>
+            <div id="extra1" class="extra"></div>
+            <div id="extra2" class="extra"></div>
+            <div id="example" class="example"></div>
+          </div>
+        </div>
+        <div class="actions"><button id="prev" class="secondary">Trước</button><button id="flip" class="ghost">Lật thẻ</button><button id="next" class="primary">Tiếp</button></div>
+      </div>
+      <div id="mcqArea" class="hidden">
+        <div id="question" class="question"></div>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="hidden"></div>
+        <div class="actions"><button id="nextQ" class="primary hidden">Câu tiếp theo</button></div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-<script src="data.js"></script>
 <script>
-const sets=window.EFS_SETS||[];let set=null,order=[],i=0,flipped=false,locked=false,mode="random";
-const $=id=>document.getElementById(id);
-function esc(s){
-  return String(s??"").replace(/[&<>"']/g,function(m){
-    if(m==="&")return "&amp;";
-    if(m==="<")return "&lt;";
-    if(m===">")return "&gt;";
-    if(m==='"')return "&quot;";
-    return "&#039;";
-  });
-}
-function isMCQ(c){return c&&c.A&&c.B&&c.C&&c.D&&c.key}
-function hi(text,target){let s=esc(text);if(!target)return s;let t=String(target).replace(/[.*+?^\${}()|[\]\\]/g,"\\$&");try{return s.replace(new RegExp(t,"i"),m=>"<u><strong>"+m+"</strong></u>")}catch{return s}}
-function build(){order=set.cards.map((_,x)=>x);if(mode==="random")for(let x=order.length-1;x>0;x--){let y=Math.floor(Math.random()*(x+1));[order[x],order[y]]=[order[y],order[x]]}i=0}
-function card(){return set.cards[order[i]]}
-function renderLib(){
-  let id=new URLSearchParams(location.search).get("set");
-  if(id){
-    set=sets.find(s=>s.id===id);
-    if(set){
-      $("library").classList.add("hidden");
-      $("practice").classList.remove("hidden");
-      build();render();return;
-    }
-  }
-  $("library").innerHTML="<h1>Học phần</h1><p>Chọn một bộ để luyện tập.</p><div id='setList' class='list'></div>";
-  const list=$("setList");
-  sets.forEach(s=>{
-    const row=document.createElement("div");
-    row.className="set";
-    const info=document.createElement("div");
-    info.innerHTML="<b>"+esc(s.title)+"</b><div class='small'>"+s.cards.length+" thẻ/câu</div>";
-    const btn=document.createElement("button");
-    btn.className="primary";
-    btn.textContent="Mở";
-    btn.onclick=()=>openSet(s.id);
-    row.appendChild(info);
-    row.appendChild(btn);
-    list.appendChild(row);
-  });
-}
-window.openSet=id=>{history.replaceState(null,"","?set="+encodeURIComponent(id));set=sets.find(s=>s.id===id);$("library").classList.add("hidden");$("practice").classList.remove("hidden");build();render()}
-function render(){let c=card();$("title").textContent=set.title;$("count").textContent=(i+1)+" / "+set.cards.length;$("bar").style.width=((i+1)/set.cards.length*100)+"%";$("shuffle").classList.toggle("hidden",mode!=="random");if(isMCQ(c)){renderQ(c)}else{renderCard(c)}}
-function renderCard(c){$("mcq").classList.add("hidden");$("basic").classList.remove("hidden");flipped=false;$("front").classList.remove("hidden");$("back").classList.add("hidden");$("front").innerHTML=hi(c.front,c.targetText);setOpt("pos",c.backTitle);setOpt("meaning",c.backContent);setOpt("extra1",c.extra1);setOpt("extra2",c.extra2);setOpt("example",c.example)}
-function setOpt(id,v){$(id).textContent=v||"";$(id).classList.toggle("hidden",!v)}
-function flip(){flipped=!flipped;$("front").classList.toggle("hidden",flipped);$("back").classList.toggle("hidden",!flipped)}
-function renderQ(c){$("basic").classList.add("hidden");$("mcq").classList.remove("hidden");locked=false;$("nextq").classList.add("hidden");$("fb").className="feedback";$("fb").innerHTML="";$("q").innerHTML=hi(c.front,c.targetText);$("opts").innerHTML=["A","B","C","D"].map(k=>"<button class='option' data-k='"+k+"'><b>"+k+".</b> "+esc(c[k])+"</button>").join("");document.querySelectorAll(".option").forEach(b=>b.onclick=()=>answer(b.dataset.k,b))}
-function answer(k,b){if(locked)return;locked=true;let c=card();document.querySelectorAll(".option").forEach(o=>{if(o.dataset.k===c.key)o.classList.add("correct")});let ok=k===c.key;if(!ok)b.classList.add("wrong");$("fb").className="feedback show "+(ok?"good":"bad");$("fb").innerHTML=(ok?"✓ Chính xác":"✗ Chưa đúng")+explain(c);$("nextq").classList.remove("hidden")}
-function explain(c){let h="<div class='explain'><b>Đáp án:</b> "+c.key+". "+esc(c[c.key]||"");if(c.explanation)h+="<br><br><b>Giải thích:</b> "+esc(c.explanation);if(c.Ameaning||c.Bmeaning||c.Cmeaning||c.Dmeaning)h+="<div class='meanings'>"+["A","B","C","D"].map(k=>"<div><b>"+k+". "+esc(c[k])+"</b>: "+esc(c[k+"meaning"]||"—")+"</div>").join("")+"</div>";if(c.grammarSignal)h+="<br><b>Dấu hiệu nhận biết:</b> "+esc(c.grammarSignal);if(c.grammarStructure)h+="<br><b>Cấu trúc:</b> "+esc(c.grammarStructure);return h+"</div>"}
-function step(n){i=(i+n+order.length)%order.length;render()}
-$("flip").onclick=flip;$("flash").onclick=flip;$("next").onclick=()=>step(1);$("prev").onclick=()=>step(-1);$("nextq").onclick=()=>step(1);$("mode").onchange=e=>{mode=e.target.value;build();render()};$("shuffle").onclick=()=>{mode="random";$("mode").value="random";build();render()};renderLib();
+var SETS=[
+{id:"g10-u1-task1-vocab-set1",title:"GRADE 10 - UNIT 1 - TASK 1 - VOCABULARY SET 1",cards:[
+{front:"household chores",backTitle:"noun phrase",backContent:"công việc nhà",example:"Children can help with household chores."},
+{front:"homemaker",backTitle:"noun",backContent:"người nội trợ",extra1:"homemaking (n) — công việc nội trợ",example:"Her father is a homemaker."},
+{front:"breadwinner",backTitle:"noun",backContent:"người trụ cột gia đình",example:"Her mother is the main breadwinner in the family."},
+{front:"equally",backTitle:"adverb",backContent:"một cách công bằng; ngang nhau",extra1:"equal (adj) — bằng nhau; bình đẳng",extra2:"equality (n) — sự bình đẳng; equalize (v) — làm cho bằng nhau",example:"The parents share the housework equally."},
+{front:"equalize",backTitle:"verb",backContent:"làm cho bằng nhau",extra1:"equal (adj) — bằng nhau; bình đẳng",extra2:"equality (n) — sự bình đẳng; equally (adv) — một cách công bằng",example:"The new rule aims to equalize opportunities for all students."},
+{front:"equality",backTitle:"noun",backContent:"sự bình đẳng",extra1:"equal (adj) — bình đẳng; bằng nhau",extra2:"equally (adv) — một cách công bằng; equalize (v) — làm cho bằng nhau",example:"Gender equality is important in modern families."},
+{front:"grocery",backTitle:"noun",backContent:"cửa hàng tạp hóa",extra1:"groceries (plural noun) — hàng tạp hóa; thực phẩm",example:"There is a grocery near my house."},
+{front:"groceries",backTitle:"plural noun",backContent:"hàng tạp hóa; thực phẩm",extra1:"grocery (n) — cửa hàng tạp hóa",example:"We buy groceries every weekend."},
+{front:"heavy lifting",backTitle:"noun phrase",backContent:"công việc nặng nhọc",example:"My brother usually does the heavy lifting."},
+{front:"rubbish",backTitle:"noun",backContent:"rác thải",example:"Please put the rubbish in the bin."},
+{front:"litter",backTitle:"noun / verb",backContent:"rác nhỏ bị vứt bừa bãi; vứt rác bừa bãi",extra1:"littered (adj) — đầy rác, bị vứt rác",example:"Do not litter in public places."},
+{front:"waste",backTitle:"noun / verb",backContent:"chất thải; lãng phí",extra1:"wasteful (adj) — lãng phí",extra2:"wastefully (adv) — một cách lãng phí",example:"We should reduce food waste."},
+{front:"responsibility",backTitle:"noun",backContent:"trách nhiệm",extra1:"responsible (adj) — có trách nhiệm",extra2:"responsibly (adv) — một cách có trách nhiệm",example:"Doing housework teaches children responsibility."},
+{front:"responsible",backTitle:"adjective",backContent:"có trách nhiệm",extra1:"responsibility (n) — trách nhiệm",extra2:"responsibly (adv) — một cách có trách nhiệm",example:"Everyone should be responsible for their own tasks."},
+{front:"gratitude",backTitle:"noun",backContent:"lòng biết ơn",extra1:"grateful (adj) — biết ơn",extra2:"gratefully (adv) — một cách biết ơn",example:"We should show gratitude to people who help us."}
+]},
+{id:"g10-u1-health-grammar-tenses-01",title:"GRADE 10 - HEALTH & LIFESTYLE - GRAMMAR TENSES 01",cards:[
+{front:"Yesterday, I _______ salad for lunch as it was said to be good for my health.",A:"have eaten",B:"ate",C:"eat",D:"was eating",key:"B",explanation:"Yesterday shows a finished time in the past, so use the Past Simple.",grammarSignal:"yesterday",grammarStructure:"S + V2/V-ed"},
+{front:"I _______ to bed early last night to get enough sleep for a healthy lifestyle.",A:"go",B:"have gone",C:"went",D:"was going",key:"C",explanation:"Last night is a finished past time, so use the Past Simple.",grammarSignal:"last night",grammarStructure:"S + V2/V-ed"},
+{front:"Last weekend, I _______ hiking with friends. It _______ such a nice outdoor activity.",A:"go/is",B:"have gone/has been",C:"went/was",D:"went/has been",key:"C",explanation:"Last weekend refers to a completed past time. Both actions are completed in the past, so use the Past Simple for both verbs.",grammarSignal:"last weekend",grammarStructure:"S + V2/V-ed; be → was/were"},
+{front:"Up to now they _______ to get enough sleep every night to promote good mental and physical health.",A:"tried",B:"am trying",C:"try",D:"have tried",key:"D",explanation:"Up to now connects the past with the present, so use the Present Perfect.",grammarSignal:"up to now",grammarStructure:"S + have/has + V3"},
+{front:"Minh _______ this supplement before. It is bitter to him.",A:"never takes",B:"has never taken",C:"never took",D:"is never taking",key:"B",explanation:"Before, with no finished past time stated, refers to life experience up to now. Use the Present Perfect.",grammarSignal:"before; never",grammarStructure:"S + have/has + never + V3"}
+]}
+];
+
+var currentSet=null,order=[],index=0,mode="random",locked=false;
+function el(id){return document.getElementById(id);}
+function escapeHtml(v){return String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");}
+function isMCQ(c){return !!(c&&c.A&&c.B&&c.C&&c.D&&c.key);}
+function buildOrder(){order=[];for(var i=0;i<currentSet.cards.length;i++)order.push(i);if(mode==="random"){for(var j=order.length-1;j>0;j--){var k=Math.floor(Math.random()*(j+1));var t=order[j];order[j]=order[k];order[k]=t;}}index=0;}
+function showLibrary(){currentSet=null;el("practice").classList.add("hidden");el("library").classList.remove("hidden");history.replaceState(null,"",location.pathname);var h="<h1>Học phần</h1><p class='muted'>Chọn một bộ để luyện tập.</p>";for(var i=0;i<SETS.length;i++){h+="<div class='set'><div><b>"+escapeHtml(SETS[i].title)+"</b><div class='small'>"+SETS[i].cards.length+" thẻ/câu</div></div><button class='primary' data-id='"+escapeHtml(SETS[i].id)+"'>Mở</button></div>";}el("library").innerHTML=h;var bs=el("library").querySelectorAll("button[data-id]");for(var j=0;j<bs.length;j++){bs[j].onclick=function(){openSet(this.getAttribute("data-id"));};}}
+function openSet(id){for(var i=0;i<SETS.length;i++){if(SETS[i].id===id){currentSet=SETS[i];break;}}if(!currentSet){showLibrary();return;}history.replaceState(null,"","?set="+encodeURIComponent(id));el("library").classList.add("hidden");el("practice").classList.remove("hidden");buildOrder();render();}
+function currentCard(){return currentSet.cards[order[index]];}
+function render(){var c=currentCard();el("title").textContent=currentSet.title;el("count").textContent=(index+1)+" / "+currentSet.cards.length;el("bar").style.width=((index+1)/currentSet.cards.length*100)+"%";el("shuffle").classList.toggle("hidden",mode!=="random");if(isMCQ(c))renderMCQ(c);else renderFlash(c);}
+function setText(id,v){el(id).textContent=v||"";el(id).classList.toggle("hidden",!v);}
+function renderFlash(c){el("mcqArea").classList.add("hidden");el("flashArea").classList.remove("hidden");el("front").textContent=c.front;el("front").classList.remove("hidden");el("back").classList.add("hidden");setText("pos",c.backTitle);setText("meaning",c.backContent);setText("extra1",c.extra1);setText("extra2",c.extra2);setText("example",c.example);}
+function flip(){el("front").classList.toggle("hidden");el("back").classList.toggle("hidden");}
+function renderMCQ(c){locked=false;el("flashArea").classList.add("hidden");el("mcqArea").classList.remove("hidden");el("question").textContent=c.front;el("feedback").className="hidden";el("feedback").innerHTML="";el("nextQ").classList.add("hidden");var h="";var ks=["A","B","C","D"];for(var i=0;i<ks.length;i++){var k=ks[i];h+="<button class='option' data-k='"+k+"'><b>"+k+".</b> "+escapeHtml(c[k])+"</button>";}el("options").innerHTML=h;var os=el("options").querySelectorAll(".option");for(var j=0;j<os.length;j++){os[j].onclick=function(){answer(this.getAttribute("data-k"),this);};}}
+function answer(k,btn){if(locked)return;locked=true;var c=currentCard();var os=el("options").querySelectorAll(".option");for(var i=0;i<os.length;i++){if(os[i].getAttribute("data-k")===c.key)os[i].classList.add("correct");}var ok=k===c.key;if(!ok)btn.classList.add("wrong");var f=el("feedback");f.className="feedback "+(ok?"good":"bad");var text=(ok?"✓ Chính xác":"✗ Chưa đúng")+"<br><b>Đáp án:</b> "+c.key+". "+escapeHtml(c[c.key]);if(c.explanation)text+="<br><br><b>Giải thích:</b> "+escapeHtml(c.explanation);if(c.grammarSignal)text+="<br><b>Dấu hiệu:</b> "+escapeHtml(c.grammarSignal);if(c.grammarStructure)text+="<br><b>Cấu trúc:</b> "+escapeHtml(c.grammarStructure);f.innerHTML=text;el("nextQ").classList.remove("hidden");}
+function step(n){index=(index+n+order.length)%order.length;render();}
+el("flip").onclick=flip;el("flash").onclick=flip;el("next").onclick=function(){step(1);};el("prev").onclick=function(){step(-1);};el("nextQ").onclick=function(){step(1);};el("home").onclick=showLibrary;el("mode").onchange=function(){mode=this.value;buildOrder();render();};el("shuffle").onclick=function(){mode="random";el("mode").value="random";buildOrder();render();};
+var requested=new URLSearchParams(location.search).get("set");if(requested)openSet(requested);else showLibrary();
 </script>
-</body></html>
+</body>
+</html>
