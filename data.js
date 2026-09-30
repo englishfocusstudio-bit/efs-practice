@@ -17,7 +17,7 @@ cards:[
 {front:"responsibility",backTitle:"noun",backContent:"trách nhiệm",extra1:"responsible (adj) — có trách nhiệm",extra2:"responsibly (adv) — một cách có trách nhiệm",example:"Doing housework teaches children responsibility."},
 {front:"responsible",backTitle:"adjective",backContent:"có trách nhiệm",extra1:"responsibility (n) — trách nhiệm",extra2:"responsibly (adv) — một cách có trách nhiệm",example:"Everyone should be responsible for their own tasks."},
 {front:"gratitude",backTitle:"noun",backContent:"lòng biết ơn",extra1:"grateful (adj) — biết ơn",extra2:"gratefully (adv) — một cách biết ơn",example:"We should show gratitude to people who help us."}
-]}},{
+]},{
 id:"g10-u1-health-grammar-tenses-01",
 title:"GRADE 10 - HEALTH & LIFESTYLE - GRAMMAR TENSES 01",
 cards:[
