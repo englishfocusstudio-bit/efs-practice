@@ -1,0 +1,124 @@
+{
+  "id": "g10-u10-task1-vocab-set1",
+  "title": "GRADE 10 - UNIT 10 - TASK 1 - VOCABULARY SET 1",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "field trip",
+      "speakText": "field trip",
+      "backTitle": "noun phrase",
+      "backContent": "chuyến đi thực tế",
+      "example": "Our class went on a field trip to a national park."
+    },
+    {
+      "front": "tourist attraction",
+      "speakText": "tourist attraction",
+      "backTitle": "noun phrase",
+      "backContent": "địa điểm thu hút khách du lịch",
+      "example": "The cave is a popular tourist attraction."
+    },
+    {
+      "front": "stalactite",
+      "speakText": "stalactite",
+      "backTitle": "noun",
+      "backContent": "nhũ đá",
+      "example": "We saw beautiful stalactites inside the cave."
+    },
+    {
+      "front": "eco-friendly",
+      "speakText": "eco-friendly",
+      "backTitle": "adjective",
+      "backContent": "thân thiện với môi trường",
+      "example": "We should choose eco-friendly products."
+    },
+    {
+      "front": "explore",
+      "speakText": "explore",
+      "backTitle": "verb",
+      "backContent": "thám hiểm, khám phá",
+      "extra1": "explorer (n) — nhà thám hiểm",
+      "extra2": "exploration (n) — sự thám hiểm; exploratory (adj) — mang tính thám hiểm",
+      "example": "They want to explore the cave safely."
+    },
+    {
+      "front": "explorer",
+      "speakText": "explorer",
+      "backTitle": "noun",
+      "backContent": "nhà thám hiểm",
+      "extra1": "explore (v) — thám hiểm, khám phá",
+      "extra2": "exploration (n) — sự thám hiểm; exploratory (adj) — mang tính thám hiểm",
+      "example": "The explorer recorded what he saw in the cave."
+    },
+    {
+      "front": "exploration",
+      "speakText": "exploration",
+      "backTitle": "noun",
+      "backContent": "sự thám hiểm",
+      "extra1": "explore (v) — thám hiểm, khám phá",
+      "extra2": "explorer (n) — nhà thám hiểm; exploratory (adj) — mang tính thám hiểm",
+      "example": "Cave exploration must be done carefully."
+    },
+    {
+      "front": "exploratory",
+      "speakText": "exploratory",
+      "backTitle": "adjective",
+      "backContent": "mang tính thám hiểm",
+      "extra1": "explore (v) — thám hiểm, khám phá",
+      "extra2": "explorer (n) — nhà thám hiểm; exploration (n) — sự thám hiểm",
+      "example": "The team made an exploratory trip into the area."
+    },
+    {
+      "front": "damage",
+      "speakText": "damage",
+      "backTitle": "noun / verb",
+      "backContent": "sự hư hại; gây hư hại",
+      "example": "Tourists should not damage the natural environment."
+    },
+    {
+      "front": "litter",
+      "speakText": "litter",
+      "backTitle": "noun / verb",
+      "backContent": "rác vứt bừa bãi",
+      "example": "Visitors must not leave litter in the park."
+    },
+    {
+      "front": "packaging",
+      "speakText": "packaging",
+      "backTitle": "noun",
+      "backContent": "bao bì, việc đóng gói",
+      "extra1": "package (n/v) — gói hàng; đóng gói",
+      "example": "Too much packaging can create more waste."
+    },
+    {
+      "front": "impact",
+      "speakText": "impact",
+      "backTitle": "noun / verb",
+      "backContent": "tác động, ảnh hưởng",
+      "example": "Tourism can have an impact on the environment."
+    },
+    {
+      "front": "craft",
+      "speakText": "craft",
+      "backTitle": "noun",
+      "backContent": "nghề thủ công",
+      "extra1": "craftsman (n) — thợ thủ công",
+      "example": "Traditional craft is an important part of local culture."
+    },
+    {
+      "front": "craftsman",
+      "speakText": "craftsman",
+      "backTitle": "noun",
+      "backContent": "thợ thủ công",
+      "extra1": "craft (n) — nghề thủ công",
+      "example": "The craftsman makes beautiful items by hand."
+    },
+    {
+      "front": "tourism",
+      "speakText": "tourism",
+      "backTitle": "noun",
+      "backContent": "du lịch",
+      "extra1": "tourist (n) — khách du lịch",
+      "example": "Sustainable tourism can protect local communities and nature."
+    }
+  ]
+}
