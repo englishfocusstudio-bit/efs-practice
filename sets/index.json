@@ -28,5 +28,15 @@
     "count": 3,
     "file": "sets/g10-u1-healthy-lifestyle-mixed-01.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u10-task1-vocab-set1",
+    "title": "GRADE 10 - UNIT 10 - TASK 1 - VOCABULARY SET 1",
+    "grade": "10",
+    "unit": "10",
+    "type": "vocabulary",
+    "count": 15,
+    "file": "sets/g10-u10-task1-vocab-set1.json",
+    "status": "published"
   }
 ]
