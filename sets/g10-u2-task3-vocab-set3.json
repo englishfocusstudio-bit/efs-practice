@@ -1,0 +1,138 @@
+{
+  "id": "g10-u2-task3-vocab-set3",
+  "title": "GRADE 10 - UNIT 2 - TASK 3 - VOCABULARY SET 3",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "reusable",
+      "speakText": "reusable",
+      "backTitle": "adjective",
+      "backContent": "có thể tái sử dụng",
+      "extra1": "reuse (v) — tái sử dụng",
+      "extra2": "reusable bag / bottle / container",
+      "example": "Using reusable bags can reduce plastic waste."
+    },
+    {
+      "front": "reuse",
+      "speakText": "reuse",
+      "backTitle": "verb",
+      "backContent": "tái sử dụng",
+      "extra1": "reusable (adj) — có thể tái sử dụng",
+      "extra2": "reuse + bottles / bags / containers",
+      "example": "We can reuse glass jars instead of throwing them away."
+    },
+    {
+      "front": "awareness",
+      "speakText": "awareness",
+      "backTitle": "noun",
+      "backContent": "nhận thức; ý thức",
+      "extra1": "aware (adj) — nhận thức được; ý thức được",
+      "extra2": "raise awareness of/about — nâng cao nhận thức về",
+      "example": "Schools can raise awareness of environmental problems."
+    },
+    {
+      "front": "environment",
+      "speakText": "environment",
+      "backTitle": "noun",
+      "backContent": "môi trường",
+      "extra1": "environmental (adj) — thuộc môi trường",
+      "extra2": "protect the environment — bảo vệ môi trường",
+      "example": "Everyone has a role in protecting the environment."
+    },
+    {
+      "front": "environmental",
+      "speakText": "environmental",
+      "backTitle": "adjective",
+      "backContent": "thuộc môi trường",
+      "extra1": "environment (n) — môi trường",
+      "extra2": "environmental problem / protection / impact",
+      "example": "Plastic pollution is a serious environmental problem."
+    },
+    {
+      "front": "pollution",
+      "speakText": "pollution",
+      "backTitle": "noun",
+      "backContent": "sự ô nhiễm",
+      "extra1": "pollute (v) — làm ô nhiễm",
+      "extra2": "air / water / noise pollution",
+      "example": "Reducing traffic can help lower air pollution."
+    },
+    {
+      "front": "pollute",
+      "speakText": "pollute",
+      "backTitle": "verb",
+      "backContent": "làm ô nhiễm",
+      "extra1": "pollution (n) — sự ô nhiễm",
+      "extra2": "pollute the air / water / soil",
+      "example": "Factories can pollute rivers if waste is not treated properly."
+    },
+    {
+      "front": "plastic waste",
+      "speakText": "plastic waste",
+      "backTitle": "noun phrase",
+      "backContent": "rác thải nhựa",
+      "extra1": "reduce plastic waste — giảm rác thải nhựa",
+      "example": "Reusable products can help reduce plastic waste."
+    },
+    {
+      "front": "greenhouse gas",
+      "speakText": "greenhouse gas",
+      "backTitle": "noun phrase",
+      "backContent": "khí nhà kính",
+      "extra1": "greenhouse gas emissions — lượng khí thải nhà kính",
+      "example": "Burning fossil fuels produces greenhouse gases."
+    },
+    {
+      "front": "climate change",
+      "speakText": "climate change",
+      "backTitle": "noun phrase",
+      "backContent": "biến đổi khí hậu",
+      "extra1": "fight / address climate change — ứng phó với biến đổi khí hậu",
+      "example": "Climate change affects people and ecosystems around the world."
+    },
+    {
+      "front": "lifestyle",
+      "speakText": "lifestyle",
+      "backTitle": "noun",
+      "backContent": "lối sống",
+      "extra1": "healthy / green / sustainable lifestyle",
+      "example": "A greener lifestyle can reduce our impact on the environment."
+    },
+    {
+      "front": "impact",
+      "speakText": "impact",
+      "backTitle": "noun / verb",
+      "backContent": "tác động; ảnh hưởng",
+      "extra1": "have an impact on — có tác động đến",
+      "extra2": "environmental impact — tác động môi trường",
+      "example": "Daily choices can have an impact on the environment."
+    },
+    {
+      "front": "source",
+      "speakText": "source",
+      "backTitle": "noun",
+      "backContent": "nguồn",
+      "extra1": "source of + noun — nguồn của...",
+      "extra2": "renewable energy source — nguồn năng lượng tái tạo",
+      "example": "Solar energy is a clean source of power."
+    },
+    {
+      "front": "attention",
+      "speakText": "attention",
+      "backTitle": "noun",
+      "backContent": "sự chú ý; sự quan tâm",
+      "extra1": "pay attention to — chú ý đến",
+      "extra2": "draw attention to — thu hút sự chú ý đến",
+      "example": "We should pay attention to how much waste we produce."
+    },
+    {
+      "front": "protection",
+      "speakText": "protection",
+      "backTitle": "noun",
+      "backContent": "sự bảo vệ",
+      "extra1": "protect (v) — bảo vệ",
+      "extra2": "environmental protection — bảo vệ môi trường",
+      "example": "Environmental protection requires action from everyone."
+    }
+  ]
+}
