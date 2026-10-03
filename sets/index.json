@@ -78,5 +78,15 @@
     "count": 15,
     "file": "sets/g10-u1-task5-collocations-phrases-set2.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u1-task6-word-formation",
+    "title": "GRADE 10 - UNIT 1 - TASK 6 - WORD FORMATION",
+    "grade": "10",
+    "unit": "1",
+    "type": "word-formation",
+    "count": 10,
+    "file": "sets/g10-u1-task6-word-formation.json",
+    "status": "published"
   }
 ]
