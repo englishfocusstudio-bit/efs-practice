@@ -1,0 +1,128 @@
+{
+  "id": "g10-u1-task4-collocations-phrases-set1",
+  "title": "GRADE 10 - UNIT 1 - TASK 4 - COLLOCATIONS & PHRASES SET 1",
+  "type": "phrase",
+  "cards": [
+    {
+      "front": "do the cooking",
+      "speakText": "do the cooking",
+      "backTitle": "collocation",
+      "backContent": "nấu ăn",
+      "extra1": "do + the cooking",
+      "example": "My father often does the cooking at weekends."
+    },
+    {
+      "front": "help somebody with something",
+      "speakText": "help somebody with something",
+      "backTitle": "verb pattern",
+      "backContent": "giúp ai làm việc gì",
+      "extra1": "help + somebody + with + something",
+      "example": "I help my mother with the housework every day."
+    },
+    {
+      "front": "divide something into",
+      "speakText": "divide something into",
+      "backTitle": "verb pattern",
+      "backContent": "chia cái gì thành",
+      "extra1": "divide + something + into + parts/groups",
+      "example": "We divide the household chores into three groups."
+    },
+    {
+      "front": "do the chores",
+      "speakText": "do the chores",
+      "backTitle": "collocation",
+      "backContent": "làm việc nhà",
+      "extra1": "do + the chores",
+      "example": "The children do the chores after school."
+    },
+    {
+      "front": "earn money",
+      "speakText": "earn money",
+      "backTitle": "collocation",
+      "backContent": "kiếm tiền",
+      "extra1": "earn + money",
+      "example": "Many parents work hard to earn money for the family."
+    },
+    {
+      "front": "shop for",
+      "speakText": "shop for",
+      "backTitle": "verb phrase",
+      "backContent": "mua sắm",
+      "extra1": "shop for + something",
+      "example": "We usually shop for groceries on Sunday."
+    },
+    {
+      "front": "do the laundry",
+      "speakText": "do the laundry",
+      "backTitle": "collocation",
+      "backContent": "giặt quần áo",
+      "extra1": "do + the laundry",
+      "example": "My sister does the laundry twice a week."
+    },
+    {
+      "front": "do the washing-up",
+      "speakText": "do the washing-up",
+      "backTitle": "collocation",
+      "backContent": "rửa bát",
+      "extra1": "British English: do the washing-up",
+      "extra2": "American English: do the dishes",
+      "example": "I usually do the washing-up after dinner."
+    },
+    {
+      "front": "put out",
+      "speakText": "put out",
+      "backTitle": "phrasal verb",
+      "backContent": "đổ rác; dập lửa",
+      "extra1": "put out the rubbish / put out a fire",
+      "example": "Please put out the rubbish before you leave."
+    },
+    {
+      "front": "support the family",
+      "speakText": "support the family",
+      "backTitle": "verb phrase",
+      "backContent": "nuôi sống; hỗ trợ gia đình",
+      "extra1": "support + the family",
+      "example": "Both parents work to support the family."
+    },
+    {
+      "front": "pick somebody up",
+      "speakText": "pick somebody up",
+      "backTitle": "phrasal verb",
+      "backContent": "đón ai",
+      "extra1": "pick + somebody + up",
+      "example": "My dad picks me up from school every afternoon."
+    },
+    {
+      "front": "take responsibility for",
+      "speakText": "take responsibility for",
+      "backTitle": "collocation",
+      "backContent": "chịu trách nhiệm về",
+      "extra1": "take responsibility for + noun / V-ing",
+      "example": "Everyone should take responsibility for keeping the house clean."
+    },
+    {
+      "front": "take care of",
+      "speakText": "take care of",
+      "backTitle": "verb phrase",
+      "backContent": "chăm sóc",
+      "extra1": "take care of + somebody / something",
+      "example": "Older children can help take care of younger family members."
+    },
+    {
+      "front": "share something with somebody",
+      "speakText": "share something with somebody",
+      "backTitle": "verb pattern",
+      "backContent": "chia sẻ cái gì với ai",
+      "extra1": "share + something + with + somebody",
+      "example": "Family members should share household tasks with one another."
+    },
+    {
+      "front": "make a list of",
+      "speakText": "make a list of",
+      "backTitle": "collocation",
+      "backContent": "lập danh sách",
+      "extra1": "make a list of + plural noun",
+      "example": "We made a list of the chores for the week."
+    }
+  ]
+}
