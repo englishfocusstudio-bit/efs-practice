@@ -1,0 +1,137 @@
+{
+  "id": "g10-u3-task1-vocab-set1",
+  "title": "GRADE 10 - UNIT 3 - TASK 1 - VOCABULARY SET 1",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "popular",
+      "speakText": "popular",
+      "backTitle": "adjective",
+      "backContent": "phổ biến; được nhiều người yêu thích",
+      "extra1": "popularity (n) — sự phổ biến",
+      "extra2": "popular with/among + people — được ưa chuộng bởi",
+      "example": "The singer is very popular among teenagers."
+    },
+    {
+      "front": "talented",
+      "speakText": "talented",
+      "backTitle": "adjective",
+      "backContent": "có tài năng",
+      "extra1": "talent (n) — tài năng",
+      "extra2": "talented at/in + noun/V-ing",
+      "example": "She is a talented young musician."
+    },
+    {
+      "front": "instrument",
+      "speakText": "instrument",
+      "backTitle": "noun",
+      "backContent": "nhạc cụ",
+      "extra1": "musical instrument — nhạc cụ",
+      "example": "He can play several musical instruments."
+    },
+    {
+      "front": "award",
+      "speakText": "award",
+      "backTitle": "noun / verb",
+      "backContent": "giải thưởng; trao thưởng",
+      "extra1": "win/receive an award — giành/nhận giải thưởng",
+      "extra2": "award somebody something — trao cho ai cái gì",
+      "example": "The band won an award for its new song."
+    },
+    {
+      "front": "trumpet",
+      "speakText": "trumpet",
+      "backTitle": "noun",
+      "backContent": "kèn trumpet",
+      "extra1": "play the trumpet — chơi kèn trumpet",
+      "example": "He learned to play the trumpet at school."
+    },
+    {
+      "front": "teenager",
+      "speakText": "teenager",
+      "backTitle": "noun",
+      "backContent": "thanh thiếu niên",
+      "extra1": "teenage (adj) — thuộc tuổi thiếu niên",
+      "example": "Many teenagers enjoy listening to pop music."
+    },
+    {
+      "front": "upload",
+      "speakText": "upload",
+      "backTitle": "verb / noun",
+      "backContent": "đăng tải lên mạng; lần/tệp tải lên",
+      "extra1": "upload a video/photo/file — đăng video/ảnh/tệp lên mạng",
+      "example": "She uploaded her first music video last week."
+    },
+    {
+      "front": "view",
+      "speakText": "view",
+      "backTitle": "noun / verb",
+      "backContent": "lượt xem; xem",
+      "extra1": "get/million views — có/đạt hàng triệu lượt xem",
+      "extra2": "viewer (n) — người xem",
+      "example": "The video received thousands of views in one day."
+    },
+    {
+      "front": "perform",
+      "speakText": "perform",
+      "backTitle": "verb",
+      "backContent": "biểu diễn",
+      "extra1": "performance (n) — màn/cuộc biểu diễn",
+      "extra2": "performer (n) — người biểu diễn",
+      "example": "The students will perform on stage tonight."
+    },
+    {
+      "front": "performance",
+      "speakText": "performance",
+      "backTitle": "noun",
+      "backContent": "màn/cuộc biểu diễn",
+      "extra1": "perform (v) — biểu diễn",
+      "extra2": "performer (n) — người biểu diễn",
+      "example": "The audience enjoyed the band's live performance."
+    },
+    {
+      "front": "performer",
+      "speakText": "performer",
+      "backTitle": "noun",
+      "backContent": "người biểu diễn",
+      "extra1": "perform (v) — biểu diễn",
+      "extra2": "performance (n) — màn/cuộc biểu diễn",
+      "example": "Each performer had five minutes on stage."
+    },
+    {
+      "front": "judge",
+      "speakText": "judge",
+      "backTitle": "noun / verb",
+      "backContent": "giám khảo; đánh giá",
+      "extra1": "judge a competition/performance — chấm một cuộc thi/phần biểu diễn",
+      "extra2": "judgement (n) — sự đánh giá; phán xét",
+      "example": "Three judges scored each performance."
+    },
+    {
+      "front": "judgement",
+      "speakText": "judgement",
+      "backTitle": "noun",
+      "backContent": "sự đánh giá; phán xét",
+      "extra1": "judge (n/v) — giám khảo; đánh giá",
+      "extra2": "make a judgement — đưa ra đánh giá",
+      "example": "The judges made their judgement after the final performance."
+    },
+    {
+      "front": "audience",
+      "speakText": "audience",
+      "backTitle": "noun",
+      "backContent": "khán giả; thính giả",
+      "extra1": "live audience — khán giả trực tiếp",
+      "example": "The audience clapped loudly at the end of the song."
+    },
+    {
+      "front": "viewer",
+      "speakText": "viewer",
+      "backTitle": "noun",
+      "backContent": "người xem qua truyền hình hoặc màn hình",
+      "extra1": "view (n/v) — lượt xem; xem",
+      "extra2": "online/TV viewer — người xem trực tuyến/truyền hình",
+      "example": "Millions of viewers watched the show online."
+    }
+  ]
+}
