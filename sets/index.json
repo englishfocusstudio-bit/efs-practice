@@ -168,5 +168,15 @@
     "count": 15,
     "file": "sets/g10-u3-task2-vocab-set2.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u2-practice-15min-test-01",
+    "title": "GRADE 10 - UNIT 2 - PRACTICE FOR 15' TEST",
+    "grade": "10",
+    "unit": "2",
+    "type": "mixed",
+    "count": 15,
+    "file": "sets/g10-u2-practice-15min-test-01.json",
+    "status": "published"
   }
 ]
