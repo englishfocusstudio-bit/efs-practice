@@ -188,5 +188,15 @@
     "count": 10,
     "file": "sets/g10-u2-practice-15min-ex2-passive.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u2-practice-15min-ex3-mixed",
+    "title": "GRADE 10 - UNIT 2 - PRACTICE FOR 15' TEST - EXERCISE 3",
+    "grade": "10",
+    "unit": "2",
+    "type": "mixed",
+    "count": 13,
+    "file": "sets/g10-u2-practice-15min-ex3-mixed.json",
+    "status": "published"
   }
 ]
