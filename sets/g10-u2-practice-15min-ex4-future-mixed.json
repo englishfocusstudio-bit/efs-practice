@@ -1,0 +1,142 @@
+{
+  "id": "g10-u2-practice-15min-ex4-future-mixed",
+  "title": "GRADE 10 - UNIT 2 - PRACTICE FOR 15' TEST - EXERCISE 4",
+  "type": "mixed",
+  "cards": [
+    {
+      "front": "1. This shirt looks beautiful. I _____ it.",
+      "A": "am buying",
+      "B": "buy",
+      "C": "will buy",
+      "D": "buys",
+      "key": "C",
+      "explanation": "✓ C. will buy.\n\nThis is a decision made at the moment of speaking after seeing the shirt. We commonly use “will” for an instant decision.\n\nA. am buying = present continuous, usually for an arranged future\nB. buy = present simple\nC. will buy = will + V, suitable for an instant decision\nD. buys = present simple, third-person singular"
+    },
+    {
+      "front": "2. I have made a reservation. We _____ dinner at the Hoa Sua restaurant nearby.",
+      "A": "are going to have",
+      "B": "will have",
+      "C": "have",
+      "D": "is going to have",
+      "key": "A",
+      "explanation": "✓ A. are going to have.\n\n“I have made a reservation” shows a prior plan/intention, so “be going to” is appropriate.\n\nA. are going to have = planned future, subject “we”\nB. will have = possible future, but less suitable for a pre-arranged plan here\nC. have = present simple\nD. is going to have = wrong subject–verb agreement with “we”"
+    },
+    {
+      "front": "3. The Sun is shining. It _____ a lovely day.",
+      "A": "are",
+      "B": "is",
+      "C": "is being",
+      "D": "is going to be",
+      "key": "D",
+      "explanation": "✓ D. is going to be.\n\nThere is present evidence: “The Sun is shining.” We use “be going to” for a prediction based on what we can see now.\n\nA. are = wrong with subject “It”\nB. is = describes present state, not this future prediction\nC. is being = present continuous form, not suitable here\nD. is going to be = evidence-based prediction"
+    },
+    {
+      "front": "4. Stop making so much noise or the neighbour _____ angry.",
+      "A": "get",
+      "B": "will get",
+      "C": "is going to get",
+      "D": "is getting",
+      "key": "B",
+      "explanation": "✓ B. will get.\n\nThis is a warning about a likely future consequence: “Stop ... or ... will ...”.\n\nA. get = bare verb, not correct here\nB. will get = future consequence\nC. is going to get = possible in other contexts, but “or + will” is the natural warning pattern here\nD. is getting = action/state happening now"
+    },
+    {
+      "front": "5. She doesn't like Kate, so she _____ her to her house.",
+      "A": "is going to invite",
+      "B": "isn’t going to invite",
+      "C": "will invite",
+      "D": "won't invite",
+      "key": "B",
+      "explanation": "✓ B. isn’t going to invite.\n\nHer dislike of Kate suggests an intention/plan not to invite her, so “be going to” fits.\n\nA. is going to invite = opposite meaning\nB. isn’t going to invite = planned/intended negative future\nC. will invite = opposite meaning\nD. won't invite = possible as a prediction/refusal, but the sentence points to intention"
+    },
+    {
+      "front": "6. I'm sure John _____ very happy to meet you.",
+      "A": "is",
+      "B": "are",
+      "C": "is going to be",
+      "D": "will be",
+      "key": "D",
+      "explanation": "✓ D. will be.\n\n“I’m sure” is a common signal for a future prediction/opinion with “will”.\n\nA. is = present\nB. are = wrong agreement with “John”\nC. is going to be = usually prediction based on present evidence\nD. will be = prediction/opinion"
+    },
+    {
+      "front": "7. She _____ the phone no matter who calls her.",
+      "A": "will not answer",
+      "B": "isn't going to answer",
+      "C": "answers",
+      "D": "is answering",
+      "key": "A",
+      "explanation": "✓ A. will not answer.\n\n“No matter who calls her” expresses a firm future refusal/decision. “will not” is suitable.\n\nA. will not answer = future refusal/decision\nB. isn’t going to answer = planned intention; possible in some contexts but less direct here\nC. answers = present simple\nD. is answering = action happening now"
+    },
+    {
+      "front": "8. You _____ able to see much better with these new glasses.",
+      "A": "are",
+      "B": "is",
+      "C": "will be",
+      "D": "are going to be",
+      "key": "C",
+      "explanation": "✓ C. will be.\n\nThis is a prediction about the result of using the new glasses.\n\nA. are = present, changes the intended meaning\nB. is = wrong agreement with “you”\nC. will be = future prediction/result\nD. are going to be = possible in some contexts, but “will be able to” is the standard form here"
+    },
+    {
+      "front": "9. I don't think he _____ that car because it's old and unreliable.",
+      "A": "is getting",
+      "B": "will get",
+      "C": "is going to get",
+      "D": "gets",
+      "key": "B",
+      "explanation": "✓ B. will get.\n\n“I don’t think ...” commonly introduces a future prediction with “will”.\n\nA. is getting = arranged/present continuous future\nB. will get = prediction/opinion\nC. is going to get = prior intention/plan or evidence-based future\nD. gets = present simple"
+    },
+    {
+      "front": "10. Look at the child's face. He _____.",
+      "A": "is going to cry",
+      "B": "cries",
+      "C": "will cry",
+      "D": "is crying",
+      "key": "A",
+      "explanation": "✓ A. is going to cry.\n\n“Look at the child’s face” provides present evidence for a prediction. Use “be going to”.\n\nA. is going to cry = evidence-based prediction\nB. cries = present simple / habit\nC. will cry = prediction without the same emphasis on present evidence\nD. is crying = means the crying is already happening"
+    },
+    {
+      "front": "11. She aims at _____ the Environment Club to clean up our environment with other people.",
+      "A": "join",
+      "B": "to join",
+      "C": "joined",
+      "D": "joining",
+      "key": "D",
+      "explanation": "✓ D. joining.\n\nStructure: aim at + noun / V-ing.\n→ “aims at joining”.\n\nA. join = bare verb\nB. to join = infinitive; not used after the preposition “at” here\nC. joined = past/V3\nD. joining = V-ing after “at”"
+    },
+    {
+      "front": "12. The best solution is to raise people’s _____ of environmental issues and the effects of pollution.",
+      "A": "aware",
+      "B": "awareness",
+      "C": "unaware",
+      "D": "unawareness",
+      "key": "B",
+      "explanation": "✓ B. awareness = nhận thức.\n\nWORD FAMILY:\nA. aware (adj) = nhận thức được\nB. awareness (n) = nhận thức\nC. unaware (adj) = không nhận thức được\nD. unawareness (n) = sự thiếu nhận thức\n\nCollocation: “raise awareness of/about something”."
+    },
+    {
+      "front": "13. _____ your appliances when they are not in use is one of the easiest ways to save energy.",
+      "A": "Turning off",
+      "B": "Turning on",
+      "C": "Turning up",
+      "D": "Turning down",
+      "key": "A",
+      "explanation": "✓ A. Turning off = việc tắt.\n\nCÁC LỰA CHỌN:\nA. turn off = tắt\nB. turn on = bật\nC. turn up = vặn to / tăng mức\nD. turn down = vặn nhỏ / giảm mức\n\nThe V-ing phrase acts as the subject. To save energy, we turn appliances off when not in use."
+    },
+    {
+      "front": "14. We should encourage people to use _____ bottles to reduce plastic waste.",
+      "A": "renewable",
+      "B": "remarkable",
+      "C": "refillable",
+      "D": "resolved",
+      "key": "C",
+      "explanation": "✓ C. refillable = có thể nạp/làm đầy lại.\n\nCÁC LỰA CHỌN:\nA. renewable = có thể tái tạo\nB. remarkable = đáng chú ý; nổi bật\nC. refillable = có thể châm đầy lại\nD. resolved = đã được giải quyết / kiên quyết\n\n“refillable bottles” are bottles that can be filled and used again, helping reduce plastic waste."
+    },
+    {
+      "front": "15. Children should be taught how to sort and recycle household items instead of _____ them.",
+      "A": "cutting down",
+      "B": "cleaning up",
+      "C": "breaking down",
+      "D": "throwing away",
+      "key": "D",
+      "explanation": "✓ D. throwing away = vứt bỏ.\n\nCÁC LỰA CHỌN:\nA. cut down = cắt giảm\nB. clean up = dọn dẹp\nC. break down = phân hủy / hỏng\nD. throw away = vứt đi\n\nStructure: instead of + V-ing. The meaning contrasts recycling with throwing items away."
+    }
+  ]
+}
