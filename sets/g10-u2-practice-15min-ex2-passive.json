@@ -1,0 +1,117 @@
+{
+  "id": "g10-u2-practice-15min-ex2-passive",
+  "title": "GRADE 10 - UNIT 2 - PRACTICE FOR 15' TEST - EXERCISE 2",
+  "type": "grammar",
+  "cards": [
+    {
+      "front": "11. This beautiful dress _____ for me by my mother last week.",
+      "A": "is made",
+      "B": "was made",
+      "C": "will be made",
+      "D": "has been made",
+      "key": "B",
+      "explanation": "“last week” → Past Simple. Chủ ngữ “This beautiful dress” nhận hành động → bị động: was + past participle. → was made.",
+      "grammarSignal": "last week",
+      "grammarStructure": "Past Simple Passive: was/were + V3"
+    },
+    {
+      "front": "12. Those flowers and plants _____ every day.",
+      "A": "will be watered",
+      "B": "are watered",
+      "C": "were watered",
+      "D": "are being watered",
+      "key": "B",
+      "explanation": "“every day” diễn tả thói quen/lặp lại. Chủ ngữ số nhiều nhận hành động → Present Simple Passive: are watered.",
+      "grammarSignal": "every day",
+      "grammarStructure": "Present Simple Passive: am/is/are + V3"
+    },
+    {
+      "front": "13. Hundreds of films _____ by CGV Cinemas since January.",
+      "A": "have showed",
+      "B": "have been showed",
+      "C": "were showed",
+      "D": "showed",
+      "key": "B",
+      "explanation": "“since January” → Present Perfect. Câu ở bị động nên cấu trúc cần là have been + V3. Đáp án B là đáp án dự kiến của nguồn, nhưng dạng chuẩn phải là “have been shown”, không phải “have been showed”.",
+      "grammarSignal": "since January",
+      "grammarStructure": "Present Perfect Passive: have/has been + V3"
+    },
+    {
+      "front": "14. “When _____?” — “In 1876.”",
+      "A": "the telephone was invented",
+      "B": "was the telephone invented",
+      "C": "did the telephone invented",
+      "D": "did the telephone invent",
+      "key": "B",
+      "explanation": "Câu hỏi bị động ở Past Simple: Was/Were + subject + V3? → “When was the telephone invented?”",
+      "grammarSignal": "In 1876",
+      "grammarStructure": "Past Simple Passive Question: Was/Were + S + V3?"
+    },
+    {
+      "front": "15. The preparation for the graduation ceremony _____ by the time the students _____.",
+      "A": "had been finished - came",
+      "B": "have been finished - came",
+      "C": "had finished - came",
+      "D": "will have finished - come",
+      "key": "A",
+      "explanation": "“by the time” với một hành động đã hoàn tất trước một hành động quá khứ khác → Past Perfect Passive + Past Simple: had been finished - came.",
+      "grammarSignal": "by the time + past event",
+      "grammarStructure": "Past Perfect Passive: had been + V3"
+    },
+    {
+      "front": "16. Do you hear the footsteps behind us? I think we _____.",
+      "A": "were being followed",
+      "B": "are being followed",
+      "C": "are followed",
+      "D": "were followed",
+      "key": "B",
+      "explanation": "Hành động đang xảy ra ngay lúc nói → Present Continuous Passive: are being followed.",
+      "grammarSignal": "Do you hear ...? / happening now",
+      "grammarStructure": "Present Continuous Passive: am/is/are being + V3"
+    },
+    {
+      "front": "17. My computer _____ by my brother at this time last night.",
+      "A": "was being repaired",
+      "B": "was repairing",
+      "C": "is repairing",
+      "D": "was repaired",
+      "key": "A",
+      "explanation": "“at this time last night” → hành động đang diễn ra tại một thời điểm trong quá khứ. Bị động: was being repaired.",
+      "grammarSignal": "at this time last night",
+      "grammarStructure": "Past Continuous Passive: was/were being + V3"
+    },
+    {
+      "front": "18. This work _____ by the marketing team next Monday.",
+      "A": "will be done",
+      "B": "will have been done",
+      "C": "will do",
+      "D": "is done",
+      "key": "A",
+      "explanation": "“next Monday” → tương lai. Chủ ngữ “This work” nhận hành động → Future Simple Passive: will be done.",
+      "grammarSignal": "next Monday",
+      "grammarStructure": "Future Simple Passive: will be + V3"
+    },
+    {
+      "front": "19. A lot of clean-up activities _____ by our club this weekend.",
+      "A": "will have organized",
+      "B": "is being organized",
+      "C": "are going to be organized",
+      "D": "will be organizing",
+      "key": "C",
+      "explanation": "“this weekend” và ý định/kế hoạch tương lai → be going to passive. Chủ ngữ số nhiều → are going to be organized.",
+      "grammarSignal": "this weekend / planned future action",
+      "grammarStructure": "Be going to Passive: am/is/are going to be + V3"
+    },
+    {
+      "front": "20. These reports must _____ by the manager.",
+      "A": "have checked",
+      "B": "be checking",
+      "C": "be checked",
+      "D": "check",
+      "key": "C",
+      "explanation": "Sau modal verb “must”, bị động dùng: must + be + V3. → must be checked.",
+      "grammarSignal": "must",
+      "grammarStructure": "Modal Passive: modal + be + V3"
+    }
+  ]
+}
