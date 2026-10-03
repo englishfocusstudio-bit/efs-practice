@@ -1,0 +1,134 @@
+{
+  "id": "g10-u1-task3-vocab-set3",
+  "title": "GRADE 10 - UNIT 1 - TASK 3 - VOCABULARY SET 3",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "truthful",
+      "speakText": "truthful",
+      "backTitle": "adjective",
+      "backContent": "trung thực; đúng sự thật",
+      "extra1": "truth (n) — sự thật",
+      "extra2": "truthfully (adv) — một cách trung thực",
+      "example": "Children should be truthful with their parents."
+    },
+    {
+      "front": "truth",
+      "speakText": "truth",
+      "backTitle": "noun",
+      "backContent": "sự thật",
+      "extra1": "truthful (adj) — trung thực; đúng sự thật",
+      "extra2": "truthfully (adv) — một cách trung thực",
+      "example": "It is important to tell the truth."
+    },
+    {
+      "front": "honest",
+      "speakText": "honest",
+      "backTitle": "adjective",
+      "backContent": "trung thực",
+      "extra1": "honesty (n) — tính trung thực",
+      "extra2": "dishonest (adj) — không trung thực",
+      "example": "Good family relationships are built on honest communication."
+    },
+    {
+      "front": "dishonest",
+      "speakText": "dishonest",
+      "backTitle": "adjective",
+      "backContent": "không trung thực",
+      "extra1": "honest (adj) — trung thực",
+      "extra2": "honesty (n) — tính trung thực",
+      "example": "Being dishonest can damage trust in a family."
+    },
+    {
+      "front": "honesty",
+      "speakText": "honesty",
+      "backTitle": "noun",
+      "backContent": "tính trung thực",
+      "extra1": "honest (adj) — trung thực",
+      "extra2": "dishonest (adj) — không trung thực",
+      "example": "Honesty helps family members trust one another."
+    },
+    {
+      "front": "respect",
+      "speakText": "respect",
+      "backTitle": "noun / verb",
+      "backContent": "sự tôn trọng; tôn trọng",
+      "extra1": "respectful (adj) — lễ phép; kính trọng",
+      "extra2": "respectable (adj) — đáng kính",
+      "example": "Children should respect other family members."
+    },
+    {
+      "front": "respectful",
+      "speakText": "respectful",
+      "backTitle": "adjective",
+      "backContent": "lễ phép; kính trọng",
+      "extra1": "respect (n/v) — sự tôn trọng; tôn trọng",
+      "extra2": "respectfully (adv) — một cách lễ phép, kính trọng",
+      "example": "Teenagers should speak to older people in a respectful way."
+    },
+    {
+      "front": "respectable",
+      "speakText": "respectable",
+      "backTitle": "adjective",
+      "backContent": "đáng kính",
+      "extra1": "respect (n/v) — sự tôn trọng; tôn trọng",
+      "example": "She is a respectable member of the community."
+    },
+    {
+      "front": "respective",
+      "speakText": "respective",
+      "backTitle": "adjective",
+      "backContent": "tương ứng; riêng từng",
+      "extra1": "respectively (adv) — theo thứ tự tương ứng",
+      "example": "The children returned to their respective rooms."
+    },
+    {
+      "front": "table manners",
+      "speakText": "table manners",
+      "backTitle": "noun phrase",
+      "backContent": "phép tắc ăn uống",
+      "extra1": "good table manners — phép tắc ăn uống lịch sự",
+      "example": "Parents often teach children good table manners."
+    },
+    {
+      "front": "experience",
+      "speakText": "experience",
+      "backTitle": "noun / verb",
+      "backContent": "kinh nghiệm; trải nghiệm",
+      "extra1": "experienced (adj) — có kinh nghiệm",
+      "example": "Family life gives children many useful experiences."
+    },
+    {
+      "front": "experienced",
+      "speakText": "experienced",
+      "backTitle": "adjective",
+      "backContent": "có kinh nghiệm",
+      "extra1": "experience (n/v) — kinh nghiệm; trải nghiệm",
+      "example": "An experienced adult can give useful advice."
+    },
+    {
+      "front": "family bonds",
+      "speakText": "family bonds",
+      "backTitle": "noun phrase",
+      "backContent": "mối quan hệ gia đình",
+      "extra1": "strengthen family bonds — thắt chặt mối quan hệ gia đình",
+      "example": "Sharing meals can strengthen family bonds."
+    },
+    {
+      "front": "life skills",
+      "speakText": "life skills",
+      "backTitle": "noun phrase",
+      "backContent": "kỹ năng sống",
+      "extra1": "develop life skills — phát triển kỹ năng sống",
+      "example": "Doing household chores helps teenagers develop life skills."
+    },
+    {
+      "front": "family values",
+      "speakText": "family values",
+      "backTitle": "noun phrase",
+      "backContent": "giá trị gia đình",
+      "extra1": "traditional family values — các giá trị gia đình truyền thống",
+      "example": "Respect and honesty are important family values."
+    }
+  ]
+}
