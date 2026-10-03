@@ -1,0 +1,87 @@
+{
+  "id": "g10-u2-task6-word-formation",
+  "title": "GRADE 10 - UNIT 2 - TASK 6 - WORD FORMATION",
+  "type": "word-formation",
+  "cards": [
+    {
+      "front": "harm",
+      "backTitle": "WORD FAMILY",
+      "backContent": "harm (n/v) — sự tổn hại; gây hại",
+      "extra1": "harmful (adj) — có hại · harmless (adj) — vô hại · unharmed (adj) — không bị tổn hại",
+      "extra2": "Negative form in source: —",
+      "example": "Plastic waste can harm animals and the environment."
+    },
+    {
+      "front": "emit",
+      "backTitle": "WORD FAMILY",
+      "backContent": "emit (v) — thải ra",
+      "extra1": "emission (n) — sự phát thải; lượng khí thải",
+      "extra2": "Negative form in source: —",
+      "example": "Cars emit gases that contribute to air pollution."
+    },
+    {
+      "front": "estimate",
+      "backTitle": "WORD FAMILY",
+      "backContent": "estimate (v) — ước tính",
+      "extra1": "estimation (n) — sự ước tính · estimated (adj) — được ước tính",
+      "extra2": "Negative form in source: —",
+      "example": "Experts estimate how much energy a household uses."
+    },
+    {
+      "front": "electric",
+      "backTitle": "WORD FAMILY",
+      "backContent": "electric (adj) — điện; chạy bằng điện",
+      "extra1": "electrical (adj) — liên quan đến điện · electronic (adj) — thuộc điện tử · electricity (n) — điện năng",
+      "extra2": "Negative form in source: —",
+      "example": "Electric cars use electricity instead of petrol."
+    },
+    {
+      "front": "use",
+      "backTitle": "WORD FAMILY",
+      "backContent": "use (v/n) — sử dụng; sự sử dụng",
+      "extra1": "useful (adj) — hữu ích · reusable (adj) — có thể tái sử dụng · reuse (v) — tái sử dụng",
+      "extra2": "Negative: useless (adj) — vô ích",
+      "example": "Reusable products are useful for reducing waste."
+    },
+    {
+      "front": "refill",
+      "backTitle": "WORD FAMILY",
+      "backContent": "refill (v/n) — làm đầy lại; lần nạp lại",
+      "extra1": "refillable (adj) — có thể làm đầy lại",
+      "extra2": "Negative form in source: —",
+      "example": "A refillable bottle can be used many times."
+    },
+    {
+      "front": "environment",
+      "backTitle": "WORD FAMILY",
+      "backContent": "environment (n) — môi trường",
+      "extra1": "environmental (adj) — thuộc môi trường · environmentally (adv) — theo cách thân thiện với môi trường",
+      "extra2": "Negative form in source: —",
+      "example": "Environmental protection is important for future generations."
+    },
+    {
+      "front": "pollute",
+      "backTitle": "WORD FAMILY",
+      "backContent": "pollute (v) — làm ô nhiễm",
+      "extra1": "pollution (n) — sự ô nhiễm · polluted (adj) — bị ô nhiễm",
+      "extra2": "Negative: unpolluted (adj) — không bị ô nhiễm",
+      "example": "Factories can pollute rivers if waste is not treated properly."
+    },
+    {
+      "front": "protect",
+      "backTitle": "WORD FAMILY",
+      "backContent": "protect (v) — bảo vệ",
+      "extra1": "protection (n) — sự bảo vệ · protective (adj) — có tác dụng bảo vệ",
+      "extra2": "Negative: unprotected (adj) — không được bảo vệ",
+      "example": "We should protect natural resources from pollution."
+    },
+    {
+      "front": "recycle",
+      "backTitle": "WORD FAMILY",
+      "backContent": "recycle (v) — tái chế",
+      "extra1": "recycling (n) — việc tái chế · recyclable (adj) — có thể tái chế · recycled (adj) — được tái chế",
+      "extra2": "Negative form in source: —",
+      "example": "Recycling helps reduce waste and save natural resources."
+    }
+  ]
+}
