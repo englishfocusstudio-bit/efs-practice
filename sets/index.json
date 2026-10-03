@@ -88,5 +88,15 @@
     "count": 10,
     "file": "sets/g10-u1-task6-word-formation.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u2-task1-vocab-set1",
+    "title": "GRADE 10 - UNIT 2 - TASK 1 - VOCABULARY SET 1",
+    "grade": "10",
+    "unit": "2",
+    "type": "vocabulary",
+    "count": 15,
+    "file": "sets/g10-u2-task1-vocab-set1.json",
+    "status": "published"
   }
 ]
