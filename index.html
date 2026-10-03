@@ -6,7 +6,22 @@
 <title>EFS Practice</title>
 <style>
 :root{--bg:#f3f7fb;--card:#fff;--text:#18324a;--muted:#6d8193;--accent:#20a6b7;--line:#dce7ee;--good:#2e9469;--bad:#d85b63;--soft:#e9f7f9}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif}.app{max-width:900px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;padding:7px 10px;border-radius:999px;background:var(--soft);font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}h1{font-size:28px;margin:0 0 8px}.muted{color:var(--muted)}.set{border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}button,select{font:inherit;border-radius:12px;border:0;padding:11px 15px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#edf3f6;color:var(--text)}.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}.hidden{display:none!important}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}.progress div{height:100%;background:var(--accent)}.flash{min-height:330px;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;place-items:center;text-align:center}.front{font-size:40px;font-weight:850}.pos{display:inline-block;background:var(--soft);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}.meaning{font-size:26px;font-weight:800}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.question{font-size:24px;font-weight:800;line-height:1.45;margin:12px 0 18px}.targetWord{font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:1px solid var(--line);background:#fff;text-align:left;min-height:62px;font-size:17px}.option.correct{border-color:var(--good);background:#edf9f4}.option.wrong{border-color:var(--bad);background:#fff0f1}.feedback{margin-top:16px;border-radius:16px;padding:16px;line-height:1.6}.feedback.good{background:#edf9f4}.feedback.bad{background:#fff0f1}.small{font-size:12px;color:var(--muted)}.libraryTools{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:10px;margin:16px 0}.libraryTools input,.libraryTools select{width:100%;font:inherit;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff;color:var(--text)}.libraryHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-end}.libraryCount{font-size:13px;color:var(--muted);font-weight:700}.setMeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.tag{font-size:11px;font-weight:800;background:#edf3f6;border-radius:999px;padding:5px 8px;color:var(--text)}.setActions{display:flex;gap:8px;flex:0 0 auto}.setActions button{padding:9px 12px}.speakBtn{margin-top:14px;padding:9px 12px;font-size:14px}.error{padding:16px;border-radius:14px;background:#fff0f1;color:#98414a}.panel,.set,.flash,.option,.question,.front,.meaning,.extra,.example,h1,b{
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif}.app{max-width:900px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{font-size:25px;font-weight:850}.brand span{color:var(--accent)}.badge{font-size:12px;padding:7px 10px;border-radius:999px;background:var(--soft);font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 30px rgba(28,68,93,.06)}h1{font-size:28px;margin:0 0 8px}.muted{color:var(--muted)}.set{border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}button,select{font:inherit;border-radius:12px;border:0;padding:11px 15px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:#edf3f6;color:var(--text)}.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}.hidden{display:none!important}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}.progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}.progress div{height:100%;background:var(--accent)}.flash{min-height:330px;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;place-items:center;text-align:center}.front{font-size:40px;font-weight:850}.pos{display:inline-block;background:var(--soft);padding:6px 10px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:12px}.meaning{font-size:26px;font-weight:800}.extra{font-size:17px;font-weight:650;margin-top:12px}.example{font-size:16px;color:var(--muted);margin-top:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.question{font-size:24px;font-weight:800;line-height:1.45;margin:12px 0 18px}.targetWord{font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:1px solid var(--line);background:#fff;text-align:left;min-height:62px;font-size:17px}.option.correct{border:2px solid var(--good);background:#fff;box-shadow:0 0 0 3px rgba(46,148,105,.10)}
+.option.wrong{border:2px solid var(--bad);background:#fff;box-shadow:0 0 0 3px rgba(216,91,99,.10)}
+.feedback{margin-top:18px;border:1px solid var(--line);border-radius:18px;padding:0;background:#fff;overflow:hidden;line-height:1.55}
+.feedback.good,.feedback.bad{background:#fff}
+.feedbackHead{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.feedbackStatus{font-weight:900;font-size:14px}.feedbackStatus.goodText{color:var(--good)}.feedbackStatus.badText{color:var(--bad)}
+.feedbackAnswer{font-weight:900;color:var(--text);text-align:right}
+.feedbackBody{padding:16px;display:grid;gap:12px}
+.feedbackBlock{border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff}
+.feedbackBlock.soft{background:var(--soft);border-color:#cfecef}
+.feedbackLabel{font-size:11px;letter-spacing:.04em;text-transform:uppercase;font-weight:900;color:var(--accent);margin-bottom:6px}
+.feedbackText{font-size:15px;color:var(--text);white-space:pre-line}
+.optionLearn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.optionLearn div{border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:#fff;font-size:14px}
+.optionLearn .correctLearn{border-color:var(--good);box-shadow:0 0 0 2px rgba(46,148,105,.08)}
+.grammarGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.small{font-size:12px;color:var(--muted)}.libraryTools{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:10px;margin:16px 0}.libraryTools input,.libraryTools select{width:100%;font:inherit;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff;color:var(--text)}.libraryHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-end}.libraryCount{font-size:13px;color:var(--muted);font-weight:700}.setMeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.tag{font-size:11px;font-weight:800;background:#edf3f6;border-radius:999px;padding:5px 8px;color:var(--text)}.setActions{display:flex;gap:8px;flex:0 0 auto}.setActions button{padding:9px 12px}.speakBtn{margin-top:14px;padding:9px 12px;font-size:14px}.error{padding:16px;border-radius:14px;background:#fff0f1;color:#98414a}.panel,.set,.flash,.option,.question,.front,.meaning,.extra,.example,h1,b{
   min-width:0;
   max-width:100%;
   overflow-wrap:anywhere;
@@ -33,6 +48,7 @@
   .example{font-size:15px}
   .flash{min-height:280px;padding:16px}
   .option{font-size:16px;line-height:1.4;min-height:56px;padding:12px}
+  .feedbackHead{align-items:flex-start;flex-direction:column}.feedbackAnswer{text-align:left}.optionLearn,.grammarGrid{grid-template-columns:1fr}
   .actions{width:100%}
   .actions button{flex:1 1 30%;min-width:0}
 }.front{font-size:34px}.question{font-size:21px}.meaning{font-size:23px}}
@@ -115,7 +131,56 @@ function renderQuestionText(c){
   el("question").innerHTML=esc(q.slice(0,i))+"<span class='targetWord'>"+esc(q.slice(i,i+target.length))+"</span>"+esc(q.slice(i+target.length));
 }
 function renderMCQ(c){locked=false;el("flashArea").classList.add("hidden");el("mcqArea").classList.remove("hidden");renderQuestionText(c);el("feedback").className="hidden";el("feedback").innerHTML="";el("nextQ").classList.add("hidden");var h="";["A","B","C","D"].forEach(function(k){h+="<button class='option' data-k='"+k+"'><b>"+k+".</b> "+esc(c[k])+"</button>";});el("options").innerHTML=h;el("options").querySelectorAll(".option").forEach(function(o){o.onclick=function(){answer(this.getAttribute("data-k"),this);};});}
-function answer(k,btn){if(locked)return;locked=true;var c=currentCard();el("options").querySelectorAll(".option").forEach(function(o){if(o.getAttribute("data-k")===c.key)o.classList.add("correct");});var ok=k===c.key;if(!ok)btn.classList.add("wrong");var f=el("feedback");f.className="feedback "+(ok?"good":"bad");var t=(ok?"✓ Chính xác":"✗ Chưa đúng")+"<br><b>Đáp án:</b> "+c.key+". "+esc(c[c.key]);if(c.explanation)t+="<br><br><b>Giải thích:</b> "+esc(c.explanation);if(c.grammarSignal)t+="<br><b>Dấu hiệu:</b> "+esc(c.grammarSignal);if(c.grammarStructure)t+="<br><b>Cấu trúc:</b> "+esc(c.grammarStructure);f.innerHTML=t;el("nextQ").classList.remove("hidden");}
+function formatFeedbackExplanation(c){
+  var raw=String(c.explanation||"").trim();
+  if(!raw)return "";
+  var blocks=raw.split(/\n\s*\n/).filter(Boolean);
+  var html="";
+  blocks.forEach(function(block,idx){
+    var lines=block.split(/\n/).filter(Boolean);
+    var first=(lines[0]||"").trim();
+    var isChoices=/^(CÁC LỰA CHỌN|WORD FAMILY|WORD FAMILY \/ TỪ LOẠI|CÁC ĐÁP ÁN)/i.test(first);
+    if(isChoices){
+      var label=first.replace(/:$/,"");
+      var items=lines.slice(1);
+      html+="<div class='feedbackBlock'><div class='feedbackLabel'>"+esc(label)+"</div><div class='optionLearn'>";
+      items.forEach(function(line){
+        var cls=/^"+c.key+"\./.test(line.trim())?" correctLearn":"";
+        html+="<div class='"+cls.trim()+"'>"+esc(line)+"</div>";
+      });
+      html+="</div></div>";
+    }else{
+      var label=idx===0?"Giải thích":"Ghi nhớ";
+      var clean=block.replace(/^✓\s*[A-D]\.[^\n]*\n?/,"").trim();
+      html+="<div class='feedbackBlock "+(idx===0?"soft":"")+"'><div class='feedbackLabel'>"+label+"</div><div class='feedbackText'>"+esc(clean||block)+"</div></div>";
+    }
+  });
+  return html;
+}
+function answer(k,btn){
+  if(locked)return;
+  locked=true;
+  var c=currentCard();
+  el("options").querySelectorAll(".option").forEach(function(o){
+    if(o.getAttribute("data-k")===c.key)o.classList.add("correct");
+  });
+  var ok=k===c.key;
+  if(!ok)btn.classList.add("wrong");
+  var f=el("feedback");
+  f.className="feedback";
+  var t="<div class='feedbackHead'><div class='feedbackStatus "+(ok?"goodText":"badText")+"'>"+(ok?"✓ Chính xác":"✕ Chưa đúng")+"</div><div class='feedbackAnswer'>Đáp án đúng: "+c.key+". "+esc(c[c.key])+"</div></div>";
+  t+="<div class='feedbackBody'>";
+  t+=formatFeedbackExplanation(c);
+  if(c.grammarSignal||c.grammarStructure){
+    t+="<div class='grammarGrid'>";
+    if(c.grammarSignal)t+="<div class='feedbackBlock'><div class='feedbackLabel'>Signal</div><div class='feedbackText'>"+esc(c.grammarSignal)+"</div></div>";
+    if(c.grammarStructure)t+="<div class='feedbackBlock'><div class='feedbackLabel'>Structure</div><div class='feedbackText'>"+esc(c.grammarStructure)+"</div></div>";
+    t+="</div>";
+  }
+  t+="</div>";
+  f.innerHTML=t;
+  el("nextQ").classList.remove("hidden");
+}
 function step(n){index=(index+n+order.length)%order.length;render();}
 el("flip").onclick=flip;el("flash").onclick=flip;el("speakFront").onclick=function(e){e.stopPropagation();var c=currentCard();speakText(c.speakText||c.front);};el("speakExample").onclick=function(e){e.stopPropagation();var c=currentCard();speakText(c.example);};el("next").onclick=function(){step(1);};el("prev").onclick=function(){step(-1);};el("nextQ").onclick=function(){step(1);};el("home").onclick=showLibrary;el("mode").onchange=function(){mode=this.value;buildOrder();render();};el("shuffle").onclick=function(){mode="random";el("mode").value="random";buildOrder();render();};
 (async function(){try{await loadRegistry();var id=new URLSearchParams(location.search).get("set");if(id)await openSet(id);else showLibrary();}catch(e){showError(e.message);}})();
