@@ -1,0 +1,133 @@
+{
+  "id": "g10-u2-task1-vocab-set1",
+  "title": "GRADE 10 - UNIT 2 - TASK 1 - VOCABULARY SET 1",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "Youth Union",
+      "speakText": "Youth Union",
+      "backTitle": "proper noun",
+      "backContent": "Đoàn Thanh niên",
+      "extra1": "join the Youth Union — tham gia Đoàn Thanh niên",
+      "example": "Many students take part in activities organized by the Youth Union."
+    },
+    {
+      "front": "adopt",
+      "speakText": "adopt",
+      "backTitle": "verb",
+      "backContent": "áp dụng; nhận làm con nuôi",
+      "extra1": "adoption (n) — sự áp dụng; sự nhận con nuôi",
+      "extra2": "adopt a policy / adopt a child",
+      "example": "Our school can adopt simple ways to reduce waste."
+    },
+    {
+      "front": "ceremony",
+      "speakText": "ceremony",
+      "backTitle": "noun",
+      "backContent": "nghi thức; nghi lễ",
+      "extra1": "opening ceremony — lễ khai mạc",
+      "example": "The students attended a school ceremony in the morning."
+    },
+    {
+      "front": "carbon footprint",
+      "speakText": "carbon footprint",
+      "backTitle": "noun phrase",
+      "backContent": "dấu chân carbon; lượng khí nhà kính do một hoạt động tạo ra",
+      "extra1": "reduce your carbon footprint — giảm dấu chân carbon",
+      "example": "Using less electricity can reduce your carbon footprint."
+    },
+    {
+      "front": "household appliances",
+      "speakText": "household appliances",
+      "backTitle": "noun phrase",
+      "backContent": "thiết bị gia dụng",
+      "extra1": "energy-efficient household appliances — thiết bị gia dụng tiết kiệm năng lượng",
+      "example": "We should turn off household appliances when they are not in use."
+    },
+    {
+      "front": "eco-friendly",
+      "speakText": "eco-friendly",
+      "backTitle": "adjective",
+      "backContent": "thân thiện với môi trường",
+      "extra1": "eco-friendly products / habits",
+      "example": "Reusable bags are more eco-friendly than single-use plastic bags."
+    },
+    {
+      "front": "sustainable",
+      "speakText": "sustainable",
+      "backTitle": "adjective",
+      "backContent": "bền vững; lâu dài",
+      "extra1": "sustainability (n) — tính bền vững",
+      "extra2": "sustainable development — phát triển bền vững",
+      "example": "We need sustainable ways to protect the environment."
+    },
+    {
+      "front": "energy bill",
+      "speakText": "energy bill",
+      "backTitle": "noun phrase",
+      "backContent": "hóa đơn tiền điện; hóa đơn năng lượng",
+      "extra1": "reduce an energy bill — giảm hóa đơn năng lượng",
+      "example": "Turning off unused lights can help reduce your energy bill."
+    },
+    {
+      "front": "explosion",
+      "speakText": "explosion",
+      "backTitle": "noun",
+      "backContent": "sự bùng nổ; sự phát triển ồ ạt",
+      "extra1": "explode (v) — nổ; tăng mạnh",
+      "extra2": "an explosion in + noun — sự gia tăng đột biến về...",
+      "example": "The city has seen an explosion in the use of electric vehicles."
+    },
+    {
+      "front": "organic",
+      "speakText": "organic",
+      "backTitle": "adjective",
+      "backContent": "thuộc hữu cơ; được sản xuất không dùng hóa chất tổng hợp",
+      "extra1": "organic food / organic farming",
+      "example": "Some families choose organic food to reduce chemical use."
+    },
+    {
+      "front": "harmful",
+      "speakText": "harmful",
+      "backTitle": "adjective",
+      "backContent": "có hại",
+      "extra1": "harm (n/v) — sự tổn hại; gây hại",
+      "extra2": "harmful to + noun — có hại cho",
+      "example": "Plastic waste can be harmful to wildlife."
+    },
+    {
+      "front": "harmless",
+      "speakText": "harmless",
+      "backTitle": "adjective",
+      "backContent": "vô hại",
+      "extra1": "harm (n/v) — sự tổn hại; gây hại",
+      "extra2": "harmless to + noun — không gây hại cho",
+      "example": "The product is harmless to the environment when used correctly."
+    },
+    {
+      "front": "unharmed",
+      "speakText": "unharmed",
+      "backTitle": "adjective",
+      "backContent": "không bị tổn hại; nguyên vẹn",
+      "extra1": "come out unharmed — thoát ra mà không bị thương tổn",
+      "example": "The animals were found unharmed after the storm."
+    },
+    {
+      "front": "harm",
+      "speakText": "harm",
+      "backTitle": "noun / verb",
+      "backContent": "sự tổn hại; gây hại",
+      "extra1": "harmful (adj) — có hại",
+      "extra2": "harmless (adj) — vô hại; unharmed (adj) — không bị tổn hại",
+      "example": "We should avoid actions that harm the environment."
+    },
+    {
+      "front": "chemical",
+      "speakText": "chemical",
+      "backTitle": "noun / adjective",
+      "backContent": "hóa chất; thuộc hóa học",
+      "extra1": "chemical waste — chất thải hóa học",
+      "example": "Some chemicals can pollute rivers and soil."
+    }
+  ]
+}
