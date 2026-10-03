@@ -1,0 +1,138 @@
+{
+  "id": "g10-u3-task2-vocab-set2",
+  "title": "GRADE 10 - UNIT 3 - TASK 2 - VOCABULARY SET 2",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "spectator",
+      "speakText": "spectator",
+      "backTitle": "noun",
+      "backContent": "khán giả; người xem tại một sự kiện",
+      "extra1": "sports spectator / live spectator",
+      "example": "Thousands of spectators watched the live performance."
+    },
+    {
+      "front": "onlooker",
+      "speakText": "onlooker",
+      "backTitle": "noun",
+      "backContent": "người đứng xem",
+      "extra1": "a crowd of onlookers — một đám đông người đứng xem",
+      "example": "A group of onlookers gathered near the stage."
+    },
+    {
+      "front": "recording",
+      "speakText": "recording",
+      "backTitle": "noun",
+      "backContent": "bản ghi âm; bản ghi hình",
+      "extra1": "record (v) — ghi âm; ghi hình",
+      "extra2": "make a recording — tạo một bản ghi",
+      "example": "The singer released a new studio recording."
+    },
+    {
+      "front": "result",
+      "speakText": "result",
+      "backTitle": "noun / verb",
+      "backContent": "kết quả; dẫn đến",
+      "extra1": "result in + noun — dẫn đến",
+      "extra2": "result from + noun — bắt nguồn từ",
+      "example": "The final result was announced after all the performances."
+    },
+    {
+      "front": "compete",
+      "speakText": "compete",
+      "backTitle": "verb",
+      "backContent": "cạnh tranh; thi đấu",
+      "extra1": "competition (n) — cuộc thi; sự cạnh tranh",
+      "extra2": "competitor (n) — người/đối thủ cạnh tranh · competitive (adj) — mang tính cạnh tranh",
+      "example": "Young singers compete for a place in the final."
+    },
+    {
+      "front": "competition",
+      "speakText": "competition",
+      "backTitle": "noun",
+      "backContent": "cuộc thi; sự cạnh tranh",
+      "extra1": "compete (v) — cạnh tranh; thi đấu",
+      "extra2": "competitor (n) — thí sinh/đối thủ · competitive (adj) — mang tính cạnh tranh",
+      "example": "The music competition attracted students from many schools."
+    },
+    {
+      "front": "competitor",
+      "speakText": "competitor",
+      "backTitle": "noun",
+      "backContent": "người hoặc đối thủ cạnh tranh",
+      "extra1": "compete (v) — cạnh tranh; thi đấu",
+      "extra2": "competition (n) — cuộc thi · competitive (adj) — mang tính cạnh tranh",
+      "example": "Each competitor performed one song on stage."
+    },
+    {
+      "front": "competitive",
+      "speakText": "competitive",
+      "backTitle": "adjective",
+      "backContent": "mang tính cạnh tranh",
+      "extra1": "compete (v) — cạnh tranh; thi đấu",
+      "extra2": "competition (n) — cuộc thi · competitor (n) — đối thủ/thí sinh",
+      "example": "The final round was highly competitive."
+    },
+    {
+      "front": "music",
+      "speakText": "music",
+      "backTitle": "noun",
+      "backContent": "âm nhạc",
+      "extra1": "musical (adj) — thuộc âm nhạc",
+      "extra2": "musician (n) — nhạc sĩ; nhạc công · musicality (n) — năng khiếu âm nhạc",
+      "example": "Music plays an important role in many people's lives."
+    },
+    {
+      "front": "musical",
+      "speakText": "musical",
+      "backTitle": "adjective / noun",
+      "backContent": "thuộc âm nhạc; vở nhạc kịch",
+      "extra1": "music (n) — âm nhạc",
+      "extra2": "musician (n) — nhạc sĩ; nhạc công · musicality (n) — năng khiếu âm nhạc",
+      "example": "She has strong musical skills and enjoys performing."
+    },
+    {
+      "front": "musician",
+      "speakText": "musician",
+      "backTitle": "noun",
+      "backContent": "nhạc sĩ; nhạc công",
+      "extra1": "music (n) — âm nhạc",
+      "extra2": "musical (adj) — thuộc âm nhạc · musicality (n) — năng khiếu âm nhạc",
+      "example": "The musician played the piano beautifully."
+    },
+    {
+      "front": "musicality",
+      "speakText": "musicality",
+      "backTitle": "noun",
+      "backContent": "năng khiếu âm nhạc; tính nhạc",
+      "extra1": "music (n) — âm nhạc",
+      "extra2": "musical (adj) — thuộc âm nhạc · musician (n) — nhạc sĩ; nhạc công",
+      "example": "Her musicality was clear from a very young age."
+    },
+    {
+      "front": "charity",
+      "speakText": "charity",
+      "backTitle": "noun",
+      "backContent": "tổ chức từ thiện; lòng từ thiện",
+      "extra1": "charity event / charity concert — sự kiện/buổi hòa nhạc từ thiện",
+      "example": "The band performed at a charity concert."
+    },
+    {
+      "front": "TV series",
+      "speakText": "TV series",
+      "backTitle": "noun phrase",
+      "backContent": "loạt phim hoặc chương trình truyền hình",
+      "extra1": "watch a TV series — xem một loạt phim/chương trình truyền hình",
+      "example": "This TV series has become popular with teenagers."
+    },
+    {
+      "front": "reality",
+      "speakText": "reality",
+      "backTitle": "noun",
+      "backContent": "thực tế; điều có thật",
+      "extra1": "real (adj) — có thật; thực tế",
+      "extra2": "reality show — chương trình truyền hình thực tế",
+      "example": "The programme combines music with reality television."
+    }
+  ]
+}
