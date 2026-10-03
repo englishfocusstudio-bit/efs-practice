@@ -1,0 +1,136 @@
+{
+  "id": "g10-u1-task2-vocab-set2",
+  "title": "GRADE 10 - UNIT 1 - TASK 2 - VOCABULARY SET 2",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "gratitude",
+      "speakText": "gratitude",
+      "backTitle": "noun",
+      "backContent": "lòng biết ơn",
+      "extra1": "grateful (adj) — biết ơn",
+      "extra2": "gratefully (adv) — một cách biết ơn",
+      "example": "We should show gratitude to people who help us."
+    },
+    {
+      "front": "appreciate",
+      "speakText": "appreciate",
+      "backTitle": "verb",
+      "backContent": "đánh giá cao; coi trọng",
+      "extra1": "appreciation (n) — sự cảm kích",
+      "extra2": "appreciative (adj) — biết đánh giá; biết ơn",
+      "example": "Children should appreciate the work their parents do."
+    },
+    {
+      "front": "appreciation",
+      "speakText": "appreciation",
+      "backTitle": "noun",
+      "backContent": "sự cảm kích",
+      "extra1": "appreciate (v) — đánh giá cao; coi trọng",
+      "extra2": "appreciative (adj) — biết đánh giá; biết ơn",
+      "example": "She showed her appreciation by helping with the housework."
+    },
+    {
+      "front": "appreciative",
+      "speakText": "appreciative",
+      "backTitle": "adjective",
+      "backContent": "biết đánh giá; biết ơn",
+      "extra1": "appreciate (v) — đánh giá cao; coi trọng",
+      "extra2": "appreciation (n) — sự cảm kích",
+      "example": "His parents were appreciative of his help at home."
+    },
+    {
+      "front": "appreciable",
+      "speakText": "appreciable",
+      "backTitle": "adjective",
+      "backContent": "đáng kể",
+      "extra1": "an appreciable difference — một sự khác biệt đáng kể",
+      "example": "There has been an appreciable improvement in his study habits."
+    },
+    {
+      "front": "benefit",
+      "speakText": "benefit",
+      "backTitle": "noun / verb",
+      "backContent": "lợi ích; có lợi",
+      "extra1": "beneficial (adj) — có lợi",
+      "example": "Sharing household tasks can benefit the whole family."
+    },
+    {
+      "front": "character",
+      "speakText": "character",
+      "backTitle": "noun",
+      "backContent": "tính cách; phẩm chất",
+      "extra1": "build character — rèn luyện phẩm chất",
+      "example": "Taking responsibility helps young people build character."
+    },
+    {
+      "front": "spotlessly",
+      "speakText": "spotlessly",
+      "backTitle": "adverb",
+      "backContent": "sạch không tì vết",
+      "extra1": "spotless (adj) — sạch không tì vết",
+      "example": "She keeps the kitchen spotlessly clean."
+    },
+    {
+      "front": "teenager",
+      "speakText": "teenager",
+      "backTitle": "noun",
+      "backContent": "thanh thiếu niên",
+      "extra1": "teenage (adj) — thuộc tuổi thiếu niên",
+      "example": "Many teenagers can help with chores at home."
+    },
+    {
+      "front": "value",
+      "speakText": "value",
+      "backTitle": "noun / verb",
+      "backContent": "giá trị; coi trọng",
+      "extra1": "valuable (adj) — có giá trị",
+      "extra2": "invaluable (adj) — vô giá; cực kỳ quý giá; valueless (adj) — không có giá trị",
+      "example": "Family members should value each other's contributions."
+    },
+    {
+      "front": "valuable",
+      "speakText": "valuable",
+      "backTitle": "adjective",
+      "backContent": "có giá trị",
+      "extra1": "value (n/v) — giá trị; coi trọng",
+      "extra2": "invaluable (adj) — vô giá; cực kỳ quý giá; valueless (adj) — không có giá trị",
+      "example": "Doing chores can teach children valuable life skills."
+    },
+    {
+      "front": "invaluable",
+      "speakText": "invaluable",
+      "backTitle": "adjective",
+      "backContent": "vô giá; cực kỳ quý giá",
+      "extra1": "value (n/v) — giá trị; coi trọng",
+      "extra2": "valuable (adj) — có giá trị; valueless (adj) — không có giá trị",
+      "example": "Parents can give teenagers invaluable life experience."
+    },
+    {
+      "front": "valueless",
+      "speakText": "valueless",
+      "backTitle": "adjective",
+      "backContent": "không có giá trị",
+      "extra1": "value (n/v) — giá trị; coi trọng",
+      "extra2": "valuable (adj) — có giá trị; invaluable (adj) — vô giá, cực kỳ quý giá",
+      "example": "A broken object may seem valueless, but it can still be recycled."
+    },
+    {
+      "front": "result",
+      "speakText": "result",
+      "backTitle": "noun / verb",
+      "backContent": "kết quả; dẫn đến",
+      "extra1": "result in + noun — dẫn đến",
+      "extra2": "result from + noun — bắt nguồn từ",
+      "example": "Sharing chores can result in a more balanced family life."
+    },
+    {
+      "front": "survey",
+      "speakText": "survey",
+      "backTitle": "noun / verb",
+      "backContent": "cuộc khảo sát; khảo sát",
+      "extra1": "conduct a survey — tiến hành một cuộc khảo sát",
+      "example": "The students conducted a survey about household responsibilities."
+    }
+  ]
+}
