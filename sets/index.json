@@ -158,5 +158,15 @@
     "count": 15,
     "file": "sets/g10-u3-task1-vocab-set1.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u3-task2-vocab-set2",
+    "title": "GRADE 10 - UNIT 3 - TASK 2 - VOCABULARY SET 2",
+    "grade": "10",
+    "unit": "3",
+    "type": "vocabulary",
+    "count": 15,
+    "file": "sets/g10-u3-task2-vocab-set2.json",
+    "status": "published"
   }
 ]
