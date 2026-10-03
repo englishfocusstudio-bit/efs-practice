@@ -1,0 +1,128 @@
+{
+  "id": "g10-u2-task5-collocations-phrases-set2",
+  "title": "GRADE 10 - UNIT 2 - TASK 5 - COLLOCATIONS & PHRASES SET 2",
+  "type": "phrase",
+  "cards": [
+    {
+      "front": "make a choice to do something",
+      "speakText": "make a choice to do something",
+      "backTitle": "verb pattern",
+      "backContent": "đưa ra lựa chọn làm gì",
+      "extra1": "make a choice to + verb",
+      "example": "We can make a choice to use fewer plastic products."
+    },
+    {
+      "front": "in use",
+      "speakText": "in use",
+      "backTitle": "fixed phrase",
+      "backContent": "đang được sử dụng",
+      "extra1": "be in use — đang được sử dụng",
+      "example": "Turn off devices that are not in use."
+    },
+    {
+      "front": "cut down on",
+      "speakText": "cut down on",
+      "backTitle": "phrasal verb",
+      "backContent": "cắt giảm",
+      "extra1": "cut down on + noun / V-ing",
+      "example": "Families can cut down on electricity use by switching off unused lights."
+    },
+    {
+      "front": "break down",
+      "speakText": "break down",
+      "backTitle": "phrasal verb",
+      "backContent": "phân hủy; hỏng",
+      "extra1": "break down naturally — phân hủy tự nhiên",
+      "extra2": "a machine breaks down — máy móc bị hỏng",
+      "example": "Some materials take hundreds of years to break down."
+    },
+    {
+      "front": "throw away",
+      "speakText": "throw away",
+      "backTitle": "phrasal verb",
+      "backContent": "vứt đi",
+      "extra1": "throw away + rubbish / plastic / old items",
+      "example": "Do not throw away things that can be reused."
+    },
+    {
+      "front": "cause damage to",
+      "speakText": "cause damage to",
+      "backTitle": "collocation",
+      "backContent": "gây thiệt hại cho",
+      "extra1": "cause damage to + noun",
+      "example": "Plastic waste can cause damage to marine life."
+    },
+    {
+      "front": "be compulsory for",
+      "speakText": "be compulsory for",
+      "backTitle": "adjective pattern",
+      "backContent": "bắt buộc đối với",
+      "extra1": "be compulsory for + somebody",
+      "example": "Environmental education should be compulsory for all students."
+    },
+    {
+      "front": "in conclusion",
+      "speakText": "in conclusion",
+      "backTitle": "linking phrase",
+      "backContent": "kết luận lại; nói tóm lại",
+      "extra1": "Used to introduce the final point or summary.",
+      "example": "In conclusion, small daily actions can help protect the environment."
+    },
+    {
+      "front": "make a difference",
+      "speakText": "make a difference",
+      "backTitle": "collocation",
+      "backContent": "tạo nên sự khác biệt",
+      "extra1": "make a difference to + noun",
+      "example": "Saving energy at home can make a difference to the environment."
+    },
+    {
+      "front": "give a presentation on",
+      "speakText": "give a presentation on",
+      "backTitle": "collocation",
+      "backContent": "thuyết trình về",
+      "extra1": "give a presentation on + topic",
+      "example": "Our group gave a presentation on reducing plastic waste."
+    },
+    {
+      "front": "search for",
+      "speakText": "search for",
+      "backTitle": "verb phrase",
+      "backContent": "tìm kiếm; tra cứu",
+      "extra1": "search for + information / answers / solutions",
+      "example": "Students searched for information about renewable energy."
+    },
+    {
+      "front": "decide to do something",
+      "speakText": "decide to do something",
+      "backTitle": "verb pattern",
+      "backContent": "quyết định làm gì",
+      "extra1": "decide to + verb",
+      "example": "Our class decided to use reusable bottles."
+    },
+    {
+      "front": "make a decision to do something",
+      "speakText": "make a decision to do something",
+      "backTitle": "verb pattern",
+      "backContent": "đưa ra quyết định làm gì",
+      "extra1": "make a decision to + verb",
+      "example": "The school made a decision to reduce single-use plastic."
+    },
+    {
+      "front": "be based on",
+      "speakText": "be based on",
+      "backTitle": "verb phrase",
+      "backContent": "được dựa trên",
+      "extra1": "be based on + noun / evidence / information",
+      "example": "The project is based on ideas from students and teachers."
+    },
+    {
+      "front": "be used for doing something",
+      "speakText": "be used for doing something",
+      "backTitle": "verb pattern",
+      "backContent": "được dùng để làm gì",
+      "extra1": "be used for + V-ing",
+      "example": "Reusable containers are used for storing food."
+    }
+  ]
+}
