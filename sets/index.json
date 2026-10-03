@@ -178,5 +178,15 @@
     "count": 15,
     "file": "sets/g10-u2-practice-15min-test-01.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u2-practice-15min-ex2-passive",
+    "title": "GRADE 10 - UNIT 2 - PRACTICE FOR 15' TEST - EXERCISE 2",
+    "grade": "10",
+    "unit": "2",
+    "type": "grammar",
+    "count": 10,
+    "file": "sets/g10-u2-practice-15min-ex2-passive.json",
+    "status": "published"
   }
 ]
