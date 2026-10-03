@@ -58,5 +58,15 @@
     "count": 15,
     "file": "sets/g10-u1-task3-vocab-set3.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u1-task4-collocations-phrases-set1",
+    "title": "GRADE 10 - UNIT 1 - TASK 4 - COLLOCATIONS & PHRASES SET 1",
+    "grade": "10",
+    "unit": "1",
+    "type": "phrase",
+    "count": 15,
+    "file": "sets/g10-u1-task4-collocations-phrases-set1.json",
+    "status": "published"
   }
 ]
