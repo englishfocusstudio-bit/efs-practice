@@ -1,0 +1,138 @@
+{
+  "id": "g10-u2-task2-vocab-set2",
+  "title": "GRADE 10 - UNIT 2 - TASK 2 - VOCABULARY SET 2",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "refillable",
+      "speakText": "refillable",
+      "backTitle": "adjective",
+      "backContent": "có thể nạp hoặc làm đầy lại",
+      "extra1": "refill (v/n) — nạp lại; lần nạp lại",
+      "extra2": "refillable bottle — chai có thể châm đầy lại",
+      "example": "Using a refillable bottle can reduce plastic waste."
+    },
+    {
+      "front": "sort",
+      "speakText": "sort",
+      "backTitle": "noun / verb",
+      "backContent": "loại; phân loại",
+      "extra1": "sort waste — phân loại rác",
+      "extra2": "sort into + groups/categories — phân thành các nhóm",
+      "example": "Students should sort rubbish before recycling it."
+    },
+    {
+      "front": "recycle",
+      "speakText": "recycle",
+      "backTitle": "verb",
+      "backContent": "tái chế",
+      "extra1": "recycling (n) — việc tái chế",
+      "extra2": "recyclable (adj) — có thể tái chế",
+      "example": "We can recycle paper, glass, and some types of plastic."
+    },
+    {
+      "front": "natural resources",
+      "speakText": "natural resources",
+      "backTitle": "noun phrase",
+      "backContent": "tài nguyên thiên nhiên",
+      "extra1": "protect / conserve natural resources — bảo vệ tài nguyên thiên nhiên",
+      "example": "Recycling helps conserve natural resources."
+    },
+    {
+      "front": "emission",
+      "speakText": "emission",
+      "backTitle": "noun",
+      "backContent": "sự phát thải; lượng khí thải",
+      "extra1": "emit (v) — thải ra, phát ra",
+      "extra2": "carbon emissions — khí thải carbon",
+      "example": "Public transport can help reduce carbon emissions."
+    },
+    {
+      "front": "emit",
+      "speakText": "emit",
+      "backTitle": "verb",
+      "backContent": "thải ra; phát ra",
+      "extra1": "emission (n) — sự phát thải",
+      "extra2": "emit gases / heat / light",
+      "example": "Cars emit gases that can pollute the air."
+    },
+    {
+      "front": "calculate",
+      "speakText": "calculate",
+      "backTitle": "verb",
+      "backContent": "tính toán",
+      "extra1": "calculation (n) — sự tính toán",
+      "extra2": "calculate + amount/cost/total",
+      "example": "You can calculate your carbon footprint online."
+    },
+    {
+      "front": "estimate",
+      "speakText": "estimate",
+      "backTitle": "noun / verb",
+      "backContent": "ước tính; đánh giá",
+      "extra1": "estimation (n) — sự ước tính; sự đánh giá",
+      "extra2": "estimate the cost / amount / impact",
+      "example": "Experts estimate how much energy a household uses."
+    },
+    {
+      "front": "estimation",
+      "speakText": "estimation",
+      "backTitle": "noun",
+      "backContent": "sự ước tính; sự đánh giá",
+      "extra1": "estimate (n/v) — sự ước tính; ước tính",
+      "example": "This figure is only an estimation of total energy use."
+    },
+    {
+      "front": "electric",
+      "speakText": "electric",
+      "backTitle": "adjective",
+      "backContent": "chạy bằng điện; tạo ra điện",
+      "extra1": "electric car / electric current",
+      "extra2": "electricity (n) — điện",
+      "example": "Electric cars can reduce some types of air pollution."
+    },
+    {
+      "front": "electrical",
+      "speakText": "electrical",
+      "backTitle": "adjective",
+      "backContent": "liên quan đến điện",
+      "extra1": "electrical equipment / electrical system",
+      "extra2": "electricity (n) — điện",
+      "example": "Turn off electrical equipment when it is not in use."
+    },
+    {
+      "front": "electronic",
+      "speakText": "electronic",
+      "backTitle": "adjective",
+      "backContent": "thuộc điện tử",
+      "extra1": "electronic device — thiết bị điện tử",
+      "example": "Old electronic devices should be recycled properly."
+    },
+    {
+      "front": "electricity",
+      "speakText": "electricity",
+      "backTitle": "noun",
+      "backContent": "điện; điện năng",
+      "extra1": "save electricity — tiết kiệm điện",
+      "extra2": "electric (adj) — chạy bằng điện; electrical (adj) — liên quan đến điện",
+      "example": "We can save electricity by switching off unused lights."
+    },
+    {
+      "front": "average",
+      "speakText": "average",
+      "backTitle": "noun / adjective",
+      "backContent": "mức trung bình; trung bình",
+      "extra1": "on average — trung bình",
+      "extra2": "an average amount / an average household",
+      "example": "On average, families use more electricity in hot weather."
+    },
+    {
+      "front": "professor",
+      "speakText": "professor",
+      "backTitle": "noun",
+      "backContent": "giáo sư",
+      "extra1": "a university professor — giáo sư đại học",
+      "example": "The professor explained how human activities affect the environment."
+    }
+  ]
+}
