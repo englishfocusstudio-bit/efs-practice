@@ -1,0 +1,15 @@
+{
+  "name": "efs-grading",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/core.test.cjs && node tests/ui.test.cjs",
+    "test:readers": "node tests/readers.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "mammoth": "1.8.0",
+    "pdfjs-dist": "4.2.67",
+    "tesseract.js": "5.1.1"
+  }
+}

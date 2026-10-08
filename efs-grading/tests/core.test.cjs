@@ -1,0 +1,7 @@
+const {test}=require('node:test');const a=require('node:assert/strict');const C=require('../core.js');
+const rows=[{number:1,type:'mc',key:'A',points:2},{number:2,type:'short',key:'twelve | 12',points:3},{number:3,type:'written',key:'Content 3; language 2',points:5}];
+test('numbered OCR text, compact key and conflict detection',()=>{a.deepEqual(C.parseAnswers('1A 2B 3C').answers,{1:'A',2:'B',3:'C'});a.deepEqual(C.parseAnswers('Câu 1: A\n2. twelve\n3) My school is big.').answers,{1:'A',2:'twelve',3:'My school is big.'});a.deepEqual(C.parseAnswers('1 A\n1 B').conflicts,[1]);});
+test('weighted grading, accepted variants, manual rubric, missing response',()=>{let r=C.grade(rows,{1:'a',2:'12',3:'text'});a.equal(r.score,5);a.equal(r.complete,false);r=C.grade(rows,{1:'A',2:' Twelve '},{3:4});a.equal(r.score,9);a.equal(r.max,10);a.equal(r.complete,true);a.equal(C.grade(rows,{}, {3:0}).score,0);});
+test('reject invalid keys and out-of-range manual scores',()=>{a.throws(()=>C.validateKey([...rows,rows[0]]));a.throws(()=>C.validateKey([{...rows[0],points:-1}]));a.throws(()=>C.validateKey([{...rows[0],key:'A/B'}]));a.throws(()=>C.grade(rows,{}, {3:6}));a.throws(()=>C.grade(rows,{}, {3:'NaN'}));});
+test('blank manual score is pending; exact matching avoids false positives',()=>{a.equal(C.grade(rows,{1:'A because'}, {3:''}).complete,false);a.equal(C.grade(rows,{1:'A because',2:'twelve!'}, {3:0}).score,0);});
+test('CSV escapes quotes and spreadsheet formulas',()=>{a.equal(C.csvCell('=1+2'),'"\'=1+2"');a.equal(C.csvCell('a"b'),'"a""b"');});
