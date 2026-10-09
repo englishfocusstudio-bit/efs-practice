@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "test": "node --test tests/core.test.cjs && node tests/ui.test.cjs",
+    "test": "node --test tests/core.test.cjs && node tests/ui.test.cjs && node tests/codes-ui.test.cjs",
     "test:readers": "node tests/readers.test.cjs"
   },
   "devDependencies": {

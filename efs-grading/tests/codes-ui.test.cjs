@@ -1,0 +1,19 @@
+const {JSDOM}=require('jsdom'),fs=require('fs'),a=require('node:assert/strict'),path=require('path');
+const base=path.resolve(__dirname,'..')+'/';
+function boot(storage){const dom=new JSDOM(fs.readFileSync(base+'index.html','utf8'),{runScripts:'outside-only',url:'https://efs.test/'}),w=dom.window;w.structuredClone=structuredClone;w.confirm=()=>true;w.URL.createObjectURL=()=> 'blob:test';w.URL.revokeObjectURL=()=>{};if(storage)w.localStorage.setItem('efs_grading_v2',storage);w.eval(fs.readFileSync(base+'core.js','utf8'));w.eval(fs.readFileSync(base+'app.js','utf8'));return {dom,w,$:id=>w.document.getElementById(id)};}
+const {dom,w,$}=boot();
+function saveCode(code,key){$('title').value='Unit 2';$('code').value=code;$('keyText').value=key;$('buildKey').click();$('saveKey').click();}
+saveCode('101','1 A\n2 B\n3 school');a.match($('setupSavedState').textContent,/101 đã lưu/);a.equal($('savedVersions').children.length,1);a.equal($('step1').hidden,false);
+const key=$('keyRows').querySelector('.qkey');key.value='D';key.dispatchEvent(new w.Event('input'));a.match($('setupSavedState').textContent,/chưa được lưu/);a.equal(JSON.parse(w.localStorage.getItem('efs_grading_v2')).versions['101'].questions[0].key,'A');$('savedVersions').querySelector('button').click();a.match($('setupSavedState').textContent,/101 đã lưu/);
+$('newVersion').click();a.equal($('code').value,'');a.equal($('savedVersions').children.length,1);saveCode('202','1 B\n2 C\n3 home');a.equal($('savedVersions').children.length,2);a.match($('savedVersions').textContent,/101/);a.match($('savedVersions').textContent,/202/);
+$('startGrading').click();$('student').value='HS-202';
+function submission(text){$('recognized').value=text;$('recognized').dispatchEvent(new w.Event('input'));$('checked').checked=true;$('toReview').click();}
+submission('Mã đề: 202\n1 B\n2 C\n3 home');a.match($('detectedCode').textContent,/Tự nhận diện: mã 202/);a.match($('reviewName').textContent,/Mã 202/);a.match($('score').textContent,/10.00/);$('approved').checked=true;$('saveResult').click();a.equal(JSON.parse(w.localStorage.getItem('efs_grading_v2')).results[0].code,'202');
+$('nextStudent').click();$('student').value='HS-101';submission('Mã đề: 101\n1 B\n2 C\n3 home');a.match($('reviewName').textContent,/Mã 101/);a.match($('score').textContent,/0.00/);
+submission('1 A\n2 B\n3 school');a.match($('status').textContent,/Chưa đọc được mã đề/);a.equal($('reviewTable').children.length,0);a.equal($('version').value,'');$('version').value='101';$('confirmCode').click();a.equal($('checked').checked,false);$('checked').checked=true;$('toReview').click();a.match($('reviewName').textContent,/Mã 101/);
+submission('Mã đề: 999\n1 A');a.match($('status').textContent,/chưa có đáp án/);a.equal($('reviewTable').children.length,0);
+submission('Mã đề: 101\n1 A\nMã đề: 202\n2 B');a.match($('status').textContent,/nhiều mã đề/);a.equal($('codeOverride').hidden,true);a.equal($('reviewTable').children.length,0);
+const restored=boot(w.localStorage.getItem('efs_grading_v2'));a.equal(restored.$('savedVersions').children.length,2);a.match(restored.$('setupSavedState').textContent,/đã lưu/);restored.w.close();
+// Actual text-read pipeline must also resolve the code, with no manual selection.
+Object.defineProperty($('files'),'files',{value:[{name:'student.txt',size:50,type:'text/plain',text:async()=> 'Mã đề: 202\n1 B\n2 C\n3 home'}],configurable:true});
+(async()=>{await $('readSubmission').onclick();a.match($('detectedCode').textContent,/Tự nhận diện: mã 202/);a.equal($('version').value,'202');a.equal($('checked').checked,false);console.log('PASS: saved-code visibility, unsaved edits, reload, automatic key routing, unknown/mixed code blocking and explicit fallback');w.close();})().catch(e=>{console.error(e);process.exitCode=1;w.close();});

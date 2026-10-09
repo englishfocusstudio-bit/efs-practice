@@ -3,7 +3,7 @@ const base=require('node:path').resolve(__dirname,'..')+'/';
 const dom=new JSDOM(fs.readFileSync(base+'index.html','utf8'),{runScripts:'outside-only',url:'https://efs.test/efs-grading/'}),w=dom.window;
 w.structuredClone=structuredClone;w.confirm=()=>true;w.URL.createObjectURL=()=> 'blob:test';w.URL.revokeObjectURL=()=>{};
 w.eval(fs.readFileSync(base+'core.js','utf8'));w.eval(fs.readFileSync(base+'app.js','utf8'));const $=id=>w.document.getElementById(id);
-$('title').value='Unit 2';$('keyText').value='1 A\n2 B\n3 school';$('buildKey').click();a.equal($('keyRows').children.length,3);$('saveKey').click();a.equal($('step2').hidden,false);
+$('title').value='Unit 2';$('keyText').value='1 A\n2 B\n3 school';$('buildKey').click();a.equal($('keyRows').children.length,3);$('saveKey').click();a.equal($('step1').hidden,false);a.match($('savedVersions').textContent,/101.*Đã lưu/);a.match($('setupSavedState').textContent,/đã lưu/);$('startGrading').click();a.equal($('step2').hidden,false);
 $('student').value='HS-001';$('recognized').value='1 A\n2 C\n3 school';$('toReview').click();a.match($('status').textContent,/đối chiếu/i);$('checked').checked=true;$('toReview').click();a.equal($('step3').hidden,false);a.match($('score').textContent,/6.67/);
 $('saveResult').click();a.match($('status').textContent,/Xác nhận/);$('approved').checked=true;$('saveResult').click();a.equal($('results').children.length,1);a.match($('results').textContent,/HS-001/);a.equal(JSON.parse(w.localStorage.getItem('efs_grading_v2')).results.length,1);
 $('nextStudent').click();a.equal($('recognized').value,'');a.equal($('student').value,'');

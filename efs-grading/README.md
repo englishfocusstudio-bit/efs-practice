@@ -4,9 +4,11 @@ Static teacher application; all changes stay in `efs-grading/`. No backend, API 
 
 ## Three-step workflow
 
-1. Supply a teacher-verified answer key, select question types and set each question's maximum points. Save each exam code separately.
-2. Read student DOCX, PDF, TXT, or images, or capture a page. Compare extracted text with the original. Numbered answers are mapped to the key; text can be corrected.
+1. Supply a teacher-verified answer key, select question types and set each question's maximum points. Save each exam code separately. The setup stays open after saving and displays every saved code with question count, total points and save time. Editing a saved key shows an unsaved-change status until saved again.
+2. Read student DOCX, PDF, TXT, or images, or capture a page. Compare extracted text with the original. Numbered answers are mapped to the key; text can be corrected. The exam code is detected automatically from labeled headers such as `Mã đề: 101`, `Mã số đề: 101`, `Exam code: A-12` or `Test code: 202`. It must match a saved code exactly (case insensitive, leading zeros preserved). Unlabeled numbers or matching answer patterns are never used to guess a code. If only one code is saved and there is no labeled code, that single key is used with a visible notice. An explicit unknown code never triggers that fallback. Missing or unknown codes require checking the original and an explicit confirmation in the exception panel; contradictory codes block review so multiple papers cannot be scored as one.
 3. Review answers and points. Multiple choice and short answers use deterministic comparison. Open writing requires teacher scores against the supplied rubric. Save only after approval; export CSV.
+
+For mixed exam versions, keep a readable `Mã đề: ...` header on the student paper. This remains one student submission per reading operation, with several files representing that student’s pages; it does not automatically split a folder of different students.
 
 Input: `1 A`, `2 B`, `3 school`, one answer per line. Compact multiple-choice keys such as `1A 2B 3C` also work. Short-answer variants use `twelve | 12` in the key. Comparison ignores case and repeated spaces; punctuation and substantive spelling remain significant. Blank or unrecognized answers score zero after teacher review. Duplicate contradictory responses block review. OCR does not determine which option is circled or filled on an answer sheet. Do not pass a question paper containing all the printed answer options as if it were a numbered answer list.
 
