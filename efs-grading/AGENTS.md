@@ -21,7 +21,7 @@ Reference: read `README.md` and the actual source before relying on this summary
 
 ## Architecture and data constraints
 - Current application has no configured backend, account system, synced cloud database, AI scoring service or server-managed student records. Do not imply otherwise.
-- Keys and results currently persist locally under `efs_grading_v2` in browser localStorage; no automatic cross-device sync or backup. Preserve compatibility and existing records.
+- Keys and results currently persist locally under `efs_grading_v2` in browser localStorage; no automatic cross-device sync or automatic backup. A manual JSON download exists but no restore/import feature is implemented. Preserve compatibility and existing records.
 - Library loading currently depends on CDN-hosted PDF.js, Mammoth and Tesseract.js. OCR limitations are substantial for handwriting, Vietnamese writing and filled/circled multiple-choice sheets.
 - Preserve leading zeros in exam codes and prevent guessing a version from unlabeled answer patterns.
 - Never silently substitute an unknown explicit exam code with another code.
