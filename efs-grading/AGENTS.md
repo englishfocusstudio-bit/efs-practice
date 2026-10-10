@@ -3,6 +3,9 @@
 Scope: `efs-grading/**` only. This document applies to all development and review tasks inside this directory.
 
 ## Mission and verified baseline
+
+V4 development candidate: read `V4-RELEASE-REPORT.md` before making completion or production claims. The feature branch now adds explicit scoring policies, revision history, validated metadata restore/rollback, browser-local batch queue and a disabled-by-default single-teacher AI proxy. The sections below describe the original deployed baseline unless noted. Production status remains PARTIAL / NO-GO; no institutional auth, cloud sync or complete original-file backup exists.
+
 EFS Grading is a teacher-controlled grading application, currently implemented as static HTML/CSS/JavaScript (`index.html`, `style.css`, `app.js`, `core.js`) with Node test scripts. It is **not** an AI-based free-writing grader or filled-bubble answer-sheet reader. It relies on deterministic key-based scoring and teacher-assigned scores for open writing.
 
 The current three-step workflow is:
@@ -65,7 +68,7 @@ These commands are documented by the project but should only be reported as PASS
 - **Privacy gate:** school/student data access, retention and transmission risks reviewed before adding backend or AI services.
 - **Release gate:** regression tests, manual phone checks where appropriate, deployment dependency review and rollback plan before production.
 
-## Proposed roadmap — NOT implemented
+## Original roadmap — consult V4 report for partial implementation
 P0: robust version management, clear import/error paths, backup/export, and safer one-submission review.
 P1: proper multi-student batch segmentation and QR/barcode/printed-sheet recognition only after sample-based feasibility study and confirmation UI.
 P2: AI-assisted free-response review with rubric and targeted spelling/grammar criteria, human approval, calibration dataset and model-cost/error measurements.
