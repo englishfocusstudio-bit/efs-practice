@@ -19,7 +19,8 @@ test('full backup includes version keys and grading results',async()=>{
  ctx.w.document.getElementById('backup').click();
  assert.equal(ctx.clicked(),1);
  assert.match(ctx.w.document.getElementById('status').textContent,/mã đề và kết quả/);
- const payload=JSON.parse(await ctx.exported().text());
+ const raw=await new Promise((resolve,reject)=>{const reader=new ctx.w.FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsText(ctx.exported());});
+ const payload=JSON.parse(raw);
  assert.equal(payload.format,'efs-grading-backup');
  assert.equal(payload.schemaVersion,1);
  assert.equal(payload.storageKey,'efs_grading_v2');
