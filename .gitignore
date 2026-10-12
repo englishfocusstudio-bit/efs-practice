@@ -1,0 +1,18 @@
+# Do not commit local credentials, private datasets, or generated materials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*credentials*.json
+*service-account*.json
+*.sqlite
+*.db
+.private/
+secrets/
+private-data/
+student-data/
+node_modules/
+.DS_Store
