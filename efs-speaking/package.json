@@ -1,0 +1,14 @@
+{
+  "name": "efs-speaking-pilot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.js",
+    "test:browser": "node tests/browser.cjs",
+    "format": "prettier --write index.html css js data tests/*.js tests/*.cjs README.md package.json"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "prettier": "3.6.2"
+  }
+}

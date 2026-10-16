@@ -1,0 +1,97 @@
+{
+  "id": "my-hobby",
+  "title": "My Hobby",
+  "subtitle": "Topic 001 · Small talk, real connections",
+  "primaryLanguage": "vi",
+  "image": "assets/hobbies.svg",
+  "imageAlt": "Minh họa sách, vợt cầu lông và bảng vẽ",
+  "audioPolicy": "Placeholder: chưa có bản thu EFS. Không sử dụng TTS hoặc audio thay thế.",
+  "vocabulary": [
+    {
+      "text": "be into",
+      "meaning": "rất thích / hứng thú với"
+    },
+    {
+      "text": "unwind",
+      "meaning": "thư giãn sau khi bận rộn"
+    },
+    {
+      "text": "give it a try",
+      "meaning": "thử làm một lần"
+    },
+    {
+      "text": "How about you?",
+      "meaning": "Còn bạn thì sao?"
+    }
+  ],
+  "questions": [
+    {
+      "id": "hobby",
+      "prompt": "What do you enjoy doing in your free time?",
+      "translation": "Bạn thích làm gì lúc rảnh?",
+      "ideas": ["reading stories", "playing badminton", "drawing"],
+      "frames": ["I’m really into …", "In my free time, I like …"],
+      "audio": null
+    },
+    {
+      "id": "when",
+      "prompt": "When do you usually do it?",
+      "translation": "Bạn thường làm khi nào?",
+      "ideas": ["after school", "at weekends", "with my friends"],
+      "frames": ["I usually …", "Whenever I have time, I …"],
+      "audio": null
+    },
+    {
+      "id": "why",
+      "prompt": "What do you like about it?",
+      "translation": "Bạn thích điều gì ở sở thích này?",
+      "ideas": ["relax", "stay active", "learn something new"],
+      "frames": ["What I love about it is …", "It helps me …"],
+      "audio": null
+    }
+  ],
+  "dialogue": [
+    {
+      "role": "A",
+      "text": "What do you enjoy doing in your free time?",
+      "purpose": "Start · Bắt đầu",
+      "questionId": "hobby",
+      "audio": null
+    },
+    {
+      "role": "B",
+      "text": "I’m really into drawing. It helps me unwind.",
+      "purpose": "Respond · Phản hồi",
+      "answerId": "hobby",
+      "audio": null
+    },
+    {
+      "role": "A",
+      "text": "That sounds fun! When do you usually do it?",
+      "purpose": "Follow up · Hỏi tiếp",
+      "questionId": "when",
+      "audio": null
+    },
+    {
+      "role": "B",
+      "text": "I usually draw after school.",
+      "purpose": "Respond · Phản hồi",
+      "answerId": "when",
+      "audio": null
+    },
+    {
+      "role": "A",
+      "text": "What do you like about it?",
+      "purpose": "Follow up · Hỏi tiếp",
+      "questionId": "why",
+      "audio": null
+    },
+    {
+      "role": "B",
+      "text": "It lets me turn my ideas into pictures. How about you?",
+      "purpose": "Respond & return · Đáp và hỏi lại",
+      "answerId": "why",
+      "audio": null
+    }
+  ]
+}
