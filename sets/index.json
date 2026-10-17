@@ -218,5 +218,25 @@
     "count": 5,
     "file": "sets/g10-u2-practice-15min-ex5-closest.json",
     "status": "published"
+  },
+  {
+    "id": "g10-u3-practice-ex1-mcq",
+    "title": "GRADE 10 - UNIT 3 - PRACTICE - EXERCISE 1",
+    "grade": "10",
+    "unit": "3",
+    "type": "mixed",
+    "count": 20,
+    "file": "sets/g10-u3-practice-ex1-mcq.json",
+    "status": "published"
+  },
+  {
+    "id": "g10-u3-practice-ex2-mcq",
+    "title": "GRADE 10 - UNIT 3 - PRACTICE - EXERCISE 2",
+    "grade": "10",
+    "unit": "3",
+    "type": "mixed",
+    "count": 20,
+    "file": "sets/g10-u3-practice-ex2-mcq.json",
+    "status": "published"
   }
 ]
