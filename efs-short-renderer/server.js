@@ -108,26 +108,25 @@ async function pump() {
 async function renderJob(id) {
   const dir = jobDir(id), project = JSON.parse(await fsp.readFile(path.join(dir, 'project.json'), 'utf8')),
     spec = JSON.parse(await fsp.readFile(path.join(dir, 'spec.json'), 'utf8')),
-    silent = path.join(dir, 'silent.mp4'), output = path.join(dir, 'output.mp4');
+    framesDir = path.join(dir, 'frames'), silent = path.join(dir, 'silent.mp4'), output = path.join(dir, 'output.mp4');
   await writeState(id, { status: 'rendering', progress: 1 });
-  const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'] });
-  let ffmpeg;
+  await fsp.mkdir(framesDir, { recursive: true });
+  const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--no-zygote', '--renderer-process-limit=1'] });
   try {
     const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
     await page.goto(`http://127.0.0.1:${port}/internal/jobs/${id}/app?serverRender=1`, { waitUntil: 'networkidle', timeout: 30000 });
     await page.evaluate(async ({ project, spec }) => { if (!window.EFSRenderer) throw new Error('Renderer API missing'); await window.EFSRenderer.loadProject(project, spec); }, { project, spec });
-    ffmpeg = spawn('ffmpeg', ['-y', '-f', 'image2pipe', '-vcodec', 'mjpeg', '-framerate', String(spec.fps), '-i', 'pipe:0', '-an', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-movflags', '+faststart', silent], { stdio: ['pipe', 'ignore', 'pipe'] });
-    let fferr = ''; ffmpeg.stderr.on('data', d => { fferr += d.toString(); if (fferr.length > 12000) fferr = fferr.slice(-12000); });
-    const ffDone = new Promise((resolve, reject) => { ffmpeg.on('error', reject); ffmpeg.on('close', c => c === 0 ? resolve() : reject(new Error(`Video encode failed ${c}: ${fferr.slice(-2500)}`))); });
     const frames = Math.ceil(spec.total * spec.fps);
     for (let i = 0; i < frames; i++) {
       const base64 = await page.evaluate(t => { window.EFSRenderer.renderFrame(t); return window.EFSRenderer.frameJpeg(); }, i / spec.fps);
-      if (!ffmpeg.stdin.write(Buffer.from(base64, 'base64'))) await new Promise(resolve => ffmpeg.stdin.once('drain', resolve));
+      await fsp.writeFile(path.join(framesDir, `frame-${String(i).padStart(6, '0')}.jpg`), Buffer.from(base64, 'base64'));
       if (i % 15 === 0) await writeState(id, { progress: Math.min(82, Math.round(i / frames * 82)) });
     }
-    ffmpeg.stdin.end(); await ffDone;
   } finally { await browser.close(); }
-  await writeState(id, { status: 'muxing', progress: 88 });
+  await writeState(id, { status: 'encoding', progress: 84 });
+  await run('ffmpeg', ['-y', '-framerate', String(spec.fps), '-i', path.join(framesDir, 'frame-%06d.jpg'), '-an', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '18', '-threads', '1', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-movflags', '+faststart', silent]);
+  await fsp.rm(framesDir, { recursive: true, force: true });
+  await writeState(id, { status: 'muxing', progress: 92 });
   await run('ffmpeg', ['-y', '-i', silent, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
   const base = String(spec.fileName || 'EFS_SHORT').replace(/[^A-Za-z0-9_-]+/g, '_');
   await fsp.unlink(silent).catch(() => {});
