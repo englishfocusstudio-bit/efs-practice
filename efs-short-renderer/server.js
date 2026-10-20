@@ -114,7 +114,14 @@ async function renderJob(id) {
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--no-zygote', '--renderer-process-limit=1'] });
   try {
     const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+    const pageErrors = [];
+    page.on('pageerror', error => pageErrors.push(error.message));
     await page.goto(`http://127.0.0.1:${port}/internal/jobs/${id}/app?serverRender=1`, { waitUntil: 'networkidle', timeout: 30000 });
+    try {
+      await page.waitForFunction(() => !!window.EFSRenderer, null, { timeout: 10000 });
+    } catch {
+      throw new Error(`Renderer did not initialize${pageErrors.length ? `: ${pageErrors.slice(-3).join(' | ')}` : ''}`);
+    }
     await page.evaluate(async ({ project, spec }) => { if (!window.EFSRenderer) throw new Error('Renderer API missing'); await window.EFSRenderer.loadProject(project, spec); }, { project, spec });
     const frames = Math.ceil(spec.total * spec.fps);
     for (let i = 0; i < frames; i++) {
