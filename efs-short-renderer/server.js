@@ -48,7 +48,7 @@ function run(cmd, args, options = {}) {
   });
 }
 
-const upload = multer({ dest: root, limits: { fileSize: 25 * 1024 * 1024, files: 1, fields: 5 } });
+const upload = multer({ dest: root, limits: { fileSize: 30 * 1024 * 1024, fieldSize: 30 * 1024 * 1024, files: 1, fields: 5 } });
 
 app.get('/health', (_req, res) => res.json({ ok: true, queue: queue.length, working }));
 
