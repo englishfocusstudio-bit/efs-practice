@@ -94,10 +94,13 @@ async function recordCanvasRealtime(page, spec, id, output) {
   const dataUrl = await page.evaluate(async ({ fps, total }) => {
     const canvas = document.getElementById('canvas');
     if (!canvas || !canvas.captureStream || typeof MediaRecorder === 'undefined') throw new Error('Canvas MediaRecorder is unavailable');
+    canvas.width = 720;
+    canvas.height = 1280;
+    canvas.getContext('2d').setTransform(2 / 3, 0, 0, 2 / 3, 0, 0);
     const mimeType = ['video/webm;codecs=vp8', 'video/webm;codecs=vp9', 'video/webm'].find(type => MediaRecorder.isTypeSupported(type));
     if (!mimeType) throw new Error('No supported WebM recorder');
     const stream = canvas.captureStream(fps), chunks = [];
-    const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 7000000 });
+    const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 4000000 });
     const stopped = new Promise((resolve, reject) => {
       recorder.ondataavailable = event => { if (event.data && event.data.size) chunks.push(event.data); };
       recorder.onerror = event => reject(event.error || new Error('Canvas recorder failed'));
@@ -232,7 +235,7 @@ async function renderJob(id) {
   }
   await writeState(id, { status: 'encoding', progress: 90 });
   if (usedRealtime) {
-    await run('ffmpeg', ['-y', '-i', realtime, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '19', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
+    await run('ffmpeg', ['-y', '-i', realtime, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-vf', 'scale=1080:1920:flags=lanczos', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '19', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
   } else {
     await run('ffmpeg', ['-y', '-i', silent, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
   }
