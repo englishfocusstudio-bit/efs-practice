@@ -132,6 +132,10 @@ async function recordCanvasRealtime(page, spec, id, output) {
 }
 
 const upload = multer({ dest: root, limits: { fileSize: 30 * 1024 * 1024, fieldSize: 30 * 1024 * 1024, files: 1, fields: 5 } });
+const muxUpload = multer({ dest: root, limits: { fileSize: 120 * 1024 * 1024, fields: 4, files: 2 } }).fields([
+  { name: 'video', maxCount: 1 },
+  { name: 'mix', maxCount: 1 }
+]);
 
 app.get('/health', (_req, res) => res.json({ ok: true, queue: queue.length, working }));
 
@@ -160,6 +164,34 @@ app.post('/v1/jobs', upload.single('mix'), async (req, res) => {
   }
 });
 
+app.post('/v1/mux-jobs', muxUpload, async (req, res) => {
+  if (!rateAllowed(req.ip)) return res.status(429).json({ error: 'RATE_LIMIT' });
+  const video = req.files && req.files.video && req.files.video[0];
+  const mix = req.files && req.files.mix && req.files.mix[0];
+  if (!video || !mix || !req.body.spec) return res.status(400).json({ error: 'INVALID_MUX_PACKAGE' });
+  const id = crypto.randomUUID(), dir = jobDir(id);
+  try {
+    const spec = JSON.parse(req.body.spec);
+    if (!Number.isFinite(spec.total) || spec.total <= 0 || spec.total > 180 || spec.fps !== 30) throw new Error('Invalid mux spec');
+    await fsp.mkdir(dir, { recursive: true });
+    await Promise.all([
+      fsp.rename(video.path, path.join(dir, 'video.h264')),
+      fsp.rename(mix.path, path.join(dir, 'mix.wav')),
+      fsp.writeFile(path.join(dir, 'spec.json'), JSON.stringify(spec)),
+      fsp.writeFile(statePath(id), JSON.stringify({ id, kind: 'mux', mode: 'local-webcodecs', status: 'queued', progress: 0, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() }))
+    ]);
+    queue.push(id); pump();
+    res.status(202).json({ id, status: 'queued', mode: 'local-webcodecs' });
+  } catch (error) {
+    await Promise.all([
+      video && fsp.unlink(video.path).catch(() => {}),
+      mix && fsp.unlink(mix.path).catch(() => {}),
+      fsp.rm(dir, { recursive: true, force: true }).catch(() => {})
+    ]);
+    res.status(400).json({ error: error.message });
+  }
+});
+
 app.get('/v1/jobs/:id', async (req, res) => {
   if (!validId(req.params.id)) return res.status(404).end();
   try { res.json(await readState(req.params.id)); } catch { res.status(404).json({ error: 'NOT_FOUND' }); }
@@ -183,9 +215,30 @@ async function pump() {
   if (working || !queue.length) return;
   working = true;
   const id = queue.shift();
-  try { await renderJob(id); } catch (error) { await writeState(id, { status: 'failed', error: error.message.slice(0, 1500) }).catch(() => {}); }
+  try {
+    const state = await readState(id);
+    if (state.kind === 'mux') await muxJob(id);
+    else await renderJob(id);
+  } catch (error) { await writeState(id, { status: 'failed', error: error.message.slice(0, 1500) }).catch(() => {}); }
   working = false;
   setImmediate(pump);
+}
+
+async function muxJob(id) {
+  const dir = jobDir(id), spec = JSON.parse(await fsp.readFile(path.join(dir, 'spec.json'), 'utf8')),
+    output = path.join(dir, 'output.mp4');
+  await writeState(id, { status: 'muxing', progress: 92 });
+  await run('ffmpeg', [
+    '-y', '-fflags', '+genpts', '-r', String(spec.fps), '-f', 'h264', '-i', path.join(dir, 'video.h264'),
+    '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy',
+    '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output
+  ]);
+  const base = String(spec.fileName || 'EFS_SHORT').replace(/[^A-Za-z0-9_-]+/g, '_');
+  await Promise.all([
+    fsp.unlink(path.join(dir, 'video.h264')).catch(() => {}),
+    fsp.unlink(path.join(dir, 'mix.wav')).catch(() => {})
+  ]);
+  await writeState(id, { status: 'completed', progress: 100, fileName: `${base}.mp4` });
 }
 
 async function renderJob(id) {
