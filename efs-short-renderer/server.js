@@ -61,6 +61,7 @@ function startFrameEncoder(fps, output) {
     stderr += data.toString();
     if (stderr.length > 12000) stderr = stderr.slice(-12000);
   });
+  child.stdin.on('error', error => { failure = error; });
   child.on('error', error => { failure = error; });
   const done = new Promise((resolve, reject) => {
     child.on('close', code => {
@@ -69,10 +70,12 @@ function startFrameEncoder(fps, output) {
       else reject(failure || new Error(`ffmpeg exited ${code}: ${stderr.slice(-3000)}`));
     });
   });
+  done.catch(() => {});
   return {
     async write(frame) {
       if (closed || failure) throw failure || new Error('Video encoder stopped unexpectedly');
-      if (!child.stdin.write(frame)) await once(child.stdin, 'drain');
+      if (!child.stdin.write(frame)) await Promise.race([once(child.stdin, 'drain'), done]);
+      if (failure) throw failure;
     },
     async finish() {
       child.stdin.end();
