@@ -87,6 +87,47 @@ function startFrameEncoder(fps, output) {
   };
 }
 
+async function recordCanvasRealtime(page, spec, id, output) {
+  await page.exposeFunction('efsReportRenderProgress', async progress => {
+    await writeState(id, { progress: Math.max(1, Math.min(88, Math.round(progress))) });
+  });
+  const dataUrl = await page.evaluate(async ({ fps, total }) => {
+    const canvas = document.getElementById('canvas');
+    if (!canvas || !canvas.captureStream || typeof MediaRecorder === 'undefined') throw new Error('Canvas MediaRecorder is unavailable');
+    const mimeType = ['video/webm;codecs=vp8', 'video/webm;codecs=vp9', 'video/webm'].find(type => MediaRecorder.isTypeSupported(type));
+    if (!mimeType) throw new Error('No supported WebM recorder');
+    const stream = canvas.captureStream(fps), chunks = [];
+    const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 7000000 });
+    const stopped = new Promise((resolve, reject) => {
+      recorder.ondataavailable = event => { if (event.data && event.data.size) chunks.push(event.data); };
+      recorder.onerror = event => reject(event.error || new Error('Canvas recorder failed'));
+      recorder.onstop = resolve;
+    });
+    window.EFSRenderer.renderFrame(0);
+    recorder.start(250);
+    const frames = Math.ceil(total * fps), started = performance.now();
+    for (let i = 0; i < frames; i++) {
+      window.EFSRenderer.renderFrame(i / fps);
+      if (i % fps === 0) await window.efsReportRenderProgress(i / frames * 88);
+      const wait = started + (i + 1) * 1000 / fps - performance.now();
+      await new Promise(resolve => setTimeout(resolve, Math.max(0, wait)));
+    }
+    window.EFSRenderer.renderFrame(total);
+    await new Promise(resolve => setTimeout(resolve, 80));
+    recorder.stop();
+    await stopped;
+    stream.getTracks().forEach(track => track.stop());
+    const blob = new Blob(chunks, { type: mimeType });
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(reader.error || new Error('Cannot read recorded video'));
+      reader.readAsDataURL(blob);
+    });
+  }, { fps: spec.fps, total: spec.total });
+  await fsp.writeFile(output, Buffer.from(String(dataUrl).split(',')[1], 'base64'));
+}
+
 const upload = multer({ dest: root, limits: { fileSize: 30 * 1024 * 1024, fieldSize: 30 * 1024 * 1024, files: 1, fields: 5 } });
 
 app.get('/health', (_req, res) => res.json({ ok: true, queue: queue.length, working }));
@@ -147,10 +188,10 @@ async function pump() {
 async function renderJob(id) {
   const dir = jobDir(id), project = JSON.parse(await fsp.readFile(path.join(dir, 'project.json'), 'utf8')),
     spec = JSON.parse(await fsp.readFile(path.join(dir, 'spec.json'), 'utf8')),
-    silent = path.join(dir, 'silent.mp4'), output = path.join(dir, 'output.mp4');
+    silent = path.join(dir, 'silent.mp4'), realtime = path.join(dir, 'realtime.webm'), output = path.join(dir, 'output.mp4');
   await writeState(id, { status: 'rendering', progress: 1 });
-  const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--no-zygote'] });
-  let encoder = null;
+  const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--no-zygote', '--disable-background-timer-throttling', '--disable-renderer-backgrounding'] });
+  let encoder = null, usedRealtime = false;
   try {
     const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
     const pageErrors = [];
@@ -162,27 +203,42 @@ async function renderJob(id) {
       throw new Error(`Renderer did not initialize${pageErrors.length ? `: ${pageErrors.slice(-3).join(' | ')}` : ''}`);
     }
     await page.evaluate(async ({ project, spec }) => { if (!window.EFSRenderer) throw new Error('Renderer API missing'); await window.EFSRenderer.loadProject(project, spec); }, { project, spec });
-    const frames = Math.ceil(spec.total * spec.fps);
-    encoder = startFrameEncoder(spec.fps, silent);
-    for (let i = 0; i < frames; i++) {
-      const base64 = await page.evaluate(t => {
-        window.EFSRenderer.renderFrame(t);
-        return window.EFSRenderer.frameJpeg(.88);
-      }, i / spec.fps);
-      await encoder.write(Buffer.from(base64, 'base64'));
-      if (i % 30 === 0) await writeState(id, { progress: Math.min(90, Math.round(i / frames * 90)) });
+    if (spec.total <= 60) {
+      try {
+        await writeState(id, { mode: 'realtime-canvas' });
+        await recordCanvasRealtime(page, spec, id, realtime);
+        usedRealtime = true;
+      } catch (error) {
+        await writeState(id, { mode: 'frame-fallback', fallbackReason: error.message.slice(0, 300), progress: 1 });
+      }
     }
-    await writeState(id, { status: 'encoding', progress: 91 });
-    await encoder.finish();
-    encoder = null;
+    if (!usedRealtime) {
+      const frames = Math.ceil(spec.total * spec.fps);
+      encoder = startFrameEncoder(spec.fps, silent);
+      for (let i = 0; i < frames; i++) {
+        const base64 = await page.evaluate(t => {
+          window.EFSRenderer.renderFrame(t);
+          return window.EFSRenderer.frameJpeg(.88);
+        }, i / spec.fps);
+        await encoder.write(Buffer.from(base64, 'base64'));
+        if (i % 30 === 0) await writeState(id, { progress: Math.min(88, Math.round(i / frames * 88)) });
+      }
+      await encoder.finish();
+      encoder = null;
+    }
   } finally {
     if (encoder) encoder.abort();
     await browser.close();
   }
-  await writeState(id, { status: 'muxing', progress: 94 });
-  await run('ffmpeg', ['-y', '-i', silent, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
+  await writeState(id, { status: 'encoding', progress: 90 });
+  if (usedRealtime) {
+    await run('ffmpeg', ['-y', '-i', realtime, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '19', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
+  } else {
+    await run('ffmpeg', ['-y', '-i', silent, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
+  }
+  await writeState(id, { status: 'muxing', progress: 96 });
   const base = String(spec.fileName || 'EFS_SHORT').replace(/[^A-Za-z0-9_-]+/g, '_');
-  await fsp.unlink(silent).catch(() => {});
+  await Promise.all([fsp.unlink(silent).catch(() => {}), fsp.unlink(realtime).catch(() => {})]);
   await writeState(id, { status: 'completed', progress: 100, fileName: `${base}.mp4` });
 }
 
