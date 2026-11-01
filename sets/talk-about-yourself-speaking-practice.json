@@ -1,0 +1,39 @@
+{
+  "id": "talk-about-yourself-speaking-practice",
+  "title": "TALK ABOUT YOURSELF - SPEAKING PRACTICE",
+  "type": "phrase",
+  "cards": [
+    {
+      "front": "Can you tell me about yourself?",
+      "speakText": "Can you tell me about yourself?",
+      "backTitle": "YOUR ANSWER",
+      "backContent": "Sure! I think I’m a _____ and _____ person.",
+      "extra1": "Useful words: sociable • hardworking • creative • responsible • independent • honest • shy • humorous • supportive • patient",
+      "example": "Sure! I think I’m a sociable and responsible person."
+    },
+    {
+      "front": "What do you usually do in your free time?",
+      "speakText": "What do you usually do in your free time?",
+      "backTitle": "YOUR ANSWER",
+      "backContent": "Well, I usually _____ because _____.",
+      "extra1": "Useful chunks: listen to music • play sports • read books • watch videos • go out with friends • help my family",
+      "example": "Well, I usually listen to music because it helps me relax."
+    },
+    {
+      "front": "Why do you enjoy it?",
+      "speakText": "Why do you enjoy it?",
+      "backTitle": "YOUR ANSWER",
+      "backContent": "Because it helps me _____ and shows _____.",
+      "extra1": "Useful chunks: relax • learn new things • stay healthy • feel happy • be creative • my personality • my interests",
+      "example": "Because it helps me relax and shows my interest in music."
+    },
+    {
+      "front": "What’s something special about your personality?",
+      "speakText": "What’s something special about your personality?",
+      "backTitle": "YOUR ANSWER",
+      "backContent": "I’d say I’m quite _____.",
+      "extra1": "Add one detail: because I… / I usually… / My friends say I’m…",
+      "example": "I’d say I’m quite helpful because I like supporting my friends."
+    }
+  ]
+}
