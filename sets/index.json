@@ -276,5 +276,13 @@
     "count": 10,
     "file": "sets/talk-about-yourself-vocabulary-practice.json",
     "status": "published"
+  },
+  {
+    "id": "talk-about-yourself-speaking-practice",
+    "title": "TALK ABOUT YOURSELF - SPEAKING PRACTICE",
+    "type": "phrase",
+    "count": 4,
+    "file": "sets/talk-about-yourself-speaking-practice.json",
+    "status": "published"
   }
 ]
