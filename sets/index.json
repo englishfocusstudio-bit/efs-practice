@@ -268,5 +268,13 @@
     "count": 20,
     "file": "sets/g10-u3-practice-ex5-verb-forms.json",
     "status": "published"
+  },
+  {
+    "id": "talk-about-yourself-vocabulary-practice",
+    "title": "TALK ABOUT YOURSELF - VOCABULARY PRACTICE",
+    "type": "vocabulary",
+    "count": 10,
+    "file": "sets/talk-about-yourself-vocabulary-practice.json",
+    "status": "published"
   }
 ]
