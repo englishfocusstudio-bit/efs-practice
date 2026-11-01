@@ -1,0 +1,87 @@
+{
+  "id": "talk-about-yourself-vocabulary-practice",
+  "title": "TALK ABOUT YOURSELF - VOCABULARY PRACTICE",
+  "type": "vocabulary",
+  "cards": [
+    {
+      "front": "Outgoing",
+      "speakText": "Outgoing",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Sociable — hòa đồng, thích giao tiếp",
+      "extra1": "Outgoing — hướng ngoại, cởi mở",
+      "example": "I'm quite sociable and I enjoy meeting new people."
+    },
+    {
+      "front": "Hardworking",
+      "speakText": "Hardworking",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Diligent — chăm chỉ, siêng năng",
+      "extra1": "Hardworking — chăm chỉ",
+      "example": "I'm diligent and I always try to finish my work on time."
+    },
+    {
+      "front": "Creative",
+      "speakText": "Creative",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Innovative — sáng tạo, có ý tưởng mới",
+      "extra1": "Creative — sáng tạo",
+      "example": "I'm creative and I like coming up with new ideas."
+    },
+    {
+      "front": "Responsible",
+      "speakText": "Responsible",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Accountable — có trách nhiệm, chịu trách nhiệm",
+      "extra1": "Responsible — có trách nhiệm",
+      "example": "I'm responsible and I always try to keep my promises."
+    },
+    {
+      "front": "Independent",
+      "speakText": "Independent",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Self-reliant — tự lập, có khả năng tự lo cho mình",
+      "extra1": "Independent — độc lập, tự lập",
+      "example": "I'm quite self-reliant and I can solve many problems by myself."
+    },
+    {
+      "front": "Honest",
+      "speakText": "Honest",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Truthful — trung thực, nói thật",
+      "extra1": "Honest — trung thực",
+      "example": "I'm honest and I always try to tell the truth."
+    },
+    {
+      "front": "Shy",
+      "speakText": "Shy",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Timid — nhút nhát, rụt rè",
+      "extra1": "Shy — nhút nhát",
+      "example": "I'm a little timid when I meet new people."
+    },
+    {
+      "front": "Funny",
+      "speakText": "Funny",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Humorous — hài hước, dí dỏm",
+      "extra1": "Funny — vui tính, hài hước",
+      "example": "I'm humorous and I like making my friends laugh."
+    },
+    {
+      "front": "Helpful",
+      "speakText": "Helpful",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Supportive — hay giúp đỡ, biết hỗ trợ người khác",
+      "extra1": "Helpful — hay giúp đỡ",
+      "example": "I'm supportive and I like helping my friends when they need me."
+    },
+    {
+      "front": "Patient",
+      "speakText": "Patient",
+      "backTitle": "INTERMEDIATE WORD",
+      "backContent": "Tolerant — kiên nhẫn, biết chấp nhận sự khác biệt",
+      "extra1": "Patient — kiên nhẫn",
+      "example": "I'm patient and I don't get angry easily."
+    }
+  ]
+}
