@@ -284,5 +284,13 @@
     "count": 4,
     "file": "sets/talk-about-yourself-speaking-practice.json",
     "status": "published"
+  },
+  {
+    "id": "vietnamese-countryside-cultural-heritage-ex1",
+    "title": "VIETNAMESE COUNTRYSIDE & CULTURAL HERITAGE - EXERCISE 1",
+    "type": "mixed",
+    "count": 10,
+    "file": "sets/vietnamese-countryside-cultural-heritage-ex1.json",
+    "status": "published"
   }
 ]
