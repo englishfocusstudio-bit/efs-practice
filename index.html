@@ -134,16 +134,21 @@ button,select{
 }
 .meaning{font-size:25px;font-weight:850;line-height:1.35}
 .extra{font-size:17px;font-weight:650;margin-top:12px;line-height:1.45}
-.sectionLabel{margin-top:12px;margin-bottom:8px;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-.meaningGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.infoBox,.exampleBox{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px;text-align:left}
-.infoBox:first-child{background:var(--soft);border-color:#cfecef}
-.boxLabel{font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
-.boxText{font-size:17px;font-weight:700;line-height:1.5;color:var(--text)}
-.exampleSection{margin-top:18px}
-.example{font-size:16px;color:var(--text);line-height:1.6;text-align:left}
-.example b{color:var(--text);font-weight:900}
-.exampleTranslation{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);line-height:1.55;text-align:left}
+.backTop{display:flex;align-items:flex-start;justify-content:space-between;text-align:left;margin-bottom:18px}
+.backTerm{font-size:27px;font-weight:900;line-height:1.15;letter-spacing:-.02em;color:var(--text);margin-bottom:7px}
+.readingSection{text-align:left}
+.sectionLabel{margin:0 0 8px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.definitionText{font-size:18px;font-weight:750;line-height:1.55;color:var(--text)}
+.translationLine{margin-top:10px;padding:10px 12px;border-radius:11px;background:var(--soft);line-height:1.45}
+.translationLabel{display:block;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.translationText{font-size:16px;font-weight:800;color:var(--text)}
+.softDivider{height:1px;background:var(--line);margin:18px 0}
+.exampleSection{margin-top:0}
+.exampleHeader{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.example{font-size:17px;color:var(--text);line-height:1.65;text-align:left}
+.example b{color:var(--accent);font-weight:900}
+.exampleTranslation{margin-top:9px;font-size:15px;color:var(--muted);line-height:1.55;text-align:left}
+.listenIcon{border:0;background:var(--soft);color:var(--text);border-radius:999px;padding:7px 9px;font-size:14px;line-height:1;cursor:pointer}
 .speakBtn{margin-top:14px;padding:9px 12px;font-size:14px}
 .actions{display:grid;grid-template-columns:1fr 1.15fr 1.35fr;gap:10px;margin-top:16px}
 .actions button{min-height:46px}
@@ -179,7 +184,6 @@ button,select{
   .meaning{font-size:22px}
   .extra{font-size:16px}
   .example{font-size:15px}
-  .meaningGrid{grid-template-columns:1fr}
   .quickControls{align-items:end;gap:8px}
   .languageControl{min-width:0;flex:1}
   .settingsBtn{padding:11px 12px}
@@ -200,7 +204,10 @@ button,select{
   .badge{font-size:10px;padding:6px 8px}
   h1{font-size:19px}
   .front{font-size:28px}
-  .boxText{font-size:16px}
+  .backTerm{font-size:24px}
+  .definitionText{font-size:17px}
+  .translationText{font-size:15px}
+  .example{font-size:16px}
   .quickControls{margin-top:10px}
   .actions button{font-size:13px}
 }
@@ -264,28 +271,32 @@ button,select{
 
             <div class="face backFace">
               <div id="back">
-                <div id="pos" class="pos"></div>
-
-                <div class="sectionLabel">Meaning</div>
-                <div class="meaningGrid">
-                  <div class="infoBox">
-                    <div class="boxLabel">English</div>
-                    <div id="meaning" class="boxText"></div>
-                  </div>
-                  <div id="localizedBox" class="infoBox hidden">
-                    <div id="localizedLabel" class="boxLabel"></div>
-                    <div id="localized" class="boxText"></div>
+                <div class="backTop">
+                  <div>
+                    <div id="backTerm" class="backTerm"></div>
+                    <div id="pos" class="pos"></div>
                   </div>
                 </div>
 
-                <div class="sectionLabel exampleSection">Example</div>
-                <div class="exampleBox">
+                <section class="readingSection">
+                  <div class="sectionLabel">Meaning</div>
+                  <div id="meaning" class="definitionText"></div>
+                  <div id="localizedBox" class="translationLine hidden">
+                    <span id="localizedLabel" class="translationLabel"></span>
+                    <span id="localized" class="translationText"></span>
+                  </div>
+                </section>
+
+                <div class="softDivider"></div>
+
+                <section class="readingSection exampleSection">
+                  <div class="exampleHeader">
+                    <div class="sectionLabel">Example</div>
+                    <button id="speakExample" class="listenIcon hidden" type="button" aria-label="Listen to example">🔊</button>
+                  </div>
                   <div id="example" class="example"></div>
                   <div id="exampleTranslation" class="exampleTranslation hidden"></div>
-                </div>
-
-                <button id="speakExample" class="ghost speakBtn hidden" type="button">🔊 Listen to example</button>
-                <div class="flipHint backHint"><span class="flipIcon">↻</span> Tap to flip back</div>
+                </section>
               </div>
             </div>
           </div>
@@ -465,6 +476,7 @@ function render(){
   el("shuffle").classList.toggle("hidden",mode!=="random");
 
   el("front").textContent=c.front||"";
+  el("backTerm").textContent=c.front||"";
   el("flipInner").classList.remove("flipped");
 
   setText("pos",c.backTitle);
