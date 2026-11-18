@@ -36,7 +36,12 @@
         "da": "købe",
         "sv": "köpa",
         "no": "kjøpe",
-        "fi": "ostaa"
+        "fi": "ostaa",
+        "km": "ទិញ",
+        "lo": "ຊື້",
+        "my": "ဝယ်သည်",
+        "fa": "خریدن",
+        "he": "לקנות"
       },
       "exampleTranslations": {
         "vi": "Tôi muốn mua một món quà nhỏ.",
@@ -63,7 +68,12 @@
         "da": "Jeg vil gerne købe en lille gave.",
         "sv": "Jag vill köpa en liten present.",
         "no": "Jeg vil kjøpe en liten gave.",
-        "fi": "Haluan ostaa pienen lahjan."
+        "fi": "Haluan ostaa pienen lahjan.",
+        "km": "ខ្ញុំចង់ទិញអំណោយតូចមួយ។",
+        "lo": "ຂ້ອຍຢາກຊື້ຂອງຂວັນນ້ອຍໆ.",
+        "my": "လက်ဆောင်အသေးလေးတစ်ခု ဝယ်ချင်ပါတယ်။",
+        "fa": "می‌خواهم یک هدیه کوچک بخرم.",
+        "he": "אני רוצה לקנות מתנה קטנה."
       }
     },
     {
@@ -97,7 +107,12 @@
         "da": "ven",
         "sv": "vän",
         "no": "venn",
-        "fi": "ystävä"
+        "fi": "ystävä",
+        "km": "មិត្តភក្តិ",
+        "lo": "ໝູ່",
+        "my": "သူငယ်ချင်း",
+        "fa": "دوست",
+        "he": "חבר / חברה"
       },
       "exampleTranslations": {
         "vi": "Món quà này dành cho bạn tôi.",
@@ -124,7 +139,12 @@
         "da": "Denne gave er til min ven.",
         "sv": "Den här presenten är till min vän.",
         "no": "Denne gaven er til vennen min.",
-        "fi": "Tämä lahja on ystävälleni."
+        "fi": "Tämä lahja on ystävälleni.",
+        "km": "អំណោយនេះសម្រាប់មិត្តភក្តិរបស់ខ្ញុំ។",
+        "lo": "ຂອງຂວັນນີ້ໃຫ້ໝູ່ຂອງຂ້ອຍ.",
+        "my": "ဒီလက်ဆောင်က ကျွန်တော့်/ကျွန်မ သူငယ်ချင်းအတွက်ပါ။",
+        "fa": "این هدیه برای دوستم است.",
+        "he": "המתנה הזאת היא לחבר/ה שלי."
       }
     },
     {
@@ -158,7 +178,12 @@
         "da": "etiket",
         "sv": "etikett",
         "no": "etikett",
-        "fi": "etiketti"
+        "fi": "etiketti",
+        "km": "ស្លាក",
+        "lo": "ປ້າຍ",
+        "my": "တံဆိပ်",
+        "fa": "برچسب",
+        "he": "תווית"
       },
       "exampleTranslations": {
         "vi": "Vui lòng kiểm tra nhãn trên chiếc hộp.",
@@ -185,7 +210,12 @@
         "da": "Tjek venligst etiketten på kassen.",
         "sv": "Kontrollera etiketten på lådan.",
         "no": "Sjekk etiketten på boksen.",
-        "fi": "Tarkista laatikon etiketti."
+        "fi": "Tarkista laatikon etiketti.",
+        "km": "សូមពិនិត្យស្លាកលើប្រអប់។",
+        "lo": "ກະລຸນາກວດເບິ່ງປ້າຍເທິງກ່ອງ.",
+        "my": "သေတ္တာပေါ်က တံဆိပ်ကို စစ်ကြည့်ပါ။",
+        "fa": "لطفاً برچسب روی جعبه را بررسی کنید.",
+        "he": "בבקשה בדוק/בדקי את התווית שעל הקופסה."
       }
     },
     {
@@ -219,7 +249,12 @@
         "da": "ordrenummer",
         "sv": "ordernummer",
         "no": "ordrenummer",
-        "fi": "tilausnumero"
+        "fi": "tilausnumero",
+        "km": "លេខបញ្ជាទិញ",
+        "lo": "ເລກຄຳສັ່ງຊື້",
+        "my": "အော်ဒါနံပါတ်",
+        "fa": "شماره سفارش",
+        "he": "מספר הזמנה"
       },
       "exampleTranslations": {
         "vi": "Mã số đơn hàng của bạn là gì?",
@@ -246,7 +281,12 @@
         "da": "Hvad er dit ordrenummer?",
         "sv": "Vad är ditt ordernummer?",
         "no": "Hva er ordrenummeret ditt?",
-        "fi": "Mikä on tilausnumerosi?"
+        "fi": "Mikä on tilausnumerosi?",
+        "km": "លេខបញ្ជាទិញរបស់អ្នកជាអ្វី?",
+        "lo": "ເລກຄຳສັ່ງຊື້ຂອງທ່ານແມ່ນຫຍັງ?",
+        "my": "သင့်အော်ဒါနံပါတ်က ဘာလဲ?",
+        "fa": "شماره سفارش شما چیست؟",
+        "he": "מה מספר ההזמנה שלך?"
       }
     },
     {
@@ -280,7 +320,12 @@
         "da": "købe noget",
         "sv": "köpa något",
         "no": "kjøpe noe",
-        "fi": "ostaa jotain"
+        "fi": "ostaa jotain",
+        "km": "ទិញអ្វីមួយ",
+        "lo": "ຊື້ບາງຢ່າງ",
+        "my": "တစ်ခုခုဝယ်သည်",
+        "fa": "چیزی خریدن",
+        "he": "לקנות משהו"
       },
       "exampleTranslations": {
         "vi": "Tôi cần mua một món đồ cho bạn tôi.",
@@ -307,7 +352,12 @@
         "da": "Jeg skal købe noget til min ven.",
         "sv": "Jag behöver köpa något till min vän.",
         "no": "Jeg må kjøpe noe til vennen min.",
-        "fi": "Minun täytyy ostaa jotain ystävälleni."
+        "fi": "Minun täytyy ostaa jotain ystävälleni.",
+        "km": "ខ្ញុំត្រូវទិញអ្វីមួយសម្រាប់មិត្តភក្តិរបស់ខ្ញុំ។",
+        "lo": "ຂ້ອຍຕ້ອງຊື້ບາງຢ່າງໃຫ້ໝູ່.",
+        "my": "သူငယ်ချင်းအတွက် တစ်ခုခုဝယ်ရမယ်။",
+        "fa": "باید چیزی برای دوستم بخرم.",
+        "he": "אני צריך/ה לקנות משהו לחבר/ה שלי."
       }
     },
     {
@@ -341,7 +391,12 @@
         "da": "vent her",
         "sv": "vänta här",
         "no": "vent her",
-        "fi": "odota tässä"
+        "fi": "odota tässä",
+        "km": "រង់ចាំនៅទីនេះ",
+        "lo": "ລໍຖ້າຢູ່ນີ້",
+        "my": "ဒီမှာစောင့်ပါ",
+        "fa": "اینجا صبر کنید",
+        "he": "חכה/י כאן"
       },
       "exampleTranslations": {
         "vi": "Vui lòng đợi ở đây một lát.",
@@ -368,7 +423,12 @@
         "da": "Vent venligst her et øjeblik.",
         "sv": "Vänta här en liten stund.",
         "no": "Vent her et øyeblikk.",
-        "fi": "Odota tässä hetki."
+        "fi": "Odota tässä hetki.",
+        "km": "សូមរង់ចាំនៅទីនេះបន្តិច។",
+        "lo": "ກະລຸນາລໍຖ້າຢູ່ນີ້ຈັກໜ່ອຍ.",
+        "my": "ဒီမှာခဏလောက် စောင့်ပါ။",
+        "fa": "لطفاً یک لحظه اینجا صبر کنید.",
+        "he": "בבקשה חכה/י כאן לרגע."
       }
     },
     {
@@ -402,7 +462,12 @@
         "da": "Det er til min ven.",
         "sv": "Det är till min vän.",
         "no": "Det er til vennen min.",
-        "fi": "Se on ystävälleni."
+        "fi": "Se on ystävälleni.",
+        "km": "វាសម្រាប់មិត្តភក្តិរបស់ខ្ញុំ។",
+        "lo": "ມັນແມ່ນສຳລັບໝູ່ຂອງຂ້ອຍ.",
+        "my": "ဒါက သူငယ်ချင်းအတွက်ပါ။",
+        "fa": "این برای دوستم است.",
+        "he": "זה בשביל החבר/ה שלי."
       },
       "exampleTranslations": {
         "vi": "Cái này dành cho bạn tôi. Đây là quà sinh nhật.",
@@ -429,7 +494,12 @@
         "da": "Det er til min ven. Det er en fødselsdagsgave.",
         "sv": "Det är till min vän. Det är en födelsedagspresent.",
         "no": "Det er til vennen min. Det er en bursdagsgave.",
-        "fi": "Se on ystävälleni. Se on syntymäpäivälahja."
+        "fi": "Se on ystävälleni. Se on syntymäpäivälahja.",
+        "km": "វាសម្រាប់មិត្តភក្តិរបស់ខ្ញុំ។ វាជាអំណោយខួបកំណើត។",
+        "lo": "ມັນແມ່ນສຳລັບໝູ່ຂອງຂ້ອຍ. ມັນແມ່ນຂອງຂວັນວັນເກີດ.",
+        "my": "ဒါက သူငယ်ချင်းအတွက်ပါ။ မွေးနေ့လက်ဆောင်ပါ။",
+        "fa": "این برای دوستم است. هدیه تولد است.",
+        "he": "זה בשביל החבר/ה שלי. זו מתנת יום הולדת."
       }
     },
     {
@@ -463,7 +533,12 @@
         "da": "Hvad vil du gerne have?",
         "sv": "Vad skulle du vilja ha?",
         "no": "Hva vil du ha?",
-        "fi": "Mitä haluaisit?"
+        "fi": "Mitä haluaisit?",
+        "km": "តើអ្នកចង់បានអ្វី?",
+        "lo": "ທ່ານຢາກໄດ້ຫຍັງ?",
+        "my": "ဘာလိုချင်ပါသလဲ?",
+        "fa": "چه چیزی می‌خواهید؟",
+        "he": "מה תרצה/י?"
       },
       "exampleTranslations": {
         "vi": "Bạn muốn gì? Một cái túi hay một quyển sổ?",
@@ -490,7 +565,12 @@
         "da": "Hvad vil du gerne have? En taske eller en notesbog?",
         "sv": "Vad skulle du vilja ha? En väska eller en anteckningsbok?",
         "no": "Hva vil du ha? En veske eller en notatbok?",
-        "fi": "Mitä haluaisit? Laukun vai muistikirjan?"
+        "fi": "Mitä haluaisit? Laukun vai muistikirjan?",
+        "km": "តើអ្នកចង់បានអ្វី? កាបូប ឬ សៀវភៅកត់ត្រា?",
+        "lo": "ທ່ານຢາກໄດ້ຫຍັງ? ກະເປົາ ຫຼື ປຶ້ມບັນທຶກ?",
+        "my": "ဘာလိုချင်ပါသလဲ? အိတ်လား၊ မှတ်စုစာအုပ်လား?",
+        "fa": "چه چیزی می‌خواهید؟ یک کیف یا یک دفتر؟",
+        "he": "מה תרצה/י? תיק או מחברת?"
       }
     },
     {
@@ -524,7 +604,12 @@
         "da": "Hvor meget koster det?",
         "sv": "Hur mycket kostar det?",
         "no": "Hvor mye koster det?",
-        "fi": "Kuinka paljon se maksaa?"
+        "fi": "Kuinka paljon se maksaa?",
+        "km": "វាតម្លៃប៉ុន្មាន?",
+        "lo": "ມັນລາຄາເທົ່າໃດ?",
+        "my": "ဘယ်လောက်ကျပါသလဲ?",
+        "fa": "قیمتش چقدر است؟",
+        "he": "כמה זה עולה?"
       },
       "exampleTranslations": {
         "vi": "Cái này giá bao nhiêu? Nó giá năm đô la.",
@@ -551,7 +636,12 @@
         "da": "Hvor meget koster det? Det koster fem dollars.",
         "sv": "Hur mycket kostar det? Det kostar fem dollar.",
         "no": "Hvor mye koster det? Det koster fem dollar.",
-        "fi": "Kuinka paljon se maksaa? Se maksaa viisi dollaria."
+        "fi": "Kuinka paljon se maksaa? Se maksaa viisi dollaria.",
+        "km": "វាតម្លៃប៉ុន្មាន? ប្រាំដុល្លារ។",
+        "lo": "ມັນລາຄາເທົ່າໃດ? ຫ້າໂດລາ.",
+        "my": "ဘယ်လောက်ကျပါသလဲ? ငါးဒေါ်လာပါ။",
+        "fa": "قیمتش چقدر است؟ پنج دلار است.",
+        "he": "כמה זה עולה? זה עולה חמישה דולרים."
       }
     },
     {
@@ -585,7 +675,12 @@
         "da": "Jeg henter din bestilling.",
         "sv": "Jag hämtar din beställning.",
         "no": "Jeg henter bestillingen din.",
-        "fi": "Haen tilauksesi."
+        "fi": "Haen tilauksesi.",
+        "km": "ខ្ញុំនឹងយកការបញ្ជាទិញរបស់អ្នកមក។",
+        "lo": "ຂ້ອຍຈະໄປເອົາຄຳສັ່ງຊື້ຂອງທ່ານ.",
+        "my": "သင့်အော်ဒါကို သွားယူပေးမယ်။",
+        "fa": "سفارشتان را می‌آورم.",
+        "he": "אני אביא את ההזמנה שלך."
       },
       "exampleTranslations": {
         "vi": "Tôi sẽ lấy đơn hàng của bạn. Vui lòng đợi ở đây.",
@@ -612,7 +707,12 @@
         "da": "Jeg henter din bestilling. Vent venligst her.",
         "sv": "Jag hämtar din beställning. Vänta här, tack.",
         "no": "Jeg henter bestillingen din. Vent her, takk.",
-        "fi": "Haen tilauksesi. Odota tässä, kiitos."
+        "fi": "Haen tilauksesi. Odota tässä, kiitos.",
+        "km": "ខ្ញុំនឹងយកការបញ្ជាទិញរបស់អ្នកមក។ សូមរង់ចាំនៅទីនេះ។",
+        "lo": "ຂ້ອຍຈະໄປເອົາຄຳສັ່ງຊື້ຂອງທ່ານ. ກະລຸນາລໍຖ້າຢູ່ນີ້.",
+        "my": "သင့်အော်ဒါကို သွားယူပေးမယ်။ ဒီမှာစောင့်ပါ။",
+        "fa": "سفارشتان را می‌آورم. لطفاً اینجا صبر کنید.",
+        "he": "אני אביא את ההזמנה שלך. בבקשה חכה/י כאן."
       }
     }
   ]
