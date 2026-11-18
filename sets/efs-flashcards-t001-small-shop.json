@@ -1035,5 +1035,47 @@
         "so": "Waxaan kuu keenayaa dalabkaaga. Fadlan halkan sug."
       }
     }
-  ]
+  ],
+  "qualityGate": {
+    "schema": "EFS VOCABULARY PRACTICE — GLOBAL QUALITY GATE V1.0",
+    "version": "1.0",
+    "scenarioId": "efs-flashcards-t001-small-shop",
+    "globalApproved": false,
+    "status": "PILOT_QA_REQUIRED",
+    "translationQA": {
+      "status": "NOT_HUMAN_APPROVED",
+      "coverageComplete": true,
+      "checksRequired": [
+        "scenario_meaning_accuracy",
+        "natural_target_language",
+        "communicative_function_preserved_for_phrases_collocations_chunks"
+      ]
+    },
+    "audioQA": {
+      "status": "PREMIUM_AUDIO_NOT_YET_APPROVED",
+      "browserSpeechSynthesisFallback": true,
+      "premiumAudioPilot": true,
+      "requiredAssets": [
+        "wordOrPhrase",
+        "exampleSentence"
+      ]
+    },
+    "mobileQA": {
+      "status": "RETEST_REQUIRED_AFTER_QUALITY_GATE_CHANGES"
+    },
+    "preferencePersistence": {
+      "languageKey": "efsGlobalLang",
+      "voiceKey": "efsGlobalVoice",
+      "status": "PRESERVE_EXISTING_BEHAVIOR"
+    },
+    "productionGate": {
+      "status": "BLOCKED",
+      "unblockWhen": [
+        "translation_qa_passed",
+        "audio_qa_passed",
+        "mobile_qa_passed",
+        "regression_check_passed"
+      ]
+    }
+  }
 }
