@@ -52,15 +52,66 @@ button,select{
 .progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}
 .progress div{height:100%;background:var(--accent)}
 .flash{
-  min-height:360px;
+  min-height:390px;
   border:1px solid var(--line);
   border-radius:20px;
+  padding:0;
+  background:#fff;
+  overflow:hidden;
+  perspective:1200px;
+}
+.flipStage{min-height:390px;width:100%}
+.flipInner{
+  position:relative;
+  width:100%;
+  min-height:390px;
+  transform-style:preserve-3d;
+  transition:transform .42s cubic-bezier(.2,.7,.2,1);
+}
+.flipInner.flipped{transform:rotateY(180deg)}
+.face{
+  position:absolute;
+  inset:0;
+  min-height:390px;
   padding:24px;
   display:grid;
   place-items:center;
   text-align:center;
-  background:#fff;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
+.frontFace{background:#fff}
+.backFace{
+  background:#fff;
+  transform:rotateY(180deg);
+  align-items:start;
+  overflow:auto;
+}
+#back{width:100%;max-width:760px;margin:auto}
+.flipHint{
+  margin-top:18px;
+  font-size:12px;
+  font-weight:800;
+  color:var(--muted);
+  letter-spacing:.02em;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  justify-content:center;
+  opacity:.85;
+}
+.flipIcon{
+  display:inline-block;
+  font-size:16px;
+  color:var(--accent);
+  animation:flipCue 2.2s ease-in-out infinite;
+}
+@keyframes flipCue{
+  0%,70%,100%{transform:rotate(0deg)}
+  82%{transform:rotate(24deg)}
+  92%{transform:rotate(-14deg)}
+}
+.backHint{margin-bottom:4px}
 .front{font-size:40px;font-weight:900;line-height:1.2}
 .pos{
   display:inline-block;
@@ -121,7 +172,9 @@ button,select{
   .extra{font-size:16px}
   .example{font-size:15px}
   .meaningGrid{grid-template-columns:1fr}
-  .flash{min-height:300px;padding:18px}
+  .flash{min-height:330px}
+  .flipStage,.flipInner,.face{min-height:330px}
+  .face{padding:18px}
   .actions{width:100%}
   .actions button{flex:1 1 30%;min-width:0}
   .toolbar{gap:8px}
@@ -161,33 +214,43 @@ button,select{
       </div>
 
       <div id="flash" class="flash">
-        <div id="frontWrap">
-          <div id="front" class="front"></div>
-          <button id="speakFront" class="ghost speakBtn" type="button">🔊 Listen</button>
-        </div>
-
-        <div id="back" class="hidden">
-          <div id="pos" class="pos"></div>
-
-          <div class="sectionLabel">Meaning</div>
-          <div class="meaningGrid">
-            <div class="infoBox">
-              <div class="boxLabel">English</div>
-              <div id="meaning" class="boxText"></div>
+        <div id="flipStage" class="flipStage">
+          <div id="flipInner" class="flipInner">
+            <div class="face frontFace">
+              <div id="frontWrap">
+                <div id="front" class="front"></div>
+                <button id="speakFront" class="ghost speakBtn" type="button">🔊 Listen</button>
+                <div class="flipHint"><span class="flipIcon">↻</span> Tap to flip</div>
+              </div>
             </div>
-            <div id="localizedBox" class="infoBox hidden">
-              <div id="localizedLabel" class="boxLabel"></div>
-              <div id="localized" class="boxText"></div>
+
+            <div class="face backFace">
+              <div id="back">
+                <div id="pos" class="pos"></div>
+
+                <div class="sectionLabel">Meaning</div>
+                <div class="meaningGrid">
+                  <div class="infoBox">
+                    <div class="boxLabel">English</div>
+                    <div id="meaning" class="boxText"></div>
+                  </div>
+                  <div id="localizedBox" class="infoBox hidden">
+                    <div id="localizedLabel" class="boxLabel"></div>
+                    <div id="localized" class="boxText"></div>
+                  </div>
+                </div>
+
+                <div class="sectionLabel exampleSection">Example</div>
+                <div class="exampleBox">
+                  <div id="example" class="example"></div>
+                  <div id="exampleTranslation" class="exampleTranslation hidden"></div>
+                </div>
+
+                <button id="speakExample" class="ghost speakBtn hidden" type="button">🔊 Listen to example</button>
+                <div class="flipHint backHint"><span class="flipIcon">↻</span> Tap to flip back</div>
+              </div>
             </div>
           </div>
-
-          <div class="sectionLabel exampleSection">Example</div>
-          <div class="exampleBox">
-            <div id="example" class="example"></div>
-            <div id="exampleTranslation" class="exampleTranslation hidden"></div>
-          </div>
-
-          <button id="speakExample" class="ghost speakBtn hidden" type="button">🔊 Listen to example</button>
         </div>
       </div>
 
@@ -291,8 +354,7 @@ function render(){
   el("shuffle").classList.toggle("hidden",mode!=="random");
 
   el("front").textContent=c.front||"";
-  el("frontWrap").classList.remove("hidden");
-  el("back").classList.add("hidden");
+  el("flipInner").classList.remove("flipped");
 
   setText("pos",c.backTitle);
   setText("meaning",c.definition||c.backContent);
@@ -318,8 +380,7 @@ function render(){
 }
 
 function flip(){
-  el("frontWrap").classList.toggle("hidden");
-  el("back").classList.toggle("hidden");
+  el("flipInner").classList.toggle("flipped");
 }
 
 function step(n){
