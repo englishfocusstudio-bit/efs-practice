@@ -24,6 +24,22 @@
         "hi": "मिलनसार और बहिर्मुखी",
         "tr": "dışa dönük, sosyal",
         "ru": "общительный, открытый"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi khá hướng ngoại, vì vậy tôi thích gặp gỡ những người mới.",
+        "es": "Soy extrovertido/a, así que disfruto conocer gente nueva.",
+        "pt": "Sou extrovertido/a, por isso gosto de conhecer pessoas novas.",
+        "fr": "Je suis extraverti(e), donc j’aime rencontrer de nouvelles personnes.",
+        "de": "Ich bin kontaktfreudig, deshalb lerne ich gern neue Leute kennen.",
+        "id": "Saya cukup mudah bergaul, jadi saya suka bertemu orang baru.",
+        "th": "ฉันเป็นคนชอบเข้าสังคม จึงชอบพบปะผู้คนใหม่ ๆ",
+        "ja": "私は社交的なので、新しい人に会うのが好きです。",
+        "ko": "저는 외향적이라서 새로운 사람들을 만나는 것을 좋아해요.",
+        "zh": "我很外向，所以我喜欢认识新朋友。",
+        "ar": "أنا اجتماعي، لذلك أستمتع بالتعرّف على أشخاص جدد.",
+        "hi": "मैं मिलनसार हूँ, इसलिए मुझे नए लोगों से मिलना पसंद है।",
+        "tr": "Dışa dönük biriyim, bu yüzden yeni insanlarla tanışmayı severim.",
+        "ru": "Я общительный человек, поэтому люблю знакомиться с новыми людьми."
       }
     },
     {
@@ -47,6 +63,22 @@
         "hi": "मेहनती",
         "tr": "çalışkan",
         "ru": "трудолюбивый"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi chăm chỉ và luôn hoàn thành nhiệm vụ đúng giờ.",
+        "es": "Soy trabajador/a y siempre termino mis tareas a tiempo.",
+        "pt": "Sou trabalhador/a e sempre termino minhas tarefas a tempo.",
+        "fr": "Je suis travailleur/euse et je termine toujours mes tâches à temps.",
+        "de": "Ich bin fleißig und erledige meine Aufgaben immer pünktlich.",
+        "id": "Saya rajin dan selalu menyelesaikan tugas tepat waktu.",
+        "th": "ฉันขยันและทำงานเสร็จตรงเวลาเสมอ",
+        "ja": "私は勤勉で、いつも課題を時間どおりに終えます。",
+        "ko": "저는 부지런하고 항상 제시간에 과제를 끝내요.",
+        "zh": "我很勤奋，总是按时完成任务。",
+        "ar": "أنا مجتهد وأُنهي مهامي دائمًا في الوقت المحدد.",
+        "hi": "मैं मेहनती हूँ और हमेशा अपने काम समय पर पूरा करता/करती हूँ।",
+        "tr": "Çalışkanım ve görevlerimi her zaman zamanında bitiririm.",
+        "ru": "Я трудолюбивый человек и всегда выполняю задания вовремя."
       }
     },
     {
@@ -70,6 +102,22 @@
         "hi": "रचनात्मक",
         "tr": "yaratıcı",
         "ru": "творческий"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi sáng tạo và thích tìm những cách mới để giải quyết vấn đề.",
+        "es": "Soy creativo/a y disfruto encontrar nuevas formas de resolver problemas.",
+        "pt": "Sou criativo/a e gosto de encontrar novas maneiras de resolver problemas.",
+        "fr": "Je suis créatif/créative et j’aime trouver de nouvelles façons de résoudre les problèmes.",
+        "de": "Ich bin kreativ und finde gern neue Wege, Probleme zu lösen.",
+        "id": "Saya kreatif dan suka menemukan cara baru untuk memecahkan masalah.",
+        "th": "ฉันมีความคิดสร้างสรรค์และชอบหาวิธีใหม่ ๆ ในการแก้ปัญหา",
+        "ja": "私は創造的で、問題を解決する新しい方法を考えるのが好きです。",
+        "ko": "저는 창의적이고 문제를 해결하는 새로운 방법을 찾는 것을 좋아해요.",
+        "zh": "我很有创造力，喜欢寻找解决问题的新方法。",
+        "ar": "أنا مبدع وأحب إيجاد طرق جديدة لحل المشكلات.",
+        "hi": "मैं रचनात्मक हूँ और समस्याओं को हल करने के नए तरीके ढूँढना पसंद करता/करती हूँ।",
+        "tr": "Yaratıcıyım ve sorunları çözmek için yeni yollar bulmayı seviyorum.",
+        "ru": "Я творческий человек и люблю находить новые способы решения проблем."
       }
     },
     {
@@ -93,6 +141,22 @@
         "hi": "जिम्मेदार",
         "tr": "sorumlu",
         "ru": "ответственный"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi có trách nhiệm và luôn cố gắng giữ lời hứa.",
+        "es": "Soy responsable y siempre intento cumplir mis promesas.",
+        "pt": "Sou responsável e sempre tento cumprir minhas promessas.",
+        "fr": "Je suis responsable et j’essaie toujours de tenir mes promesses.",
+        "de": "Ich bin verantwortungsbewusst und versuche immer, meine Versprechen zu halten.",
+        "id": "Saya bertanggung jawab dan selalu berusaha menepati janji.",
+        "th": "ฉันมีความรับผิดชอบและพยายามรักษาคำพูดเสมอ",
+        "ja": "私は責任感があり、いつも約束を守るようにしています。",
+        "ko": "저는 책임감이 있고 항상 약속을 지키려고 해요.",
+        "zh": "我很有责任感，总是努力信守承诺。",
+        "ar": "أنا مسؤول وأحاول دائمًا الوفاء بوعودي.",
+        "hi": "मैं जिम्मेदार हूँ और हमेशा अपने वादे निभाने की कोशिश करता/करती हूँ।",
+        "tr": "Sorumluyum ve sözlerimi tutmaya her zaman çalışırım.",
+        "ru": "Я ответственный человек и всегда стараюсь выполнять свои обещания."
       }
     },
     {
@@ -116,6 +180,22 @@
         "hi": "स्वतंत्र",
         "tr": "bağımsız",
         "ru": "самостоятельный"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi khá tự lập và có thể tự giải quyết nhiều vấn đề.",
+        "es": "Soy independiente y puedo resolver muchos problemas por mí mismo/a.",
+        "pt": "Sou independente e consigo resolver muitos problemas sozinho/a.",
+        "fr": "Je suis indépendant(e) et je peux résoudre beaucoup de problèmes seul(e).",
+        "de": "Ich bin selbstständig und kann viele Probleme allein lösen.",
+        "id": "Saya mandiri dan dapat menyelesaikan banyak masalah sendiri.",
+        "th": "ฉันพึ่งตนเองได้และแก้ปัญหาหลายอย่างได้ด้วยตัวเอง",
+        "ja": "私は自立していて、多くの問題を自分で解決できます。",
+        "ko": "저는 독립적이고 많은 문제를 스스로 해결할 수 있어요.",
+        "zh": "我很独立，很多问题都能自己解决。",
+        "ar": "أنا مستقل ويمكنني حل العديد من المشكلات بنفسي.",
+        "hi": "मैं स्वतंत्र हूँ और कई समस्याएँ खुद हल कर सकता/सकती हूँ।",
+        "tr": "Bağımsızım ve birçok sorunu kendi başıma çözebilirim.",
+        "ru": "Я самостоятельный человек и могу решить многие проблемы сам/сама."
       }
     },
     {
@@ -139,6 +219,22 @@
         "hi": "ईमानदार",
         "tr": "dürüst",
         "ru": "честный"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi trung thực, ngay cả khi nói thật là điều khó khăn.",
+        "es": "Soy honesto/a, incluso cuando decir la verdad es difícil.",
+        "pt": "Sou honesto/a, mesmo quando dizer a verdade é difícil.",
+        "fr": "Je suis honnête, même quand dire la vérité est difficile.",
+        "de": "Ich bin ehrlich, auch wenn es schwierig ist, die Wahrheit zu sagen.",
+        "id": "Saya jujur, bahkan ketika mengatakan kebenaran itu sulit.",
+        "th": "ฉันซื่อสัตย์ แม้ว่าการพูดความจริงจะเป็นเรื่องยาก",
+        "ja": "私は正直で、真実を言うのが難しいときでもそうします。",
+        "ko": "저는 정직하고 진실을 말하기 어려울 때도 솔직하게 말해요.",
+        "zh": "我很诚实，即使说实话很难。",
+        "ar": "أنا صادق حتى عندما يكون قول الحقيقة صعبًا.",
+        "hi": "मैं ईमानदार हूँ, भले ही सच कहना मुश्किल हो।",
+        "tr": "Dürüstüm, gerçeği söylemek zor olsa bile.",
+        "ru": "Я честный человек, даже когда говорить правду трудно."
       }
     },
     {
@@ -162,6 +258,22 @@
         "hi": "शर्मीला",
         "tr": "utangaç",
         "ru": "стеснительный"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi hơi nhút nhát khi lần đầu gặp người mới.",
+        "es": "Soy tímido/a cuando conozco gente nueva por primera vez.",
+        "pt": "Sou tímido/a quando conheço pessoas novas pela primeira vez.",
+        "fr": "Je suis timide quand je rencontre de nouvelles personnes pour la première fois.",
+        "de": "Ich bin schüchtern, wenn ich neue Leute zum ersten Mal treffe.",
+        "id": "Saya pemalu saat pertama kali bertemu orang baru.",
+        "th": "ฉันขี้อายเมื่อพบคนใหม่เป็นครั้งแรก",
+        "ja": "初めて新しい人に会うとき、私は少し恥ずかしがりです。",
+        "ko": "저는 새로운 사람을 처음 만날 때 수줍어요.",
+        "zh": "第一次见到陌生人时，我会有点害羞。",
+        "ar": "أنا خجول عندما ألتقي بأشخاص جدد لأول مرة.",
+        "hi": "जब मैं पहली बार नए लोगों से मिलता/मिलती हूँ, तो मैं शर्मीला/शर्मीली होता/होती हूँ।",
+        "tr": "Yeni insanlarla ilk kez tanıştığımda utangaç olurum.",
+        "ru": "Я стесняюсь, когда впервые встречаю новых людей."
       }
     },
     {
@@ -185,6 +297,22 @@
         "hi": "मज़ाकिया",
         "tr": "komik",
         "ru": "забавный"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi vui tính và thích làm bạn bè cười.",
+        "es": "Soy gracioso/a y me gusta hacer reír a mis amigos.",
+        "pt": "Sou engraçado/a e gosto de fazer meus amigos rirem.",
+        "fr": "Je suis drôle et j’aime faire rire mes amis.",
+        "de": "Ich bin lustig und bringe meine Freunde gern zum Lachen.",
+        "id": "Saya lucu dan suka membuat teman-teman tertawa.",
+        "th": "ฉันเป็นคนตลกและชอบทำให้เพื่อน ๆ หัวเราะ",
+        "ja": "私は面白い性格で、友達を笑わせるのが好きです。",
+        "ko": "저는 재미있는 사람이고 친구들을 웃게 하는 것을 좋아해요.",
+        "zh": "我很幽默，喜欢逗朋友笑。",
+        "ar": "أنا مرح وأحب إضحاك أصدقائي.",
+        "hi": "मैं मज़ाकिया हूँ और अपने दोस्तों को हँसाना पसंद करता/करती हूँ।",
+        "tr": "Komik biriyim ve arkadaşlarımı güldürmeyi seviyorum.",
+        "ru": "Я веселый человек и люблю смешить друзей."
       }
     },
     {
@@ -208,6 +336,22 @@
         "hi": "मददगार",
         "tr": "yardımsever",
         "ru": "готовый помочь"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi hay giúp đỡ và thường hỗ trợ các bạn cùng lớp.",
+        "es": "Soy servicial y a menudo ayudo a mis compañeros de clase.",
+        "pt": "Sou prestativo/a e frequentemente ajudo meus colegas de classe.",
+        "fr": "Je suis serviable et j’aide souvent mes camarades de classe.",
+        "de": "Ich bin hilfsbereit und unterstütze oft meine Mitschüler.",
+        "id": "Saya suka menolong dan sering membantu teman sekelas.",
+        "th": "ฉันชอบช่วยเหลือและมักช่วยเพื่อนร่วมชั้น",
+        "ja": "私は親切で、よくクラスメートを助けます。",
+        "ko": "저는 도움을 잘 주고 반 친구들을 자주 도와줘요.",
+        "zh": "我乐于助人，经常帮助同学。",
+        "ar": "أنا متعاون وغالبًا ما أساعد زملائي في الصف.",
+        "hi": "मैं मददगार हूँ और अक्सर अपने सहपाठियों की मदद करता/करती हूँ।",
+        "tr": "Yardımseverim ve sınıf arkadaşlarıma sık sık destek olurum.",
+        "ru": "Я люблю помогать и часто поддерживаю одноклассников."
       }
     },
     {
@@ -231,6 +375,22 @@
         "hi": "धैर्यवान",
         "tr": "sabırlı",
         "ru": "терпеливый"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi kiên nhẫn nên không dễ khó chịu khi mọi việc mất thời gian.",
+        "es": "Soy paciente, así que no me molesto cuando las cosas tardan.",
+        "pt": "Sou paciente, por isso não fico irritado/a quando as coisas demoram.",
+        "fr": "Je suis patient(e), donc je ne m’énerve pas quand les choses prennent du temps.",
+        "de": "Ich bin geduldig und werde nicht schnell unruhig, wenn etwas Zeit braucht.",
+        "id": "Saya sabar, jadi saya tidak mudah kesal ketika sesuatu membutuhkan waktu.",
+        "th": "ฉันอดทน จึงไม่หงุดหงิดง่ายเมื่อบางอย่างต้องใช้เวลา",
+        "ja": "私は忍耐強いので、時間がかかってもイライラしません。",
+        "ko": "저는 인내심이 있어서 시간이 걸려도 쉽게 짜증 내지 않아요.",
+        "zh": "我很有耐心，所以事情需要时间时我不会轻易烦躁。",
+        "ar": "أنا صبور، لذلك لا أنزعج عندما تستغرق الأمور وقتًا.",
+        "hi": "मैं धैर्यवान हूँ, इसलिए चीज़ों में समय लगने पर मैं परेशान नहीं होता/होती।",
+        "tr": "Sabırlıyım, bu yüzden işler zaman aldığında kolayca sinirlenmem.",
+        "ru": "Я терпеливый человек, поэтому не раздражаюсь, когда что-то требует времени."
       }
     }
   ]
