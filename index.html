@@ -76,7 +76,9 @@ button,select{
 }
 .meaning{font-size:25px;font-weight:850;line-height:1.35}
 .extra{font-size:17px;font-weight:650;margin-top:12px;line-height:1.45}
-.example{font-size:16px;color:var(--muted);margin-top:14px;line-height:1.55}
+.example{font-size:16px;color:var(--muted);margin-top:18px;line-height:1.55}
+.example b{color:var(--text);font-weight:900}
+#localized{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);color:var(--text)}
 .speakBtn{margin-top:14px;padding:9px 12px;font-size:14px}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .error{
@@ -146,6 +148,8 @@ button,select{
           <option value="ordered">Original order</option>
         </select>
         <button id="shuffle" class="ghost">Shuffle again</button>
+        <b>Back language:</b>
+        <select id="lang"></select>
       </div>
 
       <div id="flash" class="flash">
@@ -157,8 +161,7 @@ button,select{
         <div id="back" class="hidden">
           <div id="pos" class="pos"></div>
           <div id="meaning" class="meaning"></div>
-          <div id="extra1" class="extra"></div>
-          <div id="extra2" class="extra"></div>
+          <div id="localized" class="extra hidden"></div>
           <div id="example" class="example"></div>
           <button id="speakExample" class="ghost speakBtn hidden" type="button">🔊 Listen to example</button>
         </div>
@@ -206,6 +209,39 @@ function buildOrder(){
 
 function currentCard(){return currentSet.cards[order[index]];}
 
+var LANGS={
+  en:"English",vi:"Tiếng Việt",es:"Español",pt:"Português",fr:"Français",
+  de:"Deutsch",id:"Bahasa Indonesia",th:"ไทย",ja:"日本語",ko:"한국어",
+  zh:"中文",ar:"العربية",hi:"हिन्दी",tr:"Türkçe",ru:"Русский"
+};
+var selectedLang=localStorage.getItem("efsGlobalLang")||"en";
+
+function availableLangs(){
+  var langs={en:true};
+  (currentSet.cards||[]).forEach(function(c){
+    if(c.translations)Object.keys(c.translations).forEach(function(k){langs[k]=true;});
+  });
+  return Object.keys(langs);
+}
+function renderLangOptions(){
+  var langs=availableLangs();
+  if(langs.indexOf(selectedLang)<0)selectedLang="en";
+  el("lang").innerHTML=langs.map(function(k){
+    return "<option value='"+k+"'>"+(LANGS[k]||k.toUpperCase())+"</option>";
+  }).join("");
+  el("lang").value=selectedLang;
+}
+function escapeHtml(v){
+  return String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+}
+function highlightExample(example,front){
+  var e=String(example||""), f=String(front||"").trim();
+  if(!e||!f)return escapeHtml(e);
+  var i=e.toLowerCase().indexOf(f.toLowerCase());
+  if(i<0)return escapeHtml(e);
+  return escapeHtml(e.slice(0,i))+"<b>"+escapeHtml(e.slice(i,i+f.length))+"</b>"+escapeHtml(e.slice(i+f.length));
+}
+
 function audioEligible(c){
   return c.audio!==false;
 }
@@ -231,10 +267,14 @@ function render(){
   el("back").classList.add("hidden");
 
   setText("pos",c.backTitle);
-  setText("meaning",c.backContent);
-  setText("extra1",c.extra1);
-  setText("extra2",c.extra2);
-  setText("example",c.example);
+  setText("meaning",c.definition||c.backContent);
+  var loc="";
+  if(selectedLang!=="en" && c.translations && c.translations[selectedLang]){
+    loc=(LANGS[selectedLang]||selectedLang.toUpperCase())+": "+c.translations[selectedLang];
+  }
+  setText("localized",loc);
+  el("example").innerHTML=c.example?("<b>Example:</b> "+highlightExample(c.example,c.front)):"";
+  el("example").classList.toggle("hidden",!c.example);
 
   var eligible=audioEligible(c);
   el("speakFront").classList.toggle("hidden",!eligible);
@@ -259,6 +299,7 @@ async function init(){
   }
   try{
     currentSet=await loadSet(id);
+    renderLangOptions();
     buildOrder();
     el("practice").classList.remove("hidden");
     render();
@@ -276,6 +317,7 @@ el("next").onclick=function(){step(1);};
 el("prev").onclick=function(){step(-1);};
 el("mode").onchange=function(){mode=this.value;buildOrder();render();};
 el("shuffle").onclick=function(){mode="random";el("mode").value="random";buildOrder();render();};
+el("lang").onchange=function(){selectedLang=this.value;localStorage.setItem("efsGlobalLang",selectedLang);render();};
 
 init();
 </script>
