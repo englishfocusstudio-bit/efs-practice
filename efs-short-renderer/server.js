@@ -52,7 +52,7 @@ function run(cmd, args, options = {}) {
 function startFrameEncoder(fps, output) {
   const args = [
     '-y', '-f', 'image2pipe', '-framerate', String(fps), '-vcodec', 'mjpeg', '-i', 'pipe:0',
-    '-an', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '19',
+    '-an', '-c:v', 'libx264', '-preset', 'medium', '-crf', '15', '-profile:v', 'high', '-level:v', '5.1',
     '-pix_fmt', 'yuv420p', '-r', String(fps), '-movflags', '+faststart', output
   ];
   const child = spawn('ffmpeg', args, { stdio: ['pipe', 'ignore', 'pipe'] });
@@ -91,16 +91,16 @@ async function recordCanvasRealtime(page, spec, id, output) {
   await page.exposeFunction('efsReportRenderProgress', async progress => {
     await writeState(id, { progress: Math.max(1, Math.min(88, Math.round(progress))) });
   });
-  const dataUrl = await page.evaluate(async ({ fps, total }) => {
+  const dataUrl = await page.evaluate(async ({ fps, total, width, height, renderScale }) => {
     const canvas = document.getElementById('canvas');
     if (!canvas || !canvas.captureStream || typeof MediaRecorder === 'undefined') throw new Error('Canvas MediaRecorder is unavailable');
-    canvas.width = 720;
-    canvas.height = 1280;
-    canvas.getContext('2d').setTransform(2 / 3, 0, 0, 2 / 3, 0, 0);
+    if (window.EFSRenderer.setScale) window.EFSRenderer.setScale(renderScale || 2);
+    canvas.width = width || 2160;
+    canvas.height = height || 3840;
     const mimeType = ['video/webm;codecs=vp8', 'video/webm;codecs=vp9', 'video/webm'].find(type => MediaRecorder.isTypeSupported(type));
     if (!mimeType) throw new Error('No supported WebM recorder');
     const stream = canvas.captureStream(fps), chunks = [];
-    const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 4000000 });
+    const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 45000000 });
     const stopped = new Promise((resolve, reject) => {
       recorder.ondataavailable = event => { if (event.data && event.data.size) chunks.push(event.data); };
       recorder.onerror = event => reject(event.error || new Error('Canvas recorder failed'));
@@ -127,7 +127,7 @@ async function recordCanvasRealtime(page, spec, id, output) {
       reader.onerror = () => reject(reader.error || new Error('Cannot read recorded video'));
       reader.readAsDataURL(blob);
     });
-  }, { fps: spec.fps, total: spec.total });
+  }, { fps: spec.fps, total: spec.total, width: spec.width, height: spec.height, renderScale: spec.renderScale });
   await fsp.writeFile(output, Buffer.from(String(dataUrl).split(',')[1], 'base64'));
 }
 
@@ -231,7 +231,7 @@ async function muxJob(id) {
   await run('ffmpeg', [
     '-y', '-fflags', '+genpts', '-r', String(spec.fps), '-f', 'h264', '-i', path.join(dir, 'video.h264'),
     '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy',
-    '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output
+    '-c:a', 'aac', '-b:a', '320k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output
   ]);
   const base = String(spec.fileName || 'EFS_SHORT').replace(/[^A-Za-z0-9_-]+/g, '_');
   await Promise.all([
@@ -259,7 +259,7 @@ async function renderJob(id) {
       throw new Error(`Renderer did not initialize${pageErrors.length ? `: ${pageErrors.slice(-3).join(' | ')}` : ''}`);
     }
     await page.evaluate(async ({ project, spec }) => { if (!window.EFSRenderer) throw new Error('Renderer API missing'); await window.EFSRenderer.loadProject(project, spec); }, { project, spec });
-    if (spec.total <= 60) {
+    if (spec.total <= 60 && Number(spec.width || 0) <= 1080) {
       try {
         await writeState(id, { mode: 'realtime-canvas' });
         await recordCanvasRealtime(page, spec, id, realtime);
@@ -274,7 +274,7 @@ async function renderJob(id) {
       for (let i = 0; i < frames; i++) {
         const base64 = await page.evaluate(t => {
           window.EFSRenderer.renderFrame(t);
-          return window.EFSRenderer.frameJpeg(.88);
+          return window.EFSRenderer.frameJpeg(.97);
         }, i / spec.fps);
         await encoder.write(Buffer.from(base64, 'base64'));
         if (i % 30 === 0) await writeState(id, { progress: Math.min(88, Math.round(i / frames * 88)) });
@@ -288,9 +288,9 @@ async function renderJob(id) {
   }
   await writeState(id, { status: 'encoding', progress: 90 });
   if (usedRealtime) {
-    await run('ffmpeg', ['-y', '-i', realtime, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-vf', 'scale=1080:1920:flags=lanczos', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '19', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
+    await run('ffmpeg', ['-y', '-i', realtime, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-vf', `scale=${spec.width || 2160}:${spec.height || 3840}:flags=lanczos`, '-c:v', 'libx264', '-preset', 'medium', '-crf', '15', '-profile:v', 'high', '-level:v', '5.1', '-pix_fmt', 'yuv420p', '-r', String(spec.fps), '-c:a', 'aac', '-b:a', '320k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
   } else {
-    await run('ffmpeg', ['-y', '-i', silent, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
+    await run('ffmpeg', ['-y', '-i', silent, '-i', path.join(dir, 'mix.wav'), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '320k', '-af', 'alimiter=limit=0.95', '-shortest', '-movflags', '+faststart', output]);
   }
   await writeState(id, { status: 'muxing', progress: 96 });
   const base = String(spec.fileName || 'EFS_SHORT').replace(/[^A-Za-z0-9_-]+/g, '_');
