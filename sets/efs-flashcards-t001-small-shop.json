@@ -1,0 +1,139 @@
+{
+  "id": "efs-flashcards-t001-small-shop",
+  "title": "EFS Flashcards — Test 001 | At a Small Shop",
+  "type": "vocabulary",
+  "level": "Early A1",
+  "context": "At a Small Shop",
+  "cards": [
+    {
+      "front": "buy",
+      "speakText": "buy",
+      "backTitle": "VERB",
+      "definition": "to get something by paying money for it.",
+      "example": "I want to buy a small gift.",
+      "translations": {
+        "vi": "mua"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi muốn mua một món quà nhỏ."
+      }
+    },
+    {
+      "front": "friend",
+      "speakText": "friend",
+      "backTitle": "NOUN",
+      "definition": "a person you know well and like.",
+      "example": "This gift is for my friend.",
+      "translations": {
+        "vi": "bạn; người bạn"
+      },
+      "exampleTranslations": {
+        "vi": "Món quà này dành cho bạn tôi."
+      }
+    },
+    {
+      "front": "label",
+      "speakText": "label",
+      "backTitle": "NOUN",
+      "definition": "a small piece of paper or material that gives information about something.",
+      "example": "Please check the label on the box.",
+      "translations": {
+        "vi": "nhãn; nhãn ghi tên"
+      },
+      "exampleTranslations": {
+        "vi": "Vui lòng kiểm tra nhãn trên chiếc hộp."
+      }
+    },
+    {
+      "front": "order number",
+      "speakText": "order number",
+      "backTitle": "NOUN PHRASE",
+      "definition": "the number used to identify a customer's order.",
+      "example": "What is your order number?",
+      "translations": {
+        "vi": "mã số đơn hàng"
+      },
+      "exampleTranslations": {
+        "vi": "Mã số đơn hàng của bạn là gì?"
+      }
+    },
+    {
+      "front": "buy something",
+      "speakText": "buy something",
+      "backTitle": "PHRASE",
+      "definition": "to pay money to get an item or product.",
+      "example": "I need to buy something for my friend.",
+      "translations": {
+        "vi": "mua một món đồ / thứ gì đó"
+      },
+      "exampleTranslations": {
+        "vi": "Tôi cần mua một món đồ cho bạn tôi."
+      }
+    },
+    {
+      "front": "wait here",
+      "speakText": "wait here",
+      "backTitle": "CHUNK",
+      "definition": "stay in this place until someone comes or something happens.",
+      "example": "Please wait here for a moment.",
+      "translations": {
+        "vi": "đợi ở đây"
+      },
+      "exampleTranslations": {
+        "vi": "Vui lòng đợi ở đây một lát."
+      }
+    },
+    {
+      "front": "It's for my friend.",
+      "speakText": "It's for my friend.",
+      "backTitle": "CHUNK",
+      "definition": "used to say that something is intended for your friend.",
+      "example": "It's for my friend. It's a birthday gift.",
+      "translations": {
+        "vi": "Cái này dành cho bạn tôi."
+      },
+      "exampleTranslations": {
+        "vi": "Cái này dành cho bạn tôi. Đây là quà sinh nhật."
+      }
+    },
+    {
+      "front": "What would you like?",
+      "speakText": "What would you like?",
+      "backTitle": "CHUNK",
+      "definition": "a polite way to ask what someone wants.",
+      "example": "What would you like? A bag or a notebook?",
+      "translations": {
+        "vi": "Bạn muốn gì? / Bạn muốn chọn gì?"
+      },
+      "exampleTranslations": {
+        "vi": "Bạn muốn gì? Một cái túi hay một quyển sổ?"
+      }
+    },
+    {
+      "front": "How much is it?",
+      "speakText": "How much is it?",
+      "backTitle": "CHUNK",
+      "definition": "used to ask the price of something.",
+      "example": "How much is it? It's five dollars.",
+      "translations": {
+        "vi": "Cái này giá bao nhiêu?"
+      },
+      "exampleTranslations": {
+        "vi": "Cái này giá bao nhiêu? Nó giá năm đô la."
+      }
+    },
+    {
+      "front": "I'll get your order.",
+      "speakText": "I'll get your order.",
+      "backTitle": "CHUNK",
+      "definition": "used by staff to say they will bring or prepare the customer's order.",
+      "example": "I'll get your order. Please wait here.",
+      "translations": {
+        "vi": "Tôi sẽ lấy đơn hàng của bạn."
+      },
+      "exampleTranslations": {
+        "vi": "Tôi sẽ lấy đơn hàng của bạn. Vui lòng đợi ở đây."
+      }
+    }
+  ]
+}
