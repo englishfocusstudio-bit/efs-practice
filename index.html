@@ -43,6 +43,9 @@ h1{font-size:26px;line-height:1.25;margin:0 0 8px}
 .settingsPanel{margin:0 0 14px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#f9fbfc}
 .settingsGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .settingsGrid>div{display:flex;flex-direction:column;gap:6px}
+.settingNote{font-size:11px;line-height:1.4;color:var(--muted);margin-top:2px}
+.miniBtn{align-self:flex-start;padding:8px 10px;font-size:12px;margin-top:2px}
+.rtlSupport{direction:rtl;text-align:right}
 .shuffleBtn{margin-top:12px}
 button,select{
   font:inherit;
@@ -255,6 +258,8 @@ button,select{
           <div>
             <label for="voice">Voice</label>
             <select id="voice"></select>
+            <div id="voiceStatus" class="settingNote">Voice availability depends on this device and browser.</div>
+            <button id="testVoice" class="ghost miniBtn" type="button">🔊 Test voice</button>
           </div>
         </div>
         <button id="shuffle" class="ghost shuffleBtn" type="button">Shuffle again</button>
@@ -361,13 +366,29 @@ var LANGS={
   sl:"Slovenščina",lt:"Lietuvių",lv:"Latviešu",et:"Eesti"
 };
 var selectedLang=localStorage.getItem("efsGlobalLang")||"en";
+function isRTL(lang){return ["ar","fa","he","ur"].indexOf(lang)>=0;}
 
 function availableLangs(){
-  var langs={en:true};
-  (currentSet.cards||[]).forEach(function(c){
-    if(c.translations)Object.keys(c.translations).forEach(function(k){langs[k]=true;});
+  var cards=currentSet.cards||[];
+  if(!cards.length)return ["en"];
+
+  var candidates={};
+  cards.forEach(function(c){
+    if(c.translations){
+      Object.keys(c.translations).forEach(function(k){candidates[k]=true;});
+    }
   });
-  return Object.keys(langs);
+
+  var complete=Object.keys(candidates).filter(function(lang){
+    return cards.every(function(c){
+      var hasMeaning=c.translations && String(c.translations[lang]||"").trim();
+      var needsExample=!!c.example;
+      var hasExample=!needsExample || (c.exampleTranslations && String(c.exampleTranslations[lang]||"").trim());
+      return hasMeaning && hasExample;
+    });
+  });
+
+  return ["en"].concat(complete.filter(function(k){return k!=="en";}));
 }
 function renderLangOptions(){
   var langs=availableLangs();
@@ -414,12 +435,19 @@ function naturalScore(v){
 }
 
 function loadVoices(){
-  if(!("speechSynthesis" in window))return;
+  var voiceSel=el("voice");
+  var status=el("voiceStatus");
+  var testBtn=el("testVoice");
+  if(!("speechSynthesis" in window)){
+    if(voiceSel)voiceSel.disabled=true;
+    if(testBtn)testBtn.disabled=true;
+    if(status)status.textContent="Audio is not supported by this browser.";
+    return;
+  }
   voiceList=window.speechSynthesis.getVoices().filter(function(v){
     return /^en[-_]/i.test(v.lang||"");
   }).sort(function(a,b){return naturalScore(b)-naturalScore(a);});
 
-  var voiceSel=el("voice");
   if(!voiceSel)return;
   voiceSel.innerHTML="";
 
@@ -441,6 +469,13 @@ function loadVoices(){
     selectedVoiceName="";
     voiceSel.value="";
   }
+
+  if(status){
+    status.textContent=voiceList.length
+      ? "Using the best available English voice on this device."
+      : "No English system voice is currently available.";
+  }
+  if(testBtn)testBtn.disabled=!voiceList.length;
 }
 
 function chosenVoice(){
@@ -467,7 +502,11 @@ function speakText(text){
   else u.rate=0.90;
   u.pitch=1.0;
   u.volume=1.0;
-  window.speechSynthesis.speak(u);
+  try{
+    window.speechSynthesis.cancel();
+    if(window.speechSynthesis.paused)window.speechSynthesis.resume();
+    setTimeout(function(){window.speechSynthesis.speak(u);},30);
+  }catch(e){}
 }
 
 function render(){
@@ -491,6 +530,7 @@ function render(){
   el("localizedLabel").textContent=LANGS[selectedLang]||selectedLang.toUpperCase();
   el("localized").textContent=loc;
   el("localizedBox").classList.toggle("hidden",!loc);
+  el("localizedBox").classList.toggle("rtlSupport",!!loc&&isRTL(selectedLang));
 
   el("example").innerHTML=c.example?highlightExample(c.example,c.front):"";
   el("example").classList.toggle("hidden",!c.example);
@@ -498,6 +538,7 @@ function render(){
   var exLoc=localizedExample(c);
   el("exampleTranslation").textContent=exLoc;
   el("exampleTranslation").classList.toggle("hidden",!exLoc);
+  el("exampleTranslation").classList.toggle("rtlSupport",!!exLoc&&isRTL(selectedLang));
 
   var eligible=audioEligible(c);
   el("speakFront").classList.toggle("hidden",!eligible);
@@ -544,12 +585,19 @@ el("voice").onchange=function(){
   selectedVoiceName=this.value;
   localStorage.setItem("efsGlobalVoice",selectedVoiceName);
 };
+el("testVoice").onclick=function(){
+  speakText("Hello. This is your English practice voice.");
+};
 el("settingsBtn").onclick=function(){
   el("settingsPanel").classList.toggle("hidden");
 };
 if("speechSynthesis" in window){
   loadVoices();
+  setTimeout(loadVoices,250);
+  setTimeout(loadVoices,1000);
   window.speechSynthesis.onvoiceschanged=loadVoices;
+}else{
+  loadVoices();
 }
 
 init();
