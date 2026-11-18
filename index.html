@@ -36,7 +36,14 @@ body{
 h1{font-size:26px;line-height:1.25;margin:0 0 8px}
 .muted{color:var(--muted)}
 .small{font-size:12px;color:var(--muted)}
-.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0 16px}
+.quickControls{display:flex;gap:10px;align-items:end;justify-content:space-between;margin:12px 0 14px}
+.languageControl{display:flex;flex-direction:column;gap:6px;min-width:180px}
+.languageControl label,.settingsPanel label{font-size:11px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.settingsBtn{white-space:nowrap}
+.settingsPanel{margin:0 0 14px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#f9fbfc}
+.settingsGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.settingsGrid>div{display:flex;flex-direction:column;gap:6px}
+.shuffleBtn{margin-top:12px}
 button,select{
   font:inherit;
   border-radius:12px;
@@ -52,7 +59,7 @@ button,select{
 .progress{height:7px;background:#e8eff3;border-radius:99px;overflow:hidden;margin:8px 0 18px}
 .progress div{height:100%;background:var(--accent)}
 .flash{
-  min-height:390px;
+  min-height:360px;
   border:1px solid var(--line);
   border-radius:20px;
   padding:0;
@@ -60,11 +67,11 @@ button,select{
   overflow:hidden;
   perspective:1200px;
 }
-.flipStage{min-height:390px;width:100%}
+.flipStage{min-height:360px;width:100%}
 .flipInner{
   position:relative;
   width:100%;
-  min-height:390px;
+  min-height:360px;
   transform-style:preserve-3d;
   transition:transform .42s cubic-bezier(.2,.7,.2,1);
 }
@@ -72,7 +79,7 @@ button,select{
 .face{
   position:absolute;
   inset:0;
-  min-height:390px;
+  min-height:360px;
   padding:24px;
   display:grid;
   place-items:center;
@@ -138,7 +145,8 @@ button,select{
 .example b{color:var(--text);font-weight:900}
 .exampleTranslation{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);line-height:1.55;text-align:left}
 .speakBtn{margin-top:14px;padding:9px 12px;font-size:14px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.actions{display:grid;grid-template-columns:1fr 1.15fr 1.35fr;gap:10px;margin-top:16px}
+.actions button{min-height:46px}
 .error{
   padding:18px;
   border:1px solid #f0c9cd;
@@ -172,14 +180,29 @@ button,select{
   .extra{font-size:16px}
   .example{font-size:15px}
   .meaningGrid{grid-template-columns:1fr}
-  .flash{min-height:330px}
-  .flipStage,.flipInner,.face{min-height:330px}
-  .face{padding:18px}
-  .actions{width:100%}
-  .actions button{flex:1 1 30%;min-width:0}
-  .toolbar{gap:8px}
-  .toolbar select,.toolbar button{max-width:100%}
-  #voice{max-width:240px}
+  .quickControls{align-items:end;gap:8px}
+  .languageControl{min-width:0;flex:1}
+  .settingsBtn{padding:11px 12px}
+  .settingsPanel{padding:12px}
+  .settingsGrid{grid-template-columns:1fr}
+  .flash{min-height:300px}
+  .flipStage,.flipInner,.face{min-height:300px}
+  .face{padding:16px}
+  .actions{grid-template-columns:.9fr 1fr 1.25fr;gap:8px;position:sticky;bottom:8px;z-index:5;background:rgba(243,247,251,.92);padding:8px;border-radius:14px;backdrop-filter:blur(8px)}
+  .actions button{padding:12px 8px;min-height:48px}
+  #voice{max-width:100%}
+}
+@media(max-width:420px){
+  .app{padding:8px}
+  .panel{padding:12px}
+  .top{margin-bottom:12px}
+  .brand{font-size:19px}
+  .badge{font-size:10px;padding:6px 8px}
+  h1{font-size:19px}
+  .front{font-size:28px}
+  .boxText{font-size:16px}
+  .quickControls{margin-top:10px}
+  .actions button{font-size:13px}
 }
 </style>
 </head>
@@ -203,17 +226,29 @@ button,select{
       <div class="progress"><div id="bar"></div></div>
       <h1 id="title"></h1>
 
-      <div class="toolbar">
-        <b>Order:</b>
-        <select id="mode">
-          <option value="random">Random</option>
-          <option value="ordered">Original order</option>
-        </select>
-        <button id="shuffle" class="ghost">Shuffle again</button>
-        <b>Back language:</b>
-        <select id="lang"></select>
-        <b>Voice:</b>
-        <select id="voice"></select>
+      <div class="quickControls">
+        <div class="languageControl">
+          <label for="lang">Language</label>
+          <select id="lang"></select>
+        </div>
+        <button id="settingsBtn" class="ghost settingsBtn" type="button">⚙ Settings</button>
+      </div>
+
+      <div id="settingsPanel" class="settingsPanel hidden">
+        <div class="settingsGrid">
+          <div>
+            <label for="mode">Order</label>
+            <select id="mode">
+              <option value="random">Random</option>
+              <option value="ordered">Original order</option>
+            </select>
+          </div>
+          <div>
+            <label for="voice">Voice</label>
+            <select id="voice"></select>
+          </div>
+        </div>
+        <button id="shuffle" class="ghost shuffleBtn" type="button">Shuffle again</button>
       </div>
 
       <div id="flash" class="flash">
@@ -413,7 +448,10 @@ function speakText(text){
   }else{
     u.lang="en-US";
   }
-  u.rate=0.93;
+  var level=((currentSet&&currentSet.level)||"").toLowerCase();
+  if(level.indexOf("early a1")>=0) u.rate=0.78;
+  else if(level==="a1" || level.indexOf(" a1")>=0) u.rate=0.84;
+  else u.rate=0.90;
   u.pitch=1.0;
   u.volume=1.0;
   window.speechSynthesis.speak(u);
@@ -491,6 +529,9 @@ el("lang").onchange=function(){selectedLang=this.value;localStorage.setItem("efs
 el("voice").onchange=function(){
   selectedVoiceName=this.value;
   localStorage.setItem("efsGlobalVoice",selectedVoiceName);
+};
+el("settingsBtn").onclick=function(){
+  el("settingsPanel").classList.toggle("hidden");
 };
 if("speechSynthesis" in window){
   loadVoices();
