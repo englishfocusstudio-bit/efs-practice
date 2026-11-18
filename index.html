@@ -76,9 +76,16 @@ button,select{
 }
 .meaning{font-size:25px;font-weight:850;line-height:1.35}
 .extra{font-size:17px;font-weight:650;margin-top:12px;line-height:1.45}
-.example{font-size:16px;color:var(--muted);margin-top:18px;line-height:1.55}
+.sectionLabel{margin-top:12px;margin-bottom:8px;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.meaningGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.infoBox,.exampleBox{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px;text-align:left}
+.infoBox:first-child{background:var(--soft);border-color:#cfecef}
+.boxLabel{font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.boxText{font-size:17px;font-weight:700;line-height:1.5;color:var(--text)}
+.exampleSection{margin-top:18px}
+.example{font-size:16px;color:var(--text);line-height:1.6;text-align:left}
 .example b{color:var(--text);font-weight:900}
-#localized{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);color:var(--text)}
+.exampleTranslation{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);line-height:1.55;text-align:left}
 .speakBtn{margin-top:14px;padding:9px 12px;font-size:14px}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .error{
@@ -113,6 +120,7 @@ button,select{
   .meaning{font-size:22px}
   .extra{font-size:16px}
   .example{font-size:15px}
+  .meaningGrid{grid-template-columns:1fr}
   .flash{min-height:300px;padding:18px}
   .actions{width:100%}
   .actions button{flex:1 1 30%;min-width:0}
@@ -160,9 +168,25 @@ button,select{
 
         <div id="back" class="hidden">
           <div id="pos" class="pos"></div>
-          <div id="meaning" class="meaning"></div>
-          <div id="localized" class="extra hidden"></div>
-          <div id="example" class="example"></div>
+
+          <div class="sectionLabel">Meaning</div>
+          <div class="meaningGrid">
+            <div class="infoBox">
+              <div class="boxLabel">English</div>
+              <div id="meaning" class="boxText"></div>
+            </div>
+            <div id="localizedBox" class="infoBox hidden">
+              <div id="localizedLabel" class="boxLabel"></div>
+              <div id="localized" class="boxText"></div>
+            </div>
+          </div>
+
+          <div class="sectionLabel exampleSection">Example</div>
+          <div class="exampleBox">
+            <div id="example" class="example"></div>
+            <div id="exampleTranslation" class="exampleTranslation hidden"></div>
+          </div>
+
           <button id="speakExample" class="ghost speakBtn hidden" type="button">🔊 Listen to example</button>
         </div>
       </div>
@@ -241,6 +265,10 @@ function highlightExample(example,front){
   if(i<0)return escapeHtml(e);
   return escapeHtml(e.slice(0,i))+"<b>"+escapeHtml(e.slice(i,i+f.length))+"</b>"+escapeHtml(e.slice(i+f.length));
 }
+function localizedExample(c){
+  if(selectedLang==="en")return "";
+  return c.exampleTranslations && c.exampleTranslations[selectedLang] ? c.exampleTranslations[selectedLang] : "";
+}
 
 function audioEligible(c){
   return c.audio!==false;
@@ -268,13 +296,21 @@ function render(){
 
   setText("pos",c.backTitle);
   setText("meaning",c.definition||c.backContent);
+
   var loc="";
   if(selectedLang!=="en" && c.translations && c.translations[selectedLang]){
-    loc=(LANGS[selectedLang]||selectedLang.toUpperCase())+": "+c.translations[selectedLang];
+    loc=c.translations[selectedLang];
   }
-  setText("localized",loc);
-  el("example").innerHTML=c.example?("<b>Example:</b> "+highlightExample(c.example,c.front)):"";
+  el("localizedLabel").textContent=LANGS[selectedLang]||selectedLang.toUpperCase();
+  el("localized").textContent=loc;
+  el("localizedBox").classList.toggle("hidden",!loc);
+
+  el("example").innerHTML=c.example?highlightExample(c.example,c.front):"";
   el("example").classList.toggle("hidden",!c.example);
+
+  var exLoc=localizedExample(c);
+  el("exampleTranslation").textContent=exLoc;
+  el("exampleTranslation").classList.toggle("hidden",!exLoc);
 
   var eligible=audioEligible(c);
   el("speakFront").classList.toggle("hidden",!eligible);
