@@ -485,6 +485,33 @@ function chosenVoice(){
   return voiceList.length?voiceList[0]:null;
 }
 
+function playPremiumUrl(url,onFallback){
+  if(!url){ if(onFallback)onFallback(); return; }
+  try{
+    var a=new Audio(url);
+    a.preload="auto";
+    a.onerror=function(){ if(onFallback)onFallback(); };
+    var p=a.play();
+    if(p&&typeof p.catch==="function"){
+      p.catch(function(){ if(onFallback)onFallback(); });
+    }
+  }catch(e){ if(onFallback)onFallback(); }
+}
+
+function playCardAudio(kind,c){
+  c=c||currentCard();
+  var premium=c&&c.premiumAudio&&c.premiumAudio[kind];
+  if(premium){
+    playPremiumUrl(premium,function(){
+      if(kind==="exampleSentence")speakText(c.example);
+      else speakText(c.speakText||c.front);
+    });
+    return;
+  }
+  if(kind==="exampleSentence")speakText(c.example);
+  else speakText(c.speakText||c.front);
+}
+
 function speakText(text){
   if(!text||!("speechSynthesis" in window))return;
   window.speechSynthesis.cancel();
@@ -574,8 +601,8 @@ async function init(){
 
 el("flip").onclick=flip;
 el("flash").onclick=flip;
-el("speakFront").onclick=function(e){e.stopPropagation();var c=currentCard();speakText(c.speakText||c.front);};
-el("speakExample").onclick=function(e){e.stopPropagation();var c=currentCard();speakText(c.example);};
+el("speakFront").onclick=function(e){e.stopPropagation();playCardAudio("wordOrPhrase",currentCard());};
+el("speakExample").onclick=function(e){e.stopPropagation();playCardAudio("exampleSentence",currentCard());};
 el("next").onclick=function(){step(1);};
 el("prev").onclick=function(){step(-1);};
 el("mode").onchange=function(){mode=this.value;buildOrder();render();};
