@@ -32,7 +32,11 @@
         "pl": "kupować",
         "uk": "купувати",
         "tl": "bumili",
-        "sw": "kununua"
+        "sw": "kununua",
+        "da": "købe",
+        "sv": "köpa",
+        "no": "kjøpe",
+        "fi": "ostaa"
       },
       "exampleTranslations": {
         "vi": "Tôi muốn mua một món quà nhỏ.",
@@ -55,7 +59,11 @@
         "pl": "Chcę kupić mały prezent.",
         "uk": "Я хочу купити невеликий подарунок.",
         "tl": "Gusto kong bumili ng maliit na regalo.",
-        "sw": "Nataka kununua zawadi ndogo."
+        "sw": "Nataka kununua zawadi ndogo.",
+        "da": "Jeg vil gerne købe en lille gave.",
+        "sv": "Jag vill köpa en liten present.",
+        "no": "Jeg vil kjøpe en liten gave.",
+        "fi": "Haluan ostaa pienen lahjan."
       }
     },
     {
@@ -85,7 +93,11 @@
         "pl": "przyjaciel",
         "uk": "друг",
         "tl": "kaibigan",
-        "sw": "rafiki"
+        "sw": "rafiki",
+        "da": "ven",
+        "sv": "vän",
+        "no": "venn",
+        "fi": "ystävä"
       },
       "exampleTranslations": {
         "vi": "Món quà này dành cho bạn tôi.",
@@ -108,7 +120,11 @@
         "pl": "Ten prezent jest dla mojego przyjaciela.",
         "uk": "Цей подарунок для мого друга.",
         "tl": "Ang regalong ito ay para sa kaibigan ko.",
-        "sw": "Zawadi hii ni kwa rafiki yangu."
+        "sw": "Zawadi hii ni kwa rafiki yangu.",
+        "da": "Denne gave er til min ven.",
+        "sv": "Den här presenten är till min vän.",
+        "no": "Denne gaven er til vennen min.",
+        "fi": "Tämä lahja on ystävälleni."
       }
     },
     {
@@ -138,7 +154,11 @@
         "pl": "etykieta",
         "uk": "етикетка",
         "tl": "label",
-        "sw": "lebo"
+        "sw": "lebo",
+        "da": "etiket",
+        "sv": "etikett",
+        "no": "etikett",
+        "fi": "etiketti"
       },
       "exampleTranslations": {
         "vi": "Vui lòng kiểm tra nhãn trên chiếc hộp.",
@@ -161,7 +181,11 @@
         "pl": "Proszę sprawdzić etykietę na pudełku.",
         "uk": "Будь ласка, перевірте етикетку на коробці.",
         "tl": "Pakitingnan ang label sa kahon.",
-        "sw": "Tafadhali angalia lebo kwenye boksi."
+        "sw": "Tafadhali angalia lebo kwenye boksi.",
+        "da": "Tjek venligst etiketten på kassen.",
+        "sv": "Kontrollera etiketten på lådan.",
+        "no": "Sjekk etiketten på boksen.",
+        "fi": "Tarkista laatikon etiketti."
       }
     },
     {
@@ -191,7 +215,11 @@
         "pl": "numer zamówienia",
         "uk": "номер замовлення",
         "tl": "numero ng order",
-        "sw": "nambari ya oda"
+        "sw": "nambari ya oda",
+        "da": "ordrenummer",
+        "sv": "ordernummer",
+        "no": "ordrenummer",
+        "fi": "tilausnumero"
       },
       "exampleTranslations": {
         "vi": "Mã số đơn hàng của bạn là gì?",
@@ -214,7 +242,11 @@
         "pl": "Jaki jest twój numer zamówienia?",
         "uk": "Який у вас номер замовлення?",
         "tl": "Ano ang numero ng order mo?",
-        "sw": "Nambari yako ya oda ni ipi?"
+        "sw": "Nambari yako ya oda ni ipi?",
+        "da": "Hvad er dit ordrenummer?",
+        "sv": "Vad är ditt ordernummer?",
+        "no": "Hva er ordrenummeret ditt?",
+        "fi": "Mikä on tilausnumerosi?"
       }
     },
     {
@@ -244,7 +276,11 @@
         "pl": "kupić coś",
         "uk": "купити щось",
         "tl": "bumili ng isang bagay",
-        "sw": "kununua kitu"
+        "sw": "kununua kitu",
+        "da": "købe noget",
+        "sv": "köpa något",
+        "no": "kjøpe noe",
+        "fi": "ostaa jotain"
       },
       "exampleTranslations": {
         "vi": "Tôi cần mua một món đồ cho bạn tôi.",
@@ -267,7 +303,11 @@
         "pl": "Muszę kupić coś dla mojego przyjaciela.",
         "uk": "Мені потрібно купити щось для друга.",
         "tl": "Kailangan kong bumili ng isang bagay para sa kaibigan ko.",
-        "sw": "Ninahitaji kununua kitu kwa rafiki yangu."
+        "sw": "Ninahitaji kununua kitu kwa rafiki yangu.",
+        "da": "Jeg skal købe noget til min ven.",
+        "sv": "Jag behöver köpa något till min vän.",
+        "no": "Jeg må kjøpe noe til vennen min.",
+        "fi": "Minun täytyy ostaa jotain ystävälleni."
       }
     },
     {
@@ -297,7 +337,11 @@
         "pl": "poczekaj tutaj",
         "uk": "зачекайте тут",
         "tl": "maghintay dito",
-        "sw": "subiri hapa"
+        "sw": "subiri hapa",
+        "da": "vent her",
+        "sv": "vänta här",
+        "no": "vent her",
+        "fi": "odota tässä"
       },
       "exampleTranslations": {
         "vi": "Vui lòng đợi ở đây một lát.",
@@ -320,7 +364,11 @@
         "pl": "Proszę poczekać tutaj chwilę.",
         "uk": "Будь ласка, зачекайте тут хвилинку.",
         "tl": "Pakihintay dito sandali.",
-        "sw": "Tafadhali subiri hapa kwa muda."
+        "sw": "Tafadhali subiri hapa kwa muda.",
+        "da": "Vent venligst her et øjeblik.",
+        "sv": "Vänta här en liten stund.",
+        "no": "Vent her et øyeblikk.",
+        "fi": "Odota tässä hetki."
       }
     },
     {
@@ -350,7 +398,11 @@
         "pl": "To dla mojego przyjaciela.",
         "uk": "Це для мого друга.",
         "tl": "Para ito sa kaibigan ko.",
-        "sw": "Ni kwa rafiki yangu."
+        "sw": "Ni kwa rafiki yangu.",
+        "da": "Det er til min ven.",
+        "sv": "Det är till min vän.",
+        "no": "Det er til vennen min.",
+        "fi": "Se on ystävälleni."
       },
       "exampleTranslations": {
         "vi": "Cái này dành cho bạn tôi. Đây là quà sinh nhật.",
@@ -373,7 +425,11 @@
         "pl": "To dla mojego przyjaciela. To prezent urodzinowy.",
         "uk": "Це для мого друга. Це подарунок на день народження.",
         "tl": "Para ito sa kaibigan ko. Regalo ito sa kaarawan.",
-        "sw": "Ni kwa rafiki yangu. Ni zawadi ya siku ya kuzaliwa."
+        "sw": "Ni kwa rafiki yangu. Ni zawadi ya siku ya kuzaliwa.",
+        "da": "Det er til min ven. Det er en fødselsdagsgave.",
+        "sv": "Det är till min vän. Det är en födelsedagspresent.",
+        "no": "Det er til vennen min. Det er en bursdagsgave.",
+        "fi": "Se on ystävälleni. Se on syntymäpäivälahja."
       }
     },
     {
@@ -403,7 +459,11 @@
         "pl": "Co chciałbyś/chciałabyś?",
         "uk": "Що ви хотіли б?",
         "tl": "Ano ang gusto mo?",
-        "sw": "Ungependa nini?"
+        "sw": "Ungependa nini?",
+        "da": "Hvad vil du gerne have?",
+        "sv": "Vad skulle du vilja ha?",
+        "no": "Hva vil du ha?",
+        "fi": "Mitä haluaisit?"
       },
       "exampleTranslations": {
         "vi": "Bạn muốn gì? Một cái túi hay một quyển sổ?",
@@ -426,7 +486,11 @@
         "pl": "Co chciałbyś/chciałabyś? Torbę czy zeszyt?",
         "uk": "Що ви хотіли б? Сумку чи блокнот?",
         "tl": "Ano ang gusto mo? Bag o notebook?",
-        "sw": "Ungependa nini? Mkoba au daftari?"
+        "sw": "Ungependa nini? Mkoba au daftari?",
+        "da": "Hvad vil du gerne have? En taske eller en notesbog?",
+        "sv": "Vad skulle du vilja ha? En väska eller en anteckningsbok?",
+        "no": "Hva vil du ha? En veske eller en notatbok?",
+        "fi": "Mitä haluaisit? Laukun vai muistikirjan?"
       }
     },
     {
@@ -456,7 +520,11 @@
         "pl": "Ile to kosztuje?",
         "uk": "Скільки це коштує?",
         "tl": "Magkano ito?",
-        "sw": "Ni bei gani?"
+        "sw": "Ni bei gani?",
+        "da": "Hvor meget koster det?",
+        "sv": "Hur mycket kostar det?",
+        "no": "Hvor mye koster det?",
+        "fi": "Kuinka paljon se maksaa?"
       },
       "exampleTranslations": {
         "vi": "Cái này giá bao nhiêu? Nó giá năm đô la.",
@@ -479,7 +547,11 @@
         "pl": "Ile to kosztuje? Kosztuje pięć dolarów.",
         "uk": "Скільки це коштує? П’ять доларів.",
         "tl": "Magkano ito? Limang dolyar.",
-        "sw": "Ni bei gani? Ni dola tano."
+        "sw": "Ni bei gani? Ni dola tano.",
+        "da": "Hvor meget koster det? Det koster fem dollars.",
+        "sv": "Hur mycket kostar det? Det kostar fem dollar.",
+        "no": "Hvor mye koster det? Det koster fem dollar.",
+        "fi": "Kuinka paljon se maksaa? Se maksaa viisi dollaria."
       }
     },
     {
@@ -509,7 +581,11 @@
         "pl": "Przyniosę twoje zamówienie.",
         "uk": "Я принесу ваше замовлення.",
         "tl": "Kukunin ko ang order mo.",
-        "sw": "Nitaleta oda yako."
+        "sw": "Nitaleta oda yako.",
+        "da": "Jeg henter din bestilling.",
+        "sv": "Jag hämtar din beställning.",
+        "no": "Jeg henter bestillingen din.",
+        "fi": "Haen tilauksesi."
       },
       "exampleTranslations": {
         "vi": "Tôi sẽ lấy đơn hàng của bạn. Vui lòng đợi ở đây.",
@@ -532,7 +608,11 @@
         "pl": "Przyniosę twoje zamówienie. Proszę tutaj poczekać.",
         "uk": "Я принесу ваше замовлення. Будь ласка, зачекайте тут.",
         "tl": "Kukunin ko ang order mo. Pakihintay dito.",
-        "sw": "Nitaleta oda yako. Tafadhali subiri hapa."
+        "sw": "Nitaleta oda yako. Tafadhali subiri hapa.",
+        "da": "Jeg henter din bestilling. Vent venligst her.",
+        "sv": "Jag hämtar din beställning. Vänta här, tack.",
+        "no": "Jeg henter bestillingen din. Vent her, takk.",
+        "fi": "Haen tilauksesi. Odota tässä, kiitos."
       }
     }
   ]
